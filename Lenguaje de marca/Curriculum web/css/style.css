@@ -1,0 +1,142 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.personal_info{
+    min-width: 550px;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.personal_info header{
+    padding: 10px;
+    color: white;
+    min-width: 550px;
+    background: linear-gradient(to  left, #5333ed, #2cd3d9);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 1px 5px -2px black;
+    text-align: center;
+}
+.personal_info main{
+    padding: 10px;
+    padding-bottom: 30px;
+    min-width: 550px;
+
+}
+ul{
+    list-style: none;
+}
+.enlace-lista{
+    margin-top: -17px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+a:hover{
+    color: grey;
+    transition: 0.3s;
+}
+a:hover .img-ubicacion{
+    bottom: 0px;
+    width: 38px;
+    transition: 0.3s;
+}
+.img-ubicacion{
+    position: relative;
+    width: 35px;
+    bottom: -12px;
+}
+.mi-cara{
+    width: 200px;
+    margin-left: 30px;
+    border-radius: 50%;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 0px black;
+    border: solid grey 0.3px;
+}
+.personal_info h3{
+    margin-left: 35px;
+}
+.personal_info ul{
+    margin-left: 10px;
+}
+.estudios{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 15%;
+    top: 15%;
+    transition: 0.5s;
+    min-width: 80px;
+    min-height: 80px;
+}
+.estudios:hover {
+    right: 14.5%;
+    top: 13%;
+    transition: 0.5s;
+}
+.estudios header{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    justify-content: center;
+    min-height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(to  left, #5333ed, #2cd3d9);
+    box-shadow: 0px 0px 7px 0px black;
+    transition: 0.5s;
+}
+.estudios header:hover{
+    min-height: 220px;
+    min-width: 220px;
+    transition: 0.5s;
+    border-radius: 25%;
+}
+
+.expeciencia{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 15%;
+    bottom: 15%;
+    transition: 0.5s;
+    min-width: 80px;
+    min-height: 80px;
+}
+.expeciencia:hover {
+    right: 14.5%;
+    bottom: 13%;
+    transition: 0.5s;
+}
+.expeciencia header{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    justify-content: center;
+    min-height: 230px;
+    border-radius: 50%;
+    background: linear-gradient(to  left, #5333ed, #2cd3d9);
+    box-shadow: 0px 0px 7px 0px black;
+    transition: 0.5s;
+}
+.expeciencia header:hover{
+    min-height: 220px;
+    min-width: 220px;
+    transition: 0.5s;
+    border-radius: 25%;
+}
