@@ -1,3 +1,4 @@
+/*ESTILOS DE ETIQUETAS*/
 body{
     margin: 0px;
     padding: 0px;
@@ -9,6 +10,32 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+a .img-ubicacion{
+    transition: 0.3s;
+}
+
+a:hover{
+    color: grey;
+    transition: 0.3s;
+}
+
+a:hover .img-ubicacion{
+    bottom: 0px;
+    width: 38px;
+    transition: 0.3s;
+}
+/*CAJA INFORMACION PERSONAL*/
 .personal_info{
     min-width: 550px;
     box-shadow: 0px 0px 10px 0px black;
@@ -16,6 +43,7 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 .personal_info header{
     padding: 10px;
     color: white;
@@ -26,37 +54,28 @@ body{
     box-shadow: 0px 1px 5px -2px black;
     text-align: center;
 }
+
 .personal_info main{
     padding: 10px;
     padding-bottom: 30px;
     min-width: 550px;
 
 }
-ul{
-    list-style: none;
-}
-.enlace-lista{
-    margin-top: -17px;
-}
-a{
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
-}
-a:hover{
-    color: grey;
-    transition: 0.3s;
-}
-a:hover .img-ubicacion{
-    bottom: 0px;
-    width: 38px;
-    transition: 0.3s;
-}
+
 .img-ubicacion{
     position: relative;
     width: 35px;
     bottom: -12px;
 }
+
+.personal_info h3{
+    margin-left: 35px;
+}
+
+.personal_info ul{
+    margin-left: 10px;
+}
+
 .mi-cara{
     width: 200px;
     margin-left: 30px;
@@ -65,12 +84,14 @@ a:hover .img-ubicacion{
     box-shadow: 0px 0px 10px 0px black;
     border: solid grey 0.3px;
 }
-.personal_info h3{
-    margin-left: 35px;
+
+.enlace-lista{
+    margin-top: -17px;
 }
-.personal_info ul{
-    margin-left: 10px;
-}
+
+/*BURBUJAS FLOTANTES CERRADAS*/
+
+    /*ESTUDIOS*/
 .estudios{
     display: flex;
     flex-direction: column;
@@ -81,31 +102,35 @@ a:hover .img-ubicacion{
     min-width: 80px;
     min-height: 80px;
 }
-.estudios:hover {
-    right: 14.5%;
-    top: 13%;
-    transition: 0.5s;
-}
+
 .estudios header{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 180px;
+    min-width: 230px;
     justify-content: center;
-    min-height: 180px;
+    min-height: 230px;
     border-radius: 50%;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     box-shadow: 0px 0px 7px 0px black;
     transition: 0.5s;
 }
+
 .estudios header:hover{
-    min-height: 220px;
-    min-width: 220px;
     transition: 0.5s;
     border-radius: 25%;
 }
 
+.estudios header h1{
+    transition: 0.5s;
+}
+
+.estudios header:hover h1{
+    text-shadow: 0px 0px 10px white;
+    transition: 0.5s;
+}
+    /*EXPERIENCIA*/
 .expeciencia{
     display: flex;
     flex-direction: column;
@@ -116,17 +141,13 @@ a:hover .img-ubicacion{
     min-width: 80px;
     min-height: 80px;
 }
-.expeciencia:hover {
-    right: 14.5%;
-    bottom: 13%;
-    transition: 0.5s;
-}
+
 .expeciencia header{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 200px;
+    min-width: 230px;
     justify-content: center;
     min-height: 230px;
     border-radius: 50%;
@@ -135,8 +156,64 @@ a:hover .img-ubicacion{
     transition: 0.5s;
 }
 .expeciencia header:hover{
-    min-height: 220px;
-    min-width: 220px;
     transition: 0.5s;
     border-radius: 25%;
 }
+
+.expeciencia header h1{
+    transition: 0.5s;
+}
+
+.expeciencia header:hover h1{
+    text-shadow: 0px 0px 10px white;
+    transition: 0.5s;
+}
+    /*TECNOLOGIAS*/
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 15%;
+    bottom: 40%;
+    transition: 0.5s;
+    min-width: 80px;
+    min-height: 80px;
+}
+
+.tecnologias header{
+    padding: 10px;
+    min-width: 230px;
+    min-height: 230px;
+    background: linear-gradient(to  left, #5333ed, #2cd3d9);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0px 0px 7px 0px black;
+    transition: 0.5s;
+}
+
+.tecnologias header:hover{
+    border-radius: 25%;
+    transition: 0.5s;
+}
+
+.tecnologias header h1{
+    transition: 0.5s;
+}
+
+.tecnologias header:hover h1{
+    text-shadow: 0px 0px 10px white;
+    transition: 0.5s;
+}
+
+
+/*BURBUJAS FLOTANTES ABIERTAS*/
+
+
+
+
+
+
+
