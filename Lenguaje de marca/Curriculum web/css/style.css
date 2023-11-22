@@ -38,16 +38,21 @@ a:hover .img-ubicacion{
 /*CAJA INFORMACION PERSONAL*/
 .personal_info{
     min-width: 550px;
+    max-width: 550px;
     box-shadow: 0px 0px 10px 0px black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
+    position: absolute;
 }
 
 .personal_info header{
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
     min-width: 550px;
+    max-width: 550px;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -211,6 +216,17 @@ a:hover .img-ubicacion{
 
 /*BURBUJAS FLOTANTES ABIERTAS*/
 
+#chkb-estudios{
+    display: none;
+}
+
+#chkb-estudios:checked ~.personal_info{
+    left: 30%;
+    transition: 0.5s;
+}
+#chkb-estudios:checked ~.tecnologias{
+    display: none;
+}
 
 
 
