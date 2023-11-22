@@ -37,14 +37,14 @@ a:hover .img-ubicacion{
 }
 /*CAJA INFORMACION PERSONAL*/
 .personal_info{
-    min-width: 550px;
-    max-width: 550px;
+    min-width: 30%;
     box-shadow: 0px 0px 10px 0px black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
     position: absolute;
+    left: 35%;
 }
 
 .personal_info header{
@@ -52,7 +52,7 @@ a:hover .img-ubicacion{
     padding-bottom: 5px;
     color: white;
     min-width: 550px;
-    max-width: 550px;
+    max-width: 30%;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -183,6 +183,7 @@ a:hover .img-ubicacion{
     transition: 0.5s;
     min-width: 80px;
     min-height: 80px;
+    display: block;
 }
 
 .tecnologias header{
@@ -210,7 +211,7 @@ a:hover .img-ubicacion{
 
 .tecnologias header:hover h1{
     text-shadow: 0px 0px 10px white;
-    transition: 0.5s;
+    transition:  0.5s;
 }
 
 
@@ -221,11 +222,13 @@ a:hover .img-ubicacion{
 }
 
 #chkb-estudios:checked ~.personal_info{
-    left: 30%;
+    left: 10%;
     transition: 0.5s;
 }
 #chkb-estudios:checked ~.tecnologias{
+    
     display: none;
+    /*visibility: hidden;*/
 }
 
 
