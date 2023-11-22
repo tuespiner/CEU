@@ -44,7 +44,7 @@ create table provincias(
 
 alter table provincias add constraint pk_provincias primary key (id);
 
-alter table products add check(tipo = 'nuevo''segundamano''restaurado''deteriorado');
+alter table products add check(tipo = 'nuevo''segundamano''r192.168.1.14estaurado''deteriorado');
 alter table products add check(tipo in( 'nuevo','segundamano','restaurado','deteriorado'));
 
 alter table products add importe number(6,2);
