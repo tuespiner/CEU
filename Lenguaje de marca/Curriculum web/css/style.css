@@ -51,8 +51,7 @@ a:hover .img-ubicacion{
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
-    min-width: 550px;
-    max-width: 30%;
+    min-width: 100%;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -217,7 +216,7 @@ a:hover .img-ubicacion{
 
 /*BURBUJAS FLOTANTES ABIERTAS*/
 
-#chkb-estudios{
+input[type=checkbox]{
     display: none;
 }
 
@@ -225,9 +224,8 @@ a:hover .img-ubicacion{
     left: 10%;
     transition: 0.5s;
 }
-#chkb-estudios:checked ~.tecnologias{
-    
-    display: none;
+#chkb-estudios:checked ~label .tecnologias{
+    transition: 0.5s;
     /*visibility: hidden;*/
 }
 
