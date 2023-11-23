@@ -45,7 +45,7 @@ a:hover .img-ubicacion{
     transition: 0.5s;
     position: absolute;
     left: 35%;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
 }
 
@@ -107,6 +107,7 @@ a:hover .img-ubicacion{
     transition: 0.5s;
     min-width: 80px;
     min-height: 80px;
+    z-index: 1;
 }
 
 .estudios header{
@@ -146,6 +147,7 @@ a:hover .img-ubicacion{
     transition: 0.5s;
     min-width: 80px;
     min-height: 80px;
+    z-index: 1;
 }
 
 .expeciencia header{
@@ -185,7 +187,7 @@ a:hover .img-ubicacion{
     min-width: 80px;
     min-height: 80px;
     display: block;
-    z-index: 0;
+    z-index: 1;
 }
 
 .tecnologias header{
@@ -216,6 +218,22 @@ a:hover .img-ubicacion{
     transition:  0.5s;
 }
 
+/*IMAGENES DECORATIVAS*/
+
+.imagen-arriba-izquierda{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.imagen-abajo-derecha{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+    rotate: 180deg;
+}
 
 /*BURBUJAS FLOTANTES ABIERTAS*/
 
