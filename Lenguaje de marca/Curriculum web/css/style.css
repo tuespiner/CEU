@@ -45,6 +45,8 @@ a:hover .img-ubicacion{
     transition: 0.5s;
     position: absolute;
     left: 35%;
+    z-index: 1;
+    background-color: white;
 }
 
 .personal_info header{
@@ -183,6 +185,7 @@ a:hover .img-ubicacion{
     min-width: 80px;
     min-height: 80px;
     display: block;
+    z-index: 0;
 }
 
 .tecnologias header{
