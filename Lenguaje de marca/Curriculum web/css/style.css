@@ -249,6 +249,13 @@ input[type=checkbox]{
     transition: 0.5s;
     /*visibility: hidden;*/
 }
+#chkb-estudios:checked ~label .estudios{
+    top: 7%;
+    right: 7%;
+    width: 1000px;
+    height: 1000px;
+    transition: 0.5s;
+}
 
 
 
