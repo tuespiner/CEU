@@ -43,7 +43,7 @@ a:hover .img-ubicacion{
     display: flex;
     flex-direction: column;
     transition: 0.5s;
-    position: absolute;
+    position: fixed;
     left: 35%;
     z-index: 2;
     background-color: white;
@@ -104,9 +104,10 @@ a:hover .img-ubicacion{
     position: fixed;
     right: 15%;
     top: 15%;
-    transition: 0.5s;
-    min-width: 80px;
-    min-height: 80px;
+    transition: 0.7s;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
     z-index: 1;
 }
 
@@ -117,7 +118,7 @@ a:hover .img-ubicacion{
     align-items: center;
     min-width: 230px;
     justify-content: center;
-    min-height: 230px;
+    height: 230px;
     border-radius: 50%;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     box-shadow: 0px 0px 7px 0px black;
@@ -144,9 +145,10 @@ a:hover .img-ubicacion{
     position: fixed;
     right: 15%;
     bottom: 15%;
-    transition: 0.5s;
-    min-width: 80px;
-    min-height: 80px;
+    transition: 0.7s;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
     z-index: 1;
 }
 
@@ -183,10 +185,10 @@ a:hover .img-ubicacion{
     position: fixed;
     left: 15%;
     bottom: 40%;
-    transition: 0.5s;
-    min-width: 80px;
-    min-height: 80px;
-    display: block;
+    transition: 0.7s;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
     z-index: 1;
 }
 
@@ -196,8 +198,9 @@ a:hover .img-ubicacion{
     min-height: 230px;
     background: linear-gradient(to  left, #5333ed, #2cd3d9);
     display: flex;
+    flex-direction: column;
     text-align: center;
-    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     color: white;
     box-shadow: 0px 0px 7px 0px black;
@@ -241,22 +244,101 @@ input[type=checkbox]{
     display: none;
 }
 
+ /*CHECKBOX DE ESTUDIOS*/
 #chkb-estudios:checked ~.personal_info{
     left: 10%;
     transition: 0.5s;
 }
-#chkb-estudios:checked ~label .tecnologias{
-    transition: 0.5s;
-    /*visibility: hidden;*/
-}
 #chkb-estudios:checked ~label .estudios{
     top: 7%;
-    right: 7%;
-    width: 1000px;
-    height: 1000px;
+    right: 3%;
+    min-width: 1000px;
+    min-height: 800px;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 10px;
+
+    background-color: white;
     transition: 0.5s;
 }
+#chkb-estudios:checked ~label .estudios header{
+    border-radius: 0px;
+    height: 100px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0px 1px 5px -2px black;
+}
+#chkb-estudios:checked ~label .expeciencia{
+    display: none;
+}
+#chkb-estudios:checked ~label .tecnologias{
+    display: none;
+}
 
+ /*CHECKBOX DE EXPERIENCIA*/
+#chkb-experiencia:checked ~.personal_info{
+    left: 10%;
+    transition: 0.5s;
+}
+#chkb-experiencia:checked ~.label-experiencia .expeciencia{
+    top: 7%;
+    right: 3%;
+    min-width: 1000px;
+    min-height: 800px;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 10px;
+
+    background-color: white;
+    transition: 0.5s;
+}
+#chkb-experiencia:checked ~label .expeciencia header{
+    border-radius: 0px;
+    min-height: 100px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0px 1px 5px -2px black;
+}
+#chkb-experiencia:checked ~label .estudios{
+    display: none;
+}
+#chkb-experiencia:checked ~label .tecnologias{
+    display: none;
+}
+
+
+ /*CHECKBOX DE TECNOLOGIAS*/
+
+#chkb-tecnologias:checked ~.personal_info{
+    left: 60%;
+    transition: 0.5s;
+}
+#chkb-tecnologias:checked ~label .tecnologias{
+    top: 7%;
+    left: 3%;
+    padding: 0px;
+    min-width: 1000px;
+    min-height: 800px;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 10px;
+
+    background-color: white;
+    transition: 0.5s;
+}
+#chkb-tecnologias:checked ~label .tecnologias header{
+    border-radius: 0px;
+    min-height: 100px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0px 1px 5px -2px black;
+}
+#chkb-tecnologias:checked ~label .estudios{
+    display: none;
+}
+#chkb-tecnologias:checked ~label .expeciencia{
+    display: none;
+}
 
 
 
