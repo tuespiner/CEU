@@ -138,6 +138,10 @@ a:hover .img-ubicacion{
     text-shadow: 0px 0px 10px white;
     transition: 0.5s;
 }
+.estudios main{
+    padding-left: 10%;
+    padding-right: 10%;
+}
     /*EXPERIENCIA*/
 .expeciencia{
     display: flex;
@@ -177,6 +181,9 @@ a:hover .img-ubicacion{
 .expeciencia header:hover h1{
     text-shadow: 0px 0px 10px white;
     transition: 0.5s;
+}
+.estudios main {
+    display: none;
 }
     /*TECNOLOGIAS*/
 .tecnologias{
@@ -267,6 +274,9 @@ input[type=checkbox]{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     box-shadow: 0px 1px 5px -2px black;
+}
+#chkb-estudios:checked ~label .estudios main{
+    display: block;
 }
 #chkb-estudios:checked ~label .expeciencia{
     display: none;
