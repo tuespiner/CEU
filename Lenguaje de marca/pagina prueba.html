@@ -12,11 +12,13 @@
         p{
             color: white;
         }
-        .header{
+        header{
+            max-width: 100%;
             padding: 8px;
             background-color: purple;
             display: flex;
-            align-content: space-around;
+            align-items: center;
+            justify-content: space-between;
         }
         button{
             height: 50px;
@@ -26,39 +28,93 @@
             background-color: purple;
             border: 0px solid black ;
             border-radius: 3px;
+            margin-left: 8px;
         }
         button:hover{
            background-color: rgb(161, 47, 161);
+           
         }
-        .material-symbols-outlined {
+        .menu{
+           margin-right: 8px;
+        }
+        .menu .material-symbols-outlined {
             font-variation-settings:
             'FILL' 0,
             'wght' 400,
             'GRAD' 0,
             'opsz' 24;
             color: white;
+            font-size: 27px;
+            padding-left: 0%;
+            padding-right: 0%;
+            border-radius: 0px;
+            height: 0px;
+        }
+        .busqueda .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            font-size: 27px;
+            border-radius: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color:white;
+            transition: 0.2s;
+        }
+        .busqueda{
+            width: fit-content;
+            padding-left: 0%;
+            padding-right: 0%;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+        .barra-busqueda{
+            min-width: 0px;
+            min-height: 0px;
+            transition: 0.3s;
+        }
+        .busqueda:hover .barra-busqueda{
+            min-width: 200px;
+            min-height: 50px;
+            transition: 0.3s
+        }
+        .botones{
+            min-width: 70%;
+            display: flex;
+            
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <button>
-            <p>MAIN</p>
-        </button>
-        <button>
-            <p>CONTACTANOS</p>
-        </button>
-        <button>
-            <p>¿QUIENES SOMOS?</p>
-        </button>
-        <button>
-            <p>NUESTRAS TIENDAS</p>
-        </button>
+    <header>
+        <div class="botones">
+            <button>
+                <p>CATEGORIAS</p>
+            </button>
+            <button>
+                <p>NUESTRAS TIENDAS</p>
+            </button>
+            <button>
+                <p>SERVICIO A DOMICILIO</p>
+            </button>
+            <button>
+                <p>NUESTRAS TIENDAS</p>
+            </button>
+            <button class="busqueda">
+                <span class="material-symbols-outlined">search</span>
+                <div class="barra-busqueda"></div>
+            </button>
+        </div>
         <button class="menu">
-            <label class="abrir_cerrar" for="evento_click">
-                <span class="material-symbols-outlined">menu</span>
-            </label>
+        <label class="abrir_cerrar" for="evento_click">
+            <span class="material-symbols-outlined">menu</span>
+        </label>
         </button>
-    </div>
+    </header>
 </body>
 </html>
