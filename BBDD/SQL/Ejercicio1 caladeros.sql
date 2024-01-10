@@ -58,3 +58,4 @@ alter table fechas_capturas
     add foreign key (cod_especie) references especies (codigo);
 alter table fechas_capturas
     add foreign key (cod_caladero) references caladeros (codigo);
+
