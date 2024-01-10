@@ -3,8 +3,8 @@ package Ejercicio_21;
 public class App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Alumno alumno1 = new Alumno();
+		
 	}
 
 }
