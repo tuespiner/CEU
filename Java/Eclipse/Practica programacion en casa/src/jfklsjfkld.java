@@ -5,8 +5,8 @@ public class jfklsjfkld {
 		int longitud1 = "POSIBILIDADES".length();
 		int longitud2 = "posibilidades".length();
 		
-		Integer x = longitud1.compareTo(longitud2);
-		switch (x)
+		Integer x = longitud1-longitud2;
+		//switch (x)
 		
 	}
 
