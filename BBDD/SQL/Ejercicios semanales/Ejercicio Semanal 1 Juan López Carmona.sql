@@ -69,3 +69,13 @@ UPDATE FUTBOLISTAS SET ID_EQUIPO = 3 WHERE ID LIKE 'F00420';
 UPDATE FUTBOLISTAS SET ID_EQUIPO = 1 WHERE ID LIKE 'F00920';
 
 DELETE FROM FUTBOLISTAS WHERE ID LIKE 'F00120' OR ID LIKE 'F00420';
+
+--Ejercicio semanal 1
+--1. Se requiere saber todos los campos/datos de los partidos que se hayan disputado entre el 01-01-2020 y el 31-01-2020.
+select * from partidos where fecha between to_char('01/01/2020') and to_char('31/01/2020');
+--2. Devuelve todos los ásbitros de los aprtidos sin repetir resultados.
+select distinct arbitro from partidos;
+--3. Se quiere saber el id y resultado de la tabla partidos en los que el resultado haya terminado en -00. Debes usar un alias de tabla para partidos, que sea p, y debes usarlo en tus columnas id y resultados.
+select id as id, resultado as r from partidos "p" where resultado like('%-00');
+--4. Devuelve el id, árbitro y estadio de lso partidos pero ordenando de la siguiente forma: 1º por estadio en orden descendente, luego por árbitro y finalmente por id descendiente.
+select estadio, arbitro,id  from partidos order by estadio desc, arbitro desc, id desc;
