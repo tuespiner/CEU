@@ -142,4 +142,7 @@ select ID from futbolistas where apellidos like 'GOMEZ';
 select apellidos from futbolistas where apellidos like 'G%';
 select * from futbolistas where posicion = 'DEFENSA' or posicion = 'DELANTERO';
 select nombre from futbolistas where salario between 100000 and 200000;
-se
+
+
+select initcap(nombre), salario,salario*1.5 || 'euros' "salario bruto" from futbolistas where posicion = 'MEDIOCENTRO' order by nombre;
+select initcap(nombre), salario,salario*1.5 || ' euros' "salario bruto" from futbolistas where lower(posicion) = 'mediocentro' order by nombre;
