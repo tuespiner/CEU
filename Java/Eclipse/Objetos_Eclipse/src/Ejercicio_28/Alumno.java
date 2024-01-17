@@ -70,9 +70,8 @@ public class Alumno extends Persona {
 		} else if (dni.length() < 9) {
 			return false;
 		} else {
-			String ejemploDni = "00000000T";
 			Pattern patron = Pattern.compile("[0-9]{7,8}[A-Z a-z]");
-			Matcher match = patron.matcher(ejemploDni);
+			Matcher match = patron.matcher(dni);
 			if (match.matches()) {
 				return true;
 			} else {
