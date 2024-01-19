@@ -4,16 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-	public static ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Curso curso_1a = new Curso(1, "DAM-DAW");
+		Alumno alumnoArray[] = new Alumno[3];
 		Alumno alumno1 = new Alumno(curso_1a);
 		Alumno alumno2 = new Alumno(curso_1a);
 		Alumno alumno3 = new Alumno(curso_1a);
-		alumnos.add(alumno1);
-		alumnos.add(alumno2);
-		alumnos.add(alumno3);
+		
 		int i = 0;
 		
 		for(Alumno alumno : alumnos) {
@@ -25,8 +23,11 @@ public class App {
 			System.out.println("Dime la edad del alumno"+i);
 			alumno.setEdad(sc.nextInt());
 			System.out.println("Dime la nota del alumno"+i);
+			alumno.setNota(sc.nextDouble()); sc.nextLine();
 			}
+		
 		}
+		
 		
 		
 	}

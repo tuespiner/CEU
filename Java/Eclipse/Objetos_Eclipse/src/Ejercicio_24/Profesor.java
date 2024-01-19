@@ -21,7 +21,7 @@ public class Profesor extends Persona{
     public void setCurso(Curso curso) {
         this.curso = curso;
     }
-    
+    @Override
     public String toString() {
     	String objeto = "Nombte: "+ this.getNombre() + ", Edad: " + this.getEdad() + ", DNI: "+this.getDni()+curso;
     	return objeto;
