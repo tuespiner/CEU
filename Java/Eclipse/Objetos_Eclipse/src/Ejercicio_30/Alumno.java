@@ -89,7 +89,28 @@ public class Alumno extends Persona {
 			}
 		}
 	}
-
+	
+	
+		//VALIDAR USUARIO ALUMNO
+	public static Boolean validar(Alumno alumno) {
+		if (Alumno.validarDni(alumno.getDni())==true) {
+			if (alumno.getCurso()!=null) {
+				if (alumno.getNombre()!= null && alumno.getNombre().length() >10) {
+					if (alumno.getEdad()!= null && alumno.getEdad()<= 65 && alumno.getEdad()>=12) {
+						return true;
+					}else {
+						return false;
+					}
+				}else {
+					return false;
+				}
+			}else {
+				return false;
+			}
+		}else {
+			return false;
+		}
+	}
 		//VALIDA UN OBJETO ALUMNO ENTERO
 	/*public static Boolean validar(Alumno alumno) {
 		Scanner sc = new Scanner(System.in);
@@ -157,23 +178,5 @@ public class Alumno extends Persona {
 		return true;
 	}*/
 	
-	public static Boolean validar(Alumno alumno) {
-		if (Alumno.validarDni(alumno.getDni())==true) {
-			if (alumno.getCurso()!=null) {
-				if (alumno.getNombre()!= null && alumno.getNombre().length() >10) {
-					if (alumno.getEdad()!= null && alumno.getEdad()<= 65 && alumno.getEdad()>=12) {
-						return true;
-					}else {
-						return false;
-					}
-				}else {
-					return false;
-				}
-			}else {
-				return false;
-			}
-		}else {
-			return false;
-		}
-	}
+	
 }
