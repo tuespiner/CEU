@@ -1,4 +1,4 @@
-package Ejercicio_30;
+package Ejercicio_31;
 
 public class Curso {
     private Integer identificador;
