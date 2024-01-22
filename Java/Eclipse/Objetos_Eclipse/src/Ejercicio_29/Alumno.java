@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
 public class Alumno extends Persona {
 
 	private Double nota;
@@ -84,88 +82,93 @@ public class Alumno extends Persona {
 		}
 	}
 
-	/*public static Boolean validar(Alumno alumno) {
-		Scanner sc = new Scanner(System.in);
-		do {
-			if (Alumno.validarDni(alumno.getDni()) == false) {
-				while (true) {
-					System.out.println("DNI: wrong");
-					System.err.println("El dni no es valido, porfavor ingrese uno valido");
-					alumno.setDni(sc.nextLine());
-					if (Alumno.validarDni(alumno.getDni()) == true) {
-						break;
-					}
-				}
-
-			}
-		} while (Alumno.validarDni(alumno.getDni()) != true);
-		System.out.println("DNI: ok");
-		do {
-			if (alumno.getNombre() == null) {
-				System.out.println("Nombre: wrong");
-				System.err.println("El nombre es obligatorio");
-				alumno.setNombre(sc.nextLine());
-			} else {
-				if (alumno.getNombre().length() < 10) {
-					System.out.println("Nombre: wrong");
-					System.err.println("El nombre tiene menos de 10 caracteres");
-					alumno.setNombre(sc.nextLine());
-				} else {
-					break;
-				}
-			}
-		} while (alumno.getNombre() == null ||alumno.getNombre().length() < 10);
-		System.out.println("Nombre: ok");
-		do {
-			Curso curso = new Curso();
-			if (alumno.getCurso() == null) {
-				System.out.println("Curso: wrong");
-				System.err.println("El campo curso es obligatorio\ndime el numero del curso");
-				curso.setIdentificador(sc.nextInt());
-				sc.nextLine();
-				System.err.println("Dime el curso");
-				curso.setDescripcion(sc.nextLine());
-				alumno.setCurso(curso);
-			} else {
-				break;
-			}
-		} while (alumno.getCurso() == null);
-		System.out.println("Curso: ok");
-		do {
-			if (alumno.getEdad() == null) {
-				System.out.println("Edad: wrong");
-				System.err.println("El campo edad tiene que tener algun valor");
-				alumno.setEdad(sc.nextInt());
-			} else {
-				if (alumno.getEdad() < 12 || alumno.getEdad() > 65) {
-					System.out.println("Edad: wrong");
-					System.err.println("El campo edad tiene que ser entre 12 y 65 años");
-					alumno.setEdad(sc.nextInt());
-				} else {
-					break;
-				}
-			}
-		} while (alumno.getEdad() == null || alumno.getEdad() < 12 || alumno.getEdad() > 65);
-		System.out.println("Edad: ok");
-		return true;
-	}*/
+	/*
+	 * public static Boolean validar(Alumno alumno) {
+	 * Scanner sc = new Scanner(System.in);
+	 * do {
+	 * if (Alumno.validarDni(alumno.getDni()) == false) {
+	 * while (true) {
+	 * System.out.println("DNI: wrong");
+	 * System.err.println("El dni no es valido, porfavor ingrese uno valido");
+	 * alumno.setDni(sc.nextLine());
+	 * if (Alumno.validarDni(alumno.getDni()) == true) {
+	 * break;
+	 * }
+	 * }
+	 * 
+	 * }
+	 * } while (Alumno.validarDni(alumno.getDni()) != true);
+	 * System.out.println("DNI: ok");
+	 * do {
+	 * if (alumno.getNombre() == null) {
+	 * System.out.println("Nombre: wrong");
+	 * System.err.println("El nombre es obligatorio");
+	 * alumno.setNombre(sc.nextLine());
+	 * } else {
+	 * if (alumno.getNombre().length() < 10) {
+	 * System.out.println("Nombre: wrong");
+	 * System.err.println("El nombre tiene menos de 10 caracteres");
+	 * alumno.setNombre(sc.nextLine());
+	 * } else {
+	 * break;
+	 * }
+	 * }
+	 * } while (alumno.getNombre() == null ||alumno.getNombre().length() < 10);
+	 * System.out.println("Nombre: ok");
+	 * do {
+	 * Curso curso = new Curso();
+	 * if (alumno.getCurso() == null) {
+	 * System.out.println("Curso: wrong");
+	 * System.err.println("El campo curso es obligatorio\ndime el numero del curso"
+	 * );
+	 * curso.setIdentificador(sc.nextInt());
+	 * sc.nextLine();
+	 * System.err.println("Dime el curso");
+	 * curso.setDescripcion(sc.nextLine());
+	 * alumno.setCurso(curso);
+	 * } else {
+	 * break;
+	 * }
+	 * } while (alumno.getCurso() == null);
+	 * System.out.println("Curso: ok");
+	 * do {
+	 * if (alumno.getEdad() == null) {
+	 * System.out.println("Edad: wrong");
+	 * System.err.println("El campo edad tiene que tener algun valor");
+	 * alumno.setEdad(sc.nextInt());
+	 * } else {
+	 * if (alumno.getEdad() < 12 || alumno.getEdad() > 65) {
+	 * System.out.println("Edad: wrong");
+	 * System.err.println("El campo edad tiene que ser entre 12 y 65 años");
+	 * alumno.setEdad(sc.nextInt());
+	 * } else {
+	 * break;
+	 * }
+	 * }
+	 * } while (alumno.getEdad() == null || alumno.getEdad() < 12 ||
+	 * alumno.getEdad() > 65);
+	 * System.out.println("Edad: ok");
+	 * return true;
+	 * }
+	 */
 	public static Boolean validar(Alumno alumno) {
-		if (Alumno.validarDni(alumno.getDni())==true) {
-			if (alumno.getCurso()!=null) {
-				if (alumno.getNombre()!= null && alumno.getNombre().length() >10) {
-					if (alumno.getEdad()!= null && alumno.getEdad()<= 65 && alumno.getEdad()>=12) {
+		if (Alumno.validarDni(alumno.getDni()) == true) {
+			if (alumno.getCurso() != null) {
+				if (alumno.getNombre() != null && alumno.getNombre().length() > 10) {
+					if (alumno.getEdad() != null && alumno.getEdad() <= 65 && alumno.getEdad() >= 12) {
 						return true;
-					}else {
+					} else {
 						return false;
 					}
-				}else {
+				} else {
 					return false;
 				}
-			}else {
+			} else {
 				return false;
 			}
-		}else {
+		} else {
 			return false;
 		}
 	}
+
 }
