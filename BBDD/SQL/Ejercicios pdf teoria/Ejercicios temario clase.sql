@@ -157,6 +157,11 @@ select  nombre from futbolistas where salario > 100000 and salario < 200000;  /*
 Enunciado:  1) Se va a hacer un aumento de sueldo de los PORTEROS. Para ello obtén el nombre, apellido y el nuevo salario de los PORTEROS si se aumenta un 
             10% el que tienen actualmente. La lista debe estar ordenada alfabéticamente por los apellidos.*/
 
+--1)
+select nombre, apellidos, salario*1.1 from futbolistas order by apellidos;  /**/
+
+/*Ejercicio 8*/
+
 
 
 
