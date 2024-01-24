@@ -40,19 +40,15 @@ public class Semaforo {
 	}
 	
 	public void cambiarEstado() {
-		i++;
-		if (i == 1) {
-			this.setColor(VERDE);
-			
-		}else if(i==2) {
+		if(this.color.equals(VERDE)) {
 			this.setColor(AMBAR);
 			this.setParpadeando(true);
-		}else if(i==3) {
-			this.setColor(AMBAR);
+		}else if(this.color.equals(AMBAR)&& this.parpadeando == true) {
 			this.setParpadeando(false);
-		}else {
+		}else if(this.color.equals(AMBAR) && this.parpadeando == false) {
 			this.setColor(ROJO);
-			i = 0;
+		}else {
+			this.setColor(VERDE);
 		}
 	}
 

@@ -158,9 +158,15 @@ Enunciado:  1) Se va a hacer un aumento de sueldo de los PORTEROS. Para ello obt
             10% el que tienen actualmente. La lista debe estar ordenada alfabéticamente por los apellidos.*/
 
 --1)
-select nombre, apellidos, salario*1.1 from futbolistas order by apellidos;  /**/
+select nombre, apellidos, salario*1.1 from futbolistas order by apellidos;  /*Una forma en la que podemos usar los operadores*/
 
-/*Ejercicio 8*/
+/*Ejercicio 8
+Enunciado:  1) Devuelve en una única columna el nombre del futbolista seguido de la palabra “es”y a continuación la posición que ocupa. La columna debe 
+            llamarse “Posiciones”.*/
+
+--1)
+select nombre || ' es ' || posicion "Posiciones"from futbolistas;  /*||: Esto sirve para concatenar, es decir, en vez de poner , que separa las columnas 
+                                                                      y crea varias crea una unica columna con todos lo que le quieras poner*/
 
 
 

@@ -19,7 +19,9 @@ public class App {
 			semaforo1.cambiarEstado();
 		}
 		
-		Semaforo semaforo2 = semaforo1;
+		Semaforo semaforo2 = new Semaforo();
+		semaforo2.setColor(semaforo1.getColor());
+		semaforo2.setParpadeando(semaforo1.getParpadeando());
 	}
 
 }
