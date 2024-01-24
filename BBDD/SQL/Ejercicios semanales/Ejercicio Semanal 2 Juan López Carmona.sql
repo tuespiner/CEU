@@ -46,7 +46,7 @@ INSERT INTO EQUIPOS VALUES (2,'EQUIPO B', 'ESTADIO B',2000000);
 INSERT INTO EQUIPOS VALUES (3,'EQUIPO C', 'ESTADIO C',3000000);
 
 DELETE FROM FUTBOLISTAS;
-INSERT INTO FUTBOLISTAS VALUES ('F00120','PEDRO','GOMEZ','22/01/1980','PORTERO',100000,1);
+INSERT INTO FUTBOLISTAS VALUES ('F00120','PEDRO',l mismo seguido de un 'GOMEZ','22/01/1980','PORTERO',100000,1);
 INSERT INTO FUTBOLISTAS VALUES ('F00220','PEDRO LUIS','GOMEZ','20/04/1985','DEFENSA',110000,1);
 INSERT INTO FUTBOLISTAS VALUES ('F00320','LUIS','GALVEZ','12/01/1990','DELANTERO',80000,1);
 INSERT INTO FUTBOLISTAS VALUES ('F00420','ANTONIO','DOMINGUEZ','25/06/1981','PORTERO',340000,2);
@@ -70,11 +70,26 @@ UPDATE FUTBOLISTAS SET ID_EQUIPO = 1 WHERE ID LIKE 'F00920';
 
 DELETE FROM FUTBOLISTAS WHERE ID LIKE 'F00120' OR ID LIKE 'F00420';
 
-select nombre from futbolistas;
+/*Ejercicio 1
+Devuelve el nombre(primera letra en mayusculas), el presupuesto reducido a 250000 y seguido por un espacio y la palablra euros, el presupuesto 
+más del 10% de un espacio y la palabra euros, correspondiente a los equipos y ordenados por el presupuesto en orden descendente. Utiliza los siguientes  
+alias de columna en este orden para los presupuestos: "2022-23", "2023-24", "2024-25".*/
 
-select replace(nombre,substr(nombre,instr(nombre,' ',1,1)),' ') "solo nombre",
-nombre "solo nombre" from futbolistas;
-select nombre,instr(nombre,'E') "Primera E" ,
-    instr(nombre, 'E',1,2) "Segunda E",
-    instr(nombre,'E',5,1) "Trampa"
-    from futbolistas;
+--No entiendo el enunciado
+
+/*Ejercicio 2
+Se quiere el nombre en minúsculas, la fecha de nacimiento y el salario dividido entre 12. Este salario debe redondearse para que tenga solo dos 
+decimales y concatenar usando la función CONCAT con un espacio y la palabra euros. Los resultados deben estar ordenados por orden descendete de salario de 
+futbolista.*/
+select lower(nombre) ,fecha_nacimiento ,round(salario/12,2), concat(' ','euros') from futbolistas order by salario desc;
+
+/*Ejercicio 3
+Devuelve el nombre (con tres caracteres) seguido de un "-" y el apellido de lso futbolistas en una columna que tenga por alias "NOM-APELLIDO"  
+(emplea la función concat), y en la otra columna el tamaño/número de caracteres del campo apellido de los futbolistas, usando el alias de columna "CARACTERES 
+APELLIDO". Debe ordenarse descendentemente por ese tamaño de caracteres de apellido.*/
+select substr(nombre,1,3) || concat('-',apellidos) "NOM-APELLIDO", length(apellidos) from futbolistas order by length(apellidos) desc;
+
+/*Ejercicio 4
+Queremos un listado de los nombres de los futbolistas quitandolos segundos nombres (nombres compuesto,por ejemplo, borrar LUIS de PEDRO LUIS y
+quedando solo PEDRO) y poner como alias decolumna "SOLO NOMBRE".*/
+select nvl(substr(nombre,1,instr(nombre,' ',1,1)),nombre) "SOLO NOMBRE" from futbolistas;
