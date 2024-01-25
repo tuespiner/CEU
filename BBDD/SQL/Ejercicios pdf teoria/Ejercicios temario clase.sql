@@ -168,6 +168,56 @@ Enunciado:  1) Devuelve en una única columna el nombre del futbolista seguido de
 select nombre || ' es ' || posicion "Posiciones"from futbolistas;  /*||: Esto sirve para concatenar, es decir, en vez de poner , que separa las columnas 
                                                                       y crea varias crea una unica columna con todos lo que le quieras poner*/
 
+/*Ejercicio 9
+Enunciado:  1) Queremos saber todos los datos de los futbolistas que ganen más de 150.000 euros y sean defensas.*/
+
+
+--1)
+select * from futbolistas where salario > 149999 and posicion like 'DEFENSA';
+
+/*Ejercicio 10
+Enunciado:  1) ES UN TIPO TEST, LA RESPUESTA ES LA B*/
+
+/*Ejercicio 11
+Enunciado:  1) Realiza una consulta que te devuelva los campos Nombre, Salario, Salario bruto terminado en la palabra 
+            “euros” y llamando a esa columna “Salario bruto”.*/
+
+
+--1)
+select nombre, salario , salario*1.5 || ' EUROS' "Salario bruto" from futbolistas;
+
+
+/*Ejercicio 12
+Enunciado: Realiza las siguientes operaciones utilizando funciones numéricas:
+            1) Calcula el valor absoluto de -10.
+            2) Obtén el exponente en base e de 4.
+            3) Redondea el número 15,3 a 16.
+            4) Redondea el número anterior (15,3) a 15.
+            5) Calcula el resto de 15 entre 3 (15/3).
+            6) Eleva 15 al exponente 2 (15^2).*/
+            
+
+--1)
+select abs(-10) from dual; /*ABS(n): Esta función sirve para conocer el valor absoluto de un numero, en este caso hemos puesto 
+                                    -10 y el valor absoluto es 10*/
+
+--2)
+select exp(4) from dual; /*PREGUNTAR A INDA PARA QUE SIRVE*/
+
+--3)
+select ceil(15.3) from dual; /*ceil(n): Redondea n al numero absoluto superior, si tenemos 10,1 lo redondearia a 11*/
+
+--4)
+select floor(15.3) from dual; /*floor(n): Redondea n al numero absoluto inferior, si tenemos 10,1 lo redondearia a 10*/
+
+--5)
+select mod(15,3) from dual; /*mod(m,n): Esto calcula el resto de m entre n, si por ejemplo pusieramos mod(10,3)saldria 1*/
+
+--6)
+select power(15,2) from dual; /*power(m,n): Ejeva m a n, es decir si quisieramos sabercuanto es 2^4 tendriamos que poner
+                                       power(2,4)*/
+
+
 
 
 
