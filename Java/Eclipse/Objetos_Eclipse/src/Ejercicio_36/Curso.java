@@ -1,31 +1,25 @@
 package Ejercicio_36;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Curso {
     private Integer identificador;
     private String descripcion;
-    private static Alumno[] alumnos;
+    private List<Alumno> alumnos;
     
  //----------------------------------------------------------------------------
     
     //CONSTRUCTORES
     	//CONSTRUCTOR ID, DESC Y ALUMNOS
-    public Curso(int i, String desc, Integer numeroAlumnos) {
+    public Curso(int i, String desc) {
         this.identificador = i;
         this.descripcion = desc;
-        this.alumnos=new Alumno[numeroAlumnos];
-    }
-    	//CONSTRUCTOR ID, DESC
-    public Curso(int i, String desc) {
-    	this.identificador = i;
-    	this.descripcion =desc;
+        this.alumnos=new ArrayList<>();
     }
     	//CONSTRUCTOR ALUMNOS
-    public Curso(Integer numeroAlumnos) {
-    	this.alumnos = new Alumno[numeroAlumnos];
-    }
-    	//CONSTRUCTOR VACÍO
     public Curso() {
-    	
+    	this.alumnos = new ArrayList<>();;
     }
     
 //----------------------------------------------------------------------------
@@ -46,8 +40,8 @@ public class Curso {
         this.descripcion = descripcion;
     }
     	//ALUMNOS
-    public Alumno[] getAlumnos() {
-    	return alumnos;
+    public List<Alumno> getAlumnos() {
+    	return this.alumnos;
     }
     public String toString() {
     	String objeto = "Curso: "+identificador + descripcion;
@@ -57,20 +51,8 @@ public class Curso {
   //----------------------------------------------------------------------------
     
     //MÉTODOS
-    	//AÑADIR ALUMOS AL ARRAY
-    public static Alumno[] addAlumno(Alumno alumno) {
-    	int contEspacioVacio = 0;
-    	for(int i = 0; i<alumnos.length;i++) {
-    		if(alumnos[i] == null) {
-    			System.out.println("Alumno añadido correctamente en la posición "+(i+1));
-    			alumnos[i] = alumno;
-    			contEspacioVacio++;
-    			break;
-    		}
-    	}
-    	if(contEspacioVacio == 0) {
-    		System.out.println("No hay mas huecos en esta clase");
-    	}
-    	return alumnos;
+    	//AÑADIR ALUMOS A LA LISTA
+    public void addAlumno(Alumno alumno) {
+    	alumnos.add(alumno);
     }
 }

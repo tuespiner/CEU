@@ -7,13 +7,13 @@ public class App {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Alumno alumno1 = new Alumno();
-		Curso curso1 = new Curso(1, "DAW-DAM", 12);
+		Curso curso1 = new Curso(1, "DAW-DAM");
 		
 		alumno1.setDni("12345678H");
 		alumno1.setNombre("Juan López Carmona");
 		alumno1.setCurso(curso1);
 		curso1.addAlumno(alumno1);
-		System.out.println(curso1.getAlumnos()[0]);
+		System.out.println(curso1.getAlumnos());
 		
 	}
 
