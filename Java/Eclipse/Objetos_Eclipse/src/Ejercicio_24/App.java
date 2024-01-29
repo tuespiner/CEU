@@ -14,7 +14,7 @@ public class App {
 		
 		int i = 0;
 		
-		for(Alumno alumno : alumnos) {
+		for(Alumno alumno : alumnoArray) {
 			i++;
 			System.out.println("Dime el nombre del alumno"+i);
 			alumno.setNombre(sc.nextLine());
