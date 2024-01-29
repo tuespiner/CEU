@@ -217,7 +217,95 @@ select mod(15,3) from dual; /*mod(m,n): Esto calcula el resto de m entre n, si p
 select power(15,2) from dual; /*power(m,n): Ejeva m a n, es decir si quisieramos sabercuanto es 2^4 tendriamos que poner
                                        power(2,4)*/
 
+/*Ejercicio 13
+Enunciado: Realiza las siguientes operaciones utilizando funciones numéricas:
+            1) Redondea 15,789 con un decimal.
+            2) Obtén la raíz cuadrada de 128.
+            3) Trunca 15,789 a 1 decimal.
+            4) Trunca 15,789 para dejarlo sin decimales (15).
+            5) Trunca 157,89 para dejarlo en 100.
+            6) Obtén el signo de -15 (es decir -1).*/
 
+--1)
+select round(15.789,1) from dual;  /*round: Como su nombre dice es para redondear, lo primero que se tiene que poner es el numero 
+                                     con decimal con . (5.5), poner una coma y a cuanto lo quieres redondear (round(5.50,1)=5.5)*/
+--2)
+select sqrt(128) from dual;     /*sqrt(square root): Te dice la raiz cuadrada de un numero, simplemente tienes que poner el 
+                                  número dentro del parentesis sqrt(100) = 10*/
+--3)
+select trunc(15.789,1) from dual;  /*trunc: como su nombre dice, esta función trunca un número, el decimal hay que ponerlo como en 
+                                     el round y tambien hay que poner un número como en el round*/
+
+--4)
+select trunc(15.789,0)from dual;
+
+--5)
+select trunc(157.89,-2) from dual;
+
+--6)
+select sign(-15) from dual;  /*sign: Esta función basicambente te dice si un número es positivo o negativo poniendote o +1
+                               o -1*/
+
+/*Ejercicio 14
+Enunciado: realiza las siguientes peticiones:
+            1) ¿Cuál es el carácter 80 en ASCII?
+            2) Obtén el valor ASCII de la letra H.
+            3) Devuelve el nombre y los apellidos
+               en una única columna de los
+               futbolistas cuya posición sea
+               DEFENSA. El nombre de estar
+               completamente en mayúsculas y los
+               apellidos en minúsculas.
+            4) Obtén todas las posiciones posibles
+               (no repetidas) con la primera letra
+               en mayúsculas y el resto en
+               minúscula) ordenadas alfabet.
+            5) Devuelve los nombres de los
+               futbolistas del EQUIPO A con el
+               siguiente formato: --AAA, siendo
+               AAA las tres primeras letras del
+               nombre. Ej.: --PED, --LUI, etc.
+            6) Devuelve los nombres de los
+               futbolistas del EQUIPO A con el
+               siguiente formato: AAA--, siendo
+               AAA las tres primeras letras del
+               nombre. Ej.: PED--, LUI--, etc.
+            7) Devuelve el nombre de los
+               futbolistas sustituyendo “LUIS” por
+               “L.”.
+            8) Queremos los apellidos de los
+               futbolistas con tan solo 3 caracteres.
+            9) Devuelve el nombre de los
+               futbolistas sustituyendo “LUIS” por
+               “L.” y en otra columna el tamaño de
+               los apellidos (longitud de caract.).*/
+
+--1)
+select chr(80) from dual;
+
+--2)
+select ascii('H') from dual;
+
+--3)
+select upper(nombre) || ' ' || lower(apellidos) from futbolistas where posicion not like 'DEFENSA';
+
+--4)
+select distinct initcap(posicion) from futbolistas order by initcap(posicion) asc ;
+
+--5)
+select lpad(nombre,3,'---') from futbolistas where id_equipo like 1;
+
+--6)
+select rpad(nombre,3,'---') from futbolistas where id_equipo like 1;
+
+--7)
+select  replace(nombre,'LUIS','L') from futbolistas;
+
+--8)
+select substr(apellidos,1,3) from futbolistas;
+
+--9)
+select  replace(nombre,'LUIS','L'), length(apellidos) from futbolistas;
 
 
 
