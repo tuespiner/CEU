@@ -281,31 +281,93 @@ Enunciado: realiza las siguientes peticiones:
                los apellidos (longitud de caract.).*/
 
 --1)
-select chr(80) from dual;
+select chr(80) from dual;  /*chr: Nos dice que letra es el codigo ascii que le pongamos*/
 
 --2)
-select ascii('H') from dual;
+select ascii('H') from dual;  /*ascii: Nos dice el código ascii de la letra que pongamos*/
 
 --3)
-select upper(nombre) || ' ' || lower(apellidos) from futbolistas where posicion not like 'DEFENSA';
+select upper(nombre) || ' ' || lower(apellidos) from futbolistas where posicion not like 'DEFENSA'; /*Upper, Lower: Pone las columnas que pongamos en mayusculas
+                                                                                                        o minusculas*/
 
 --4)
-select distinct initcap(posicion) from futbolistas order by initcap(posicion) asc ;
+select distinct initcap(posicion) from futbolistas order by initcap(posicion) asc ;  /*initcap: Pone la primera letra en mayusculas*/
 
 --5)
-select lpad(nombre,3,'---') from futbolistas where id_equipo like 1;
+select lpad(substr(nombre,1,3),5,'--') from futbolistas where id_equipo like 1;  /*lpad, rpad: Sirve para que todas las consultas tengnla misma longitud, es decir
+                                                                                    que si tenemos hola y en otro hol que la a se rellene con lo que pongamos
+                                                                                    por ejemplo -*/
 
 --6)
-select rpad(nombre,3,'---') from futbolistas where id_equipo like 1;
+select rpad(substr(nombre,1,3),5,'--') from futbolistas where id_equipo like 1;
 
 --7)
-select  replace(nombre,'LUIS','L') from futbolistas;
+select  replace(nombre,'LUIS','L') from futbolistas;  /*replace(t,a,c): Reemplaza ciertas palabras por otras replace(nomb columna,cadena a reemplazar, 
+                                                            cadena para reemplazar) ej: replace(nombre,'JUAN','J') reemplaza todo lo que se llame JUAN
+                                                            en la columna nombre por J*/
 
 --8)
-select substr(apellidos,1,3) from futbolistas;
+select substr(apellidos,1,3) from futbolistas;  /*substr(t,ini,fin): Devuelve partes de una cadena, primero ponemos la columna, luego la posición en al 
+                                                    que empiezas a recoger y la ultima posición, si tienes hola y poner substr('hola',1,2) recogeria ho*/
 
 --9)
-select  replace(nombre,'LUIS','L'), length(apellidos) from futbolistas;
+select  replace(nombre,'LUIS','L'), length(apellidos) from futbolistas;  /*lenght: Te dice la longitud de caracteres que tiene una cadena, por ejemplo:
+                                                                                lenght('hola') devolveria 4*/
+
+/*Ejercicio 15
+Enunciado: Realiza las siguientes peticiones:
+            1) Obtén en tres columnas independientes, el día,
+               el mes y la fecha de hoy.
+            2) Muestra por pantalla la fecha que será dentro de
+               6 meses utilizando ADD_MONTHS.
+            3) Muestra el número de meses que hay entre hoy y
+               la fecha de nacimiento de todos los futbolistas.
+            4) ¿Cuál es el último día de este mes? Muéstralo.
+            5) ¿Qué día será el próximo lunes? Ponlo por
+               pantalla mediante una petición.
+            6) Muestra el día que era hace 4 días. ¿Y el día de
+               mañana?*/
+               
+--1) 
+select extract(day from sysdate), extract(month from sysdate), extract(year from sysdate) from dual;  /*extract: Sirve para conseguir algo especifico de una fecha, puede ser un dia, un mes o un año
+                                                                                                        , ponte que tenemos esto: '01/01/2024' y queremos sacar el dia, tendriamos que poner
+                                                                                                        extract(day from '01/01/2024')y solo tenemos que cambar donde pone day a month o year.*/
+
+--2)
+select add_months(sysdate,6 ) from dual;  /*add_months: sirve cuando queremos saber que mes seria si añadieramos algunos meses, la sintaxis es add_months((fecha),(nº de meses a añadir))*/
+
+--3)
+select floor(months_between(sysdate,fecha_nacimiento)) from futbolistas;  /*months_between: te dice los meses que hay entre una fecha y otra, se pone asi months_between((fecha 1),(fecha 2))*/
+
+--4)
+select last_day(sysdate) from dual;  /*last_DAY: te dice el último dia del mes de la fecha que pongas, se pone asi last_day((fecha))*/
+
+--5)
+select next_day(sysdate,'LUNES') from DUAL;  /*next_day: Te dice que dia es el siguiente lunes, martes miercoles, etc. La sintaxis es asi next_day((fecha),'(dia, ej: LUNES, MARTES, etc)')*/
+
+--6)
+select sysdate -4, sysdate +1 from dual;  /* si ponemos una fecha y luego un -(n) o +(n) (n = numero) podemos saber que dia es al sumarle o restarle el n que pongamos*/
+
+
+/*Ejercicio 16
+Enunciado: Realiza las siguientes peticiones:
+            1) Convierte ‘1000.45’ a un número
+            2) Convierte ‘1000.45€’ a un número
+            3) Convierte ‘-$1000.45’ a un número
+            4) Muestra el día de hoy con los siguientes
+               formatos:
+                • 12/02/2021, 12/02/21, 12-feb-2021, 12 de febrero
+                  de 2021
+            5) Convierte el ID de la tabla FUTBOLISTAS en un
+               número de tres cifras.
+            6) Muestra todos los años de nacimiento de los
+               futbolistas (solo el año, ej.: 1990, 1991, etc.).
+            Ordénalos de menor a mayor año.*/
+            
+--1)
+select to_number('1000.45', '9999.99') from dual;
+
+--2)
 
 
 
