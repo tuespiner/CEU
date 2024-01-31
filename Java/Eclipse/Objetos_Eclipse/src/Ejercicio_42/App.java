@@ -1,4 +1,4 @@
-package Ejercicio_41;
+package Ejercicio_42;
 
 import java.util.Scanner;
 
@@ -63,6 +63,13 @@ public class App {
 		System.out.println(derbi.getEquipoVisitante());
 		derbi.getEquipoLocal().setCapitan(derbi.getEquipoLocal().getJugadores().get(derbi.getEquipoLocal().getJugadores().size()-1));
 		System.out.println(derbi.getEquipoLocal());
+		
+		betis.setCompeticion("Liga Nacional");
+		System.out.println(sevilla.getCompeticion());
+		sevilla.setCompeticion("Liga Nacional");
+		System.out.println(betis.getCompeticion());
+
+
 	}
 
 }

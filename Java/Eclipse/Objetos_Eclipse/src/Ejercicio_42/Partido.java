@@ -1,4 +1,4 @@
-package Ejercicio_41;
+package Ejercicio_42;
 
 public class Partido {
 	private Equipo equipoLocal;
