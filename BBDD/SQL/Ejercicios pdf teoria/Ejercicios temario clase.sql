@@ -368,7 +368,13 @@ Enunciado: Realiza las siguientes peticiones:
 select to_number('1000.45', '9999.99') from dual;
 
 --2)
+select to_number('1000.45€', '9999.99L') from dual;
 
+--3)
+select to_number('-$1000.45','$9999.99') from dual;
+
+--4)
+select
 
 
 

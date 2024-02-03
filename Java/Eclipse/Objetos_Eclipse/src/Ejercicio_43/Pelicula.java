@@ -39,15 +39,11 @@ public class Pelicula {
 	}
 
 	public List<Actor> getListaActores() {
-		return listaActores;
+		return this.listaActores;
 	}
 
-	public void addActores(Actor actor) {
-		this.listaActores.add(actor);
-	}
-
-	public void setListaActores(List<Actor> listaActor) {
-		this.listaActores.addAll(listaActor);
+	public void setListaActores(List<Actor> actor) {
+		this.listaActores.addAll(actor);
 	}
 
 	public Guionista getGuionista() {
@@ -65,5 +61,9 @@ public class Pelicula {
 	public void setDirector(Director director) {
 		this.director = director;
 	}
+	
+	
+	
+	
 
 }

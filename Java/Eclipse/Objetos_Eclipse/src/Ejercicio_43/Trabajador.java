@@ -5,9 +5,9 @@ public abstract class Trabajador {
 	private Integer añoNacimiento;
 	private String nacionalidad;
 
-	public static final Integer GUIONISTA = 50000;
-	public static final Integer DIRECTOR = 200000;
-	public static final Integer ACTOR = 100000;
+	protected static final Integer GUIONISTA = 50000;
+	protected static final Integer DIRECTOR = 200000;
+	protected static final Integer ACTOR = 100000;
 
 	public Trabajador(String nomb, Integer añoNac, String nacio) {
 		this.nombre = nomb;
@@ -41,6 +41,14 @@ public abstract class Trabajador {
 
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Trabajador [nombre=" + nombre + ", añoNacimiento=" + añoNacimiento + ", nacionalidad=" + nacionalidad
+				+ "]";
 	}
 
 	public abstract Integer getSueldo();

@@ -14,19 +14,19 @@ public class App {
         Guionista cheng = new Guionista("Cheng Shun", 1977, "China");
 
         Pelicula pelicula1 = new Pelicula(2077, "Do you know Joe Blast", marco, sara);
-        pelicula1.addActores(blas);
-        pelicula1.addActores(laura);
+        pelicula1.getListaActores().add(blas);
+        pelicula1.getListaActores().add(laura);
 
         Pelicula pelicula2 = new Pelicula(2077, "Muerte en la sombra", cheng, sara);
-        pelicula1.addActores(blas);
-        pelicula1.addActores(laura);
-        pelicula1.addActores(violeta);
-        pelicula1.addActores(marcel);
+        pelicula2.getListaActores().add(blas);
+        pelicula2.getListaActores().add(violeta);
+        pelicula2.getListaActores().add(laura);
+        pelicula2.getListaActores().add(marcel);
 
-        System.out.println(pelicula1.getListaActores());
+        System.out.println(pelicula1.getListaActores().toString());
         System.out.println(pelicula1.getGuionista().getSueldo());
         pelicula2.getListaActores().remove(pelicula2.getListaActores().indexOf(marcel));
-        pelicula1.addActores(marcel);
+        pelicula1.getListaActores().add(marcel);
 
         System.out.println(pelicula1.getListaActores() + "/n" + pelicula2.getListaActores());
     }
