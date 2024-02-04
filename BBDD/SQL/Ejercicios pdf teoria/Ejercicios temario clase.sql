@@ -365,16 +365,40 @@ Enunciado: Realiza las siguientes peticiones:
             Ordénalos de menor a mayor año.*/
             
 --1)
-select to_number('1000.45', '9999.99') from dual;
+select to_number('1000.45', '9999.99') from dual;   /*to_number: convierte cadenas a numeros, imagina que tenemos una cadena que es '100' y queremos pasarla a 100 pero en numero
+                                                      tendriamos que poner to_number('100','999')*/
 
 --2)
-select to_number('1000.45€', '9999.99L') from dual;
+select to_number('1000.45€', '9999.99L') from dual;    /*Con el to_number tenemos formas de convertilo a numero y quitarle el simbolo de moneda, tendriamos que poner L para qeu 
+                                                         SQL busque la moneda de tu PC y $ para que quite el dolar*/
 
 --3)
-select to_number('-$1000.45','$9999.99') from dual;
+select to_number('-$1000.45','$9999.99') from dual; 
 
 --4)
-select
+select to_date(sysdate,'dd/mm/yyyy'), to_date(sysdate,'dd/mm/yy'), to_char(sysdate,'dd-mon-yyyy'), to_char(sysdate,'dd')||' de '|| replace(to_char(sysdate,'month'),' ','')||' de '||to_char(sysdate,'yyyy') from dual;
+
+    /*to_date: sirve para poner cualquier fecha en el formato que queramos, si lo queremos asi 01/03/2005 tendriamos que poner dd/mm/yyyy, con los meses ponemos poner las 3 primeras
+    letras del mes con mon y el mes entero con month aunque is ponemos el mes entero hay qeu concatenar, el año se puede poner de 2 'yy' o 4 'yyyy'*/
+
+--5)
+select to_number(substr(id,'4','6'),'999') from futbolistas;    /*to_number: convierte una cadena en un numero, primero tenemos que poner la cadena y luego el formato del numero,
+                                                                  por ejemplo si queremos pasar '1234.5' a numero tendriamos que ponere to_number('1234.5','9999.9')*/
+
+--6)
+select to_char(fecha_nacimiento, 'yyyy') from futbolistas order by fecha_nacimiento asc;    /*to_char: convierte un numero en cadena, si queremos pasar por ejemplo 100 a cadena
+                                                                                              tendriamos que poner to_char(100,'999')*/
+
+
+/*Ejercicio 17
+Enunciado: 1) Utiliza la función DECODE para mostrar, respecto de los EQUIPOS, el valor 1000k si el presupuesto es de 1000000,
+2000k si el presupuesto es de 2000000, o 3000k si el presupuesto asciende a 3000000.*/
+
+--1)
+select decode(presupuesto,1000000,'1000k',2000000,'2000k','3000k') from equipos;
+
+    /*decode: con decode podemos poner varias condiciones, si algo pasa que haga algo, si no pasa que valla a la siguiente condición, como un if
+    la sintaxis es la siguiente decode(cadena/numero,condicion, resultado, condicion2, resultado2,default)*/
 
 
 
