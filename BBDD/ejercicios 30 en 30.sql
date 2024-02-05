@@ -114,7 +114,7 @@ values(
  
  
 commit;
-
+select * from emp join dept on emp.deptno = dept.deptno;
 /*Ejercicio 1: Obtener el nombre de todos los departamentos en minúsculas.*/
 select lower(dname) from dept;
 
@@ -126,3 +126,53 @@ select ename "nombre", job "puesto", sal "salario", comm "comisión" from emp;
 
 /*Ejercicio 4: Calcula cuántas semanas completas (de lunes a domingo) ha trabajado cada empleado, y devuelve dicho valor y el nombre del empleado. El número de*/
 select round((sysdate - hiredate),0) from emp;
+
+/*Ejercicio 5: Calcular el sueldo neto de cada empleado, y la retencion iRPF mensual, sabiendo que la retención es del 19% para el sueldo y de un 10% de la comisión,
+(redondear a 2 decimales). Si el empleado no tiene comisión, se debe mostrar el valor 0.*/
+select sal*0.81, nvl(comm * 0.90,0) from emp;
+
+/*Ejercicio 6: Hacer un listado de empleados (nombre y salario) con sueldo superior a 1000.*/
+select ename, sal from emp where sal > 1000;
+
+/*Ejercicio 7: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que tengan puesto igual a CLERK.*/
+select ename, job, sal, comm from emp where job like 'CLERK';
+
+/*Ejercicio 8: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que tengan puesto distinto a CLERK.*/
+select ename, job, sal, comm from emp where job not like 'CLERK';
+
+/*Ejercicio 9: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que tengan puesto distinto a CLERK y sueldo superior a 1500.*/
+select ename, job, sal, comm from emp where job not like 'CLERK' and sal > 1500;
+
+/*Ejercicio 10: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que tengan asignada comisión.*/
+select ename, job, sal, comm from emp where comm is not null;
+select ename, job, sal, comm from emp where comm not like 'null';
+
+/*Ejercicio 11: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que NO tengan asignada comisión.*/
+select ename, job, sal, comm from emp where comm is null;
+
+/*Ejercicio 12: Seleccionar los empleados cuyo nombre empieza por 'A'.*/
+select ename from emp where ename like 'A%';
+
+/*Ejercicio 13: Seleccionar los empleados cuyo nombre tienen una A en cualquier posición.*/
+select ename from emp where instr(ename,'A') > 0;
+
+/*Ejercicio 14: Seleccionar los empleados cuyo nombre no contiene ninguna 'A'.*/
+select ename from emp where instr(ename,'A') = 0;
+
+/*Ejercicio 15: Seleccionar los empleados cuyo nombre empieza por una vocal.*/
+select ename from emp where ename like 'A%' or ename like 'E%' or ename like 'I%' or ename like 'O%' or ename like 'U%';
+
+/*Ejercicio 16: Seleccionar los empleados con sueldo entre 1000 y 2000 (ambos inclusive).*/
+select * from emp where sal > 999 and sal < 2001;
+
+/*ejercicio 17: Seleccionar los empleados con sueldo igual a 1000, 2000, 3000, 4000 o 5000.*/
+select * from emp where sal = 1000 or sal = 2000 or sal = 3000 or sal = 4000 or sal = 5000;
+
+/*Ejercicio 18: Seleccionar los empleados cuyo nombre comienza por A,B,C,J,K,M.*/
+select ename from emp where ename like 'A%' or ename like 'B%' or ename like 'C%' or ename like 'J%' or ename like 'K%' or ename like 'M%';
+
+/*Ejercicio 19: Seleccionar los empleados cuyo sueldo es la 5000/2 + 500 o 5000-1000.*/
+select * from emp where sal = (5000/2+500) or sal = (5000-1000);
+
+/*Ejercicio 20: Seleccionar los empleados cuyo sueldo es la 5000/2 + 500 ,5000-1000 o el salario máximo de todos los empleados.*/
+select * from emp where sal = (5000/2+500) or sal = (5000-1000) or sal = (select max(sal) from emp);
