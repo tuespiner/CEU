@@ -1,11 +1,12 @@
 /*Ejercicio1
     ¿Cuántos partitos ha jugado como local EQUIPO A? Debes usar el campo nombre de equipos.*/
+select * from equipos join partidos on equipos.id = partidos.id_equipo_casa where partidos.id_equipo_casa = 1;
 
-select nombre from equipos;
-select * from partidos;
-select * from equipos;
-select count(estadio) from partidos where substr(estadio,length(estadio)-1,length(estadio)) like ' A';
-select length(estadio) from partidos;
-select substr(estadio,length(estadio)-1,length(estadio)) from partidos;
+/*Ejercicio 2
+     ¿Cuál es el nombre del equipo en el que juega el futbolista de menor peso?*/
 
-select count(nombre) from equipos full join partidos on equipos.id = partidos.id_equipo_casa;
+select distinct equipos.nombre from  equipos join futbolistas on equipos.id = futbolistas.id_equipo where futbolistas.salario = (select min(futbolistas.salario) from futbolistas);
+
+/*Ejercicio3
+    Devuelve en una única columna la fase: El futbolista NOMBRE juega en el equipo NOMBRE, correspondiendo al campo nombre de futbolista y de equipo*/
+select 'El futbolista ' || futbolistas.nombre || ' juega en el equipo ' || equipos.nombre from futbolistas join equipos on futbolistas.id_equipo = equipos.id;
