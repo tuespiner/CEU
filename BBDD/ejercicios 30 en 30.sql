@@ -144,7 +144,7 @@ select ename, job, sal, comm from emp where job not like 'CLERK';
 select ename, job, sal, comm from emp where job not like 'CLERK' and sal > 1500;
 
 /*Ejercicio 10: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que tengan asignada comisión.*/
-select ename, job, sal, comm from emp where comm is not null;
+select ename, job, sal, comm from emp where comm is not null and comm > 0;
 select ename, job, sal, comm from emp where comm not like 'null';
 
 /*Ejercicio 11: Hacer un listado de empleados (nombre, puesto, sueldo, comision) que NO tengan asignada comisión.*/
@@ -199,12 +199,14 @@ select to_char(to_date('01/01/2005','dd/mm/yyyy'),'ddmmyyyy')
 from dual;
 
 /*Ejercicio 27: Calcular el número de días vividos hasta hoy por una persona nacida el día 3 de julio de 1970.*/
-
+select floor(sysdate - to_date('03/07/1970','dd/mm/yyyy'))from dual;
 
 /*Ejercicio 28: Calcular el número de segundos transcurridos desde la última medianoche (máscara 'sssss' en to_char).*/
-select time_to_sec('')
+select (((sysdate - to_date('06/02/2024 00:00:00','dd/mm/yyyy hh24:mi:ss'))*24)*60)*60 || ' Segundos' from dual;
 
 /*Ejercicio 29: Calcular el número horas completas transcurridas desde la última medianoche.*/
+select floor((sysdate - to_date('06/02/2024 00:00:00','dd/mm/yyyy hh24:mi:ss'))*24) || ' Horas' from dual;
 
 /*Ejercicio 30: Calcular el número de meses transcurridos entre la fecha de contratación de cada empleado y hoy.*/
+select floor(months_between(sysdate,hiredate)) from emp;
 
