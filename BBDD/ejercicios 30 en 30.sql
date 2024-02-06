@@ -176,3 +176,35 @@ select * from emp where sal = (5000/2+500) or sal = (5000-1000);
 
 /*Ejercicio 20: Seleccionar los empleados cuyo sueldo es la 5000/2 + 500 ,5000-1000 o el salario máximo de todos los empleados.*/
 select * from emp where sal = (5000/2+500) or sal = (5000-1000) or sal = (select max(sal) from emp);
+
+/*Ejercicio 21: Seleccionar nombre, sueldo y sueldo formateado (ej.: 1,000.00) de todos los empleados. Se puede usar las máscaras de to_number en to_char.*/
+select ename , sal , to_char(to_number(sal,'9999.99'),'999,999.99') from emp;
+
+/*Ejercicio 22: Seleccionar nombre, sueldo y sueldo formateado con el simbolo 'Dólar' (ej.: $1,000.00) de todos los empleados. Se puede usar las máscaras de to_number en to_char.*/
+select ename , sal , to_char(to_number(sal,'9999.99'),'$999,999.99') from emp;
+
+/*Ejercicio 23: Seleccionar nombre, sueldo y sueldo formateado con el simbolo 'Euro' (ej.: 1,000.00€ de todos los empleados. Se puede usar las máscaras de
+to_number en to_char.*/
+select ename , sal , to_char(to_number(sal,'9999.99'),'999,999.99L') from emp;
+
+/*Ejercicio 24: Seleccionar la fecha del sistema (día, mes, año, horas (24):minutos:segundos).*/
+select to_char(sysdate,'dd, mm, yyyy, hh24:mi;ss') from dual;
+
+/*Ejercicio 25: Seleccionar la fecha del sistema (nombre del día, día, nombre del mes, año, horas (24):minutos:segundos). No debe haber espacios sobrantes en el nombre del día o del mes.*/
+select 'Nombre del dia: ' || replace(to_char(sysdate,'day'),' ','') || ', nombre del mes: ' || replace(to_char(sysdate,'month'),' ','') || ', año: ' || to_char(sysdate, 'yyyy') || ', hora: ' || to_char(sysdate, 'hh24:mi;ss')
+from dual;
+
+/*Ejercicio 26: Seleccionar la fecha del día 1 de enero de 2005, medíante una tira de caracteres y su máscara de formato (ej.: 01012021).*/
+select to_char(to_date('01/01/2005','dd/mm/yyyy'),'ddmmyyyy') 
+from dual;
+
+/*Ejercicio 27: Calcular el número de días vividos hasta hoy por una persona nacida el día 3 de julio de 1970.*/
+
+
+/*Ejercicio 28: Calcular el número de segundos transcurridos desde la última medianoche (máscara 'sssss' en to_char).*/
+select time_to_sec('')
+
+/*Ejercicio 29: Calcular el número horas completas transcurridas desde la última medianoche.*/
+
+/*Ejercicio 30: Calcular el número de meses transcurridos entre la fecha de contratación de cada empleado y hoy.*/
+
