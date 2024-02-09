@@ -1,8 +1,10 @@
 package Ejercicio_45;
 
+import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class App {
@@ -53,6 +55,8 @@ public class App {
 		
 		
 		System.out.println("Te quedan "+periodo.getDays()+ "/"+periodo.getMonths() + "/" + periodo.getYears() + " años de esperanza de vida");
+		SimpleDateFormat hora = new SimpleDateFormat("HH:mm:ss");
+		System.out.println(hora.parse(actual));
 		
 		
 	}
