@@ -3,6 +3,7 @@ package Ejercicio_45;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public class App {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		LocalDate actual = LocalDate.now();
+		
 		int añoNacimiento = 0;
 		int mesNacimiento = 0;
 		int diaNacimiento = 0;
@@ -55,8 +57,10 @@ public class App {
 		
 		
 		System.out.println("Te quedan "+periodo.getDays()+ "/"+periodo.getMonths() + "/" + periodo.getYears() + " años de esperanza de vida");
-		SimpleDateFormat hora = new SimpleDateFormat("HH:mm:ss");
-		System.out.println(hora.parse(actual));
+		
+		LocalTime hora2 = LocalTime.now();
+		DateTimeFormatter fecha1 = DateTimeFormatter.ofPattern("HH:mm:ss");
+		System.out.println(hora2.format(fecha1));
 		
 		
 	}
