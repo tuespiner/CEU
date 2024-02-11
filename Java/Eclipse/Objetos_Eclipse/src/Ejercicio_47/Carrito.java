@@ -1,6 +1,7 @@
 package Ejercicio_47;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +55,52 @@ public class Carrito {
 	}
 	
 	public Double getTotal() {
+		if (this.listaArticulos.size() == 0) {
+			return null;
+		}else {
+			Double total = 0.0;
+			for(Articulos articulo : listaArticulos) {
+				total += articulo.getPrecio(); 
+				
+			}
+			return total;
+		}
+	}
+	
+	public Double getPrecioMedio() {
+		if (this.listaArticulos.size() == 0) {
+			return null;
+		}else {
+			Double total = 0.0;
+			for(Articulos articulo : listaArticulos) {
+				total += articulo.getPrecio(); 
+				
+			}
+			return total/this.listaArticulos.size();
+		}
+	}
+	
+	public void addArticulo(Articulos articulo) {
+		this.listaArticulos.add(articulo);
+	}
+
+	public void borrarArticulo(Integer num) {
+		if(this.listaArticulos.size() >= 0) {
+			this.listaArticulos.remove(num);
+		}
 		
 	}
+	
+	public void vaciarCesta() {
+		this.listaArticulos.clear();
+	}
+	
+	@Override
+	public String toString() {
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		return "Carrito [fechaUltimaActualizacion=" + fechaUltimaActualizacion.format(formato)
+				+ ", cliente=" + cliente + ", listaArticulos=" + listaArticulos + ", suma del total a pagar="+ this.getTotal()+"]";
+	}
+	
+	
 }
