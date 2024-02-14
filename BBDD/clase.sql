@@ -442,3 +442,17 @@ select futbolistas.nombre,equipos.nombre
 --"El jefe de SMITH es JACOB".
 
 --12. Devuelve el nombre del departamento que tiene más trabajadores junto al número de trabajadores.
+
+ select * from equipos join futbolistas on equipos.id = futbolistas.id_equipo;
+select * from futbolistas;
+ 
+select futbolistas.nombre, equipos.nombre from futbolistas join equipos on futbolistas.id_equipo = equipos.id;
+ 
+select equipos.nombre from futbolistas join equipos on futbolistas.id_equipo = equipos.id where futbolistas.altura = (select max(altura) from futbolistas);
+  
+select nombre from futbolistas where altura = (select max(altura) from futbolistas);
+
+select max(altura) from futbolistas;
+
+select futbolistas.nombre from futbolistas join equipos on futbolistas.id_equipo = equipos.id where equipos.nombre like 'EQUIPO A' union select futbolistas.nombre from futbolistas join equipos on futbolistas.id_equipo = equipos.id where equipos.nombre like 'EQUIPO B';
+

@@ -1,4 +1,4 @@
-package Ejercicio_47;
+package Ejercicio_48;
 
 public class App {
 
@@ -19,7 +19,7 @@ public class App {
 		
 		System.out.println(carrito1);
 		
-		carrito1.borrarArticulo(1);
+		carrito1.borrarArticulo(ropa1);
 		System.out.println(carrito1);
 		
 		System.out.println(carrito1.getPrecioMedio());

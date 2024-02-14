@@ -1,4 +1,4 @@
-package Ejercicio_47;
+package Ejercicio_48;
 
 public class Libros extends Articulos{
 	private String autor;

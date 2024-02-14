@@ -1,27 +1,29 @@
-package Ejercicio_47;
+package Ejercicio_48;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Carrito {
 	private LocalDate fechaCreacion;
 	private LocalDate fechaUltimaActualizacion;
 	private Cliente cliente;
-	private List<Articulos> listaArticulos;
+	private Set<Articulos> listaArticulos;
 	
 	public Carrito(Cliente cliente) {
 		this.fechaCreacion = LocalDate.now();
 		this.fechaUltimaActualizacion = LocalDate.now();
 		this.cliente = cliente;
-		this.listaArticulos = new ArrayList<>();
+		this.listaArticulos = new HashSet<>();
 	}
 	
 	public Carrito() {
 		this.fechaCreacion = LocalDate.now();
 		this.fechaUltimaActualizacion = LocalDate.now();
-		this.listaArticulos = new ArrayList<>();
+		this.listaArticulos = new HashSet<>();
 	}
 
 	public LocalDate getFechaCreacion() {
@@ -48,11 +50,11 @@ public class Carrito {
 		this.cliente = cliente;
 	}
 
-	public List<Articulos> getListaArticulos() {
+	public Set<Articulos> getListaArticulos() {
 		return listaArticulos;
 	}
 
-	public void setListaArticulos(List<Articulos> listaArticulos) {
+	public void setListaArticulos(Set<Articulos> listaArticulos) {
 		this.listaArticulos = listaArticulos;
 	}
 	
@@ -87,12 +89,14 @@ public class Carrito {
 	}
 	
 	public void addArticulo(Articulos articulo) {
-		this.listaArticulos.add(articulo);
+		if(this.listaArticulos.add(articulo) == true) {
+			this.fechaUltimaActualizacion = LocalDate.now();
+		}
 	}
 
-	public void borrarArticulo(Integer num) {
-		if(this.listaArticulos.size() >= 0) {
-			this.listaArticulos.remove(num);
+	public void borrarArticulo(Articulos articulo) {
+		if(this.listaArticulos.remove(articulo)== true) {
+			this.fechaUltimaActualizacion = LocalDate.now();
 		}
 		
 	}
