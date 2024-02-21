@@ -38,7 +38,6 @@ button:hover{
   height: 68vh;
   background-color: rgb(176, 112, 235);
   padding: 3%;
-  overflow: auto;
 }
 
 .main{
@@ -53,4 +52,8 @@ button:hover{
 }
 main{
   display: flex;
+}
+h1{
+  text-overflow: initial;
+  white-space: hidden;
 }
