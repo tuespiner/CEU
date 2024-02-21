@@ -1,6 +1,8 @@
 body {
   padding: 0px;
   margin: 0px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -53,7 +55,12 @@ button:hover{
 main{
   display: flex;
 }
-h1{
+
+p{
+  overflow: hidden;
   text-overflow: initial;
-  white-space: hidden;
+}
+h1{
+  overflow: hidden;
+  text-overflow: initial;
 }
