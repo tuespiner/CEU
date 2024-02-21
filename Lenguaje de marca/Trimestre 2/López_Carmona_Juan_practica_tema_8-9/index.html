@@ -10,11 +10,14 @@
             background-image: url(Imagenes/Fondo.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         h2{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
             color: orange;
+            text-shadow: 0px 0px 10px orangered;
         }
         img{
             width: 50px;
@@ -36,9 +39,26 @@
         }
         td{
             padding: 2px;
+            height: 50px;
+            justify-content: center;
         }
         a{
             color: red;
+            width: fit-content;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            backdrop-filter: blur(5px);
+            border-top: solid 2px white;
+            margin-top: 8px;
+        }
+        footer div{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -180,11 +200,16 @@
             <td>1568</td>
         </tr>
     </table>
-    <hr>
+    <footer>
+        <div>
+            <p style="font-style: italic; color: white;">C/ Gran vía, Madrid <br>www.ligaendesa.es <br>tfno: 1111111 <br>España</p>
+        </div>
+        <div>
+            <a href="mailto:administrador@ligaendesa.es" >administrador@ligaendesa.es</a>
+            <a href="tel:+34111111111">Tfno: +34111111111</a>
+        </div>
+    </footer>
     
-    <p style="font-style: italic; color: white;">C/ Gran vía, Madrid <br>www.ligaendesa.es <br>tfno: 1111111 <br>España</p>
-    <a href="mailto:administrador@ligaendesa.es" >administrador@ligaendesa.es</a>
-    <br>
-    <a href="tel:+34111111111">Tfno: +34111111111</a>
+    
 </body>
 </html>
