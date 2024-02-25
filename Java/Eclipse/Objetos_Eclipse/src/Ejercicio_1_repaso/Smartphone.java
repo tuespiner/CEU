@@ -1,6 +1,8 @@
 package Ejercicio_1_repaso;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -60,7 +62,8 @@ public class Smartphone {
 	
 	public BigDecimal getPrecioMasIva() {
 		BigDecimal iva = new BigDecimal(1.21);
-		return this.precio.multiply(iva);
+		BigDecimal decimalIva = this.precio.multiply(iva).setScale(2,RoundingMode.HALF_DOWN);
+		return decimalIva;
 	}
 	
 	public Boolean isAltaGama(BigDecimal precioBase) {
@@ -71,7 +74,7 @@ public class Smartphone {
 		}
 	}
 	
-	public Boolean idDatosCompletos() {
+	public Boolean isDatosCompletos() {
 		if(this.marca == null || this.marca.isBlank()) {
 			return false;
 		}else if (this.imei == null || this.marca.isBlank()) {
