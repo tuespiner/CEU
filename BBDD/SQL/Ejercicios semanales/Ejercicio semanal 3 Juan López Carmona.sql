@@ -6,4 +6,7 @@ select nombre, posicion from futbolistas where apellidos like '%EZ'and posicion 
 
 /*Ejercicio 3: Devuelve el id del equipo con alias "id equipo", el número de futbolistas con alias "Número de futbolistas" y el salario medio redondeado a 2 decimales 
 con alias "Salario medio" de los futbolistas agrupado por el equipo en el que juegan.*/
-select id_equipo "Id equipo", count(nombre) "Número de futbolistas", round(avg(salario),2) "Salario medio" from futbolistas group by id_equipo;
+select id_equipo "Id equipo", count(nombre) "Número de futbolistas", round(avg(salario),2) "Salario medio" from futbolistas group by id_equipo; 
+
+select * from emp;
+select empno || ', ' || ename "hola" from emp where job = 'MANAGER' and sal > 2500;

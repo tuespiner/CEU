@@ -14,6 +14,7 @@ select emp.ename, dept.dname, dept.deptno from emp join dept on emp.deptno = dep
 /*57. Listar el nombre del empleado y el nombre de su jefe.*/
 select ename from emp where deptno = (select deptno from emp where job = 'PRESIDENT') union select ename from emp where job = 'PRESIDENT';
 /*58. Listar el nombre del empleado y el nombre de su jefe. Incluir empleados que no tengan jefe.*/
+
 /*59. Seleccionar nombre del empleado, nombre del jefe, fechas contrato del trabajador y del jefe, de forma que la fecha de contrato del empleado sea anterior a la de su jefe.*/
 /*60. Seleccionar nombre del empleado, nombre del jefe, salarios del trabajador y del jefe, de forma que el sueldo del empleado sea inferior a la mitad del salario de su jefe.*/
 /*61. Seleccionar las distintas ubicaciones de los departamentos.*/
