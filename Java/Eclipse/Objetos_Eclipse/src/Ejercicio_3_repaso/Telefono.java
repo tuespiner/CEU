@@ -1,4 +1,4 @@
-package Ejercicio_2_repaso;
+package Ejercicio_3_repaso;
 
 public class Telefono {
 	private Integer numero;
