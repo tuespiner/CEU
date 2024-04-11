@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .marco{
+            width: 50vw;
+            height: 50vh;
+            background-color: grey;
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 70% 30%;
+        }
+        .container{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="marco">
+        <div class="container">
+            <p>HOLA</p>
+        </div>
+        <div class="container1">
+            <p>HOLA</p>
+        </div>
+    </div>
+</body>
+</html>
