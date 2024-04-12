@@ -1,5 +1,14 @@
 
+@media (width < 1290px){
+  .foto-datos-personales{
+  
+    background-color: white important; 
+  }
 
+  header{
+    background-color: red important; 
+  }
+}
 body {
   padding: 0px;
   margin: 0px;
@@ -21,16 +30,7 @@ body {
   "container2 footer footer"
   ;
 }
-@media only screen and (width: 1290px){
-  .foto-datos-personales{
-  
-    background-color: white;
-  }
 
-  header{
-    background-color: red;
-  }
-}
 section{
   box-shadow: 0px 0px 10px -5px black;
 }
