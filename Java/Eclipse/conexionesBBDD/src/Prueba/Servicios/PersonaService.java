@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashSet;
+import java.util.Set;
 
 import Prueba.Modelo.Persona;
 
@@ -39,6 +41,39 @@ public class PersonaService {
 			this.setInfoStatementPersona(stmt, p);														//la query que queremos ejecutar también
 			stmt.executeUpdate();																		//lo ponemos aquí
 		}
+	}
+	
+	public Set<Persona> filtro(String nombre, String apellido) throws SQLException{
+		ResultSet rs = null;
+		Set<Persona> set = new HashSet<>();
+		try(Connection conn = OpenConn.getNewConnection();		
+		Statement stmt = conn.createStatement()){
+			rs = stmt.executeQuery(this.queryFiltro(nombre, apellido));
+			while(rs.next()) {
+				
+			}
+			
+			
+		}
+		return set;
+	}
+	
+	public String queryFiltro(String nombre, String apellido) {
+		String query = "select * from personas where ";
+		String queryName = "nombre = '"+nombre+"'"; 
+		String queryApellido = "apellidos = '"+apellido+"'"; 
+		if(nombre != null) {
+			if(apellido != null) {
+				query = query + queryName +" and "+ queryApellido;
+			}else {
+				query = query + queryName;
+			}
+		}else if (apellido != null){
+			query = query + queryApellido;
+		}else {
+			return null;
+		}
+		return query;
 	}
 	
 	public void setInfoStatementPersona(PreparedStatement stmt, Persona p)  throws SQLException{	//2) Aquí básicamente se le ponen los datos 

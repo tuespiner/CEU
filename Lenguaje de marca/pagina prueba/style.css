@@ -1,7 +1,4 @@
-html{
-  max-height: 100vh;
-  max-width: 100vw;
-}
+
 
 body {
   padding: 0px;
@@ -13,18 +10,30 @@ body {
   column-gap: 1vw;
   row-gap: 1vh;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 7vh 40vh 40vh 7vh;
-  height: auto;
+  grid-template-rows: 7vh 52.5vh 27.5vh 7vh;
+  height: 100%;
   width: 98%;
   padding: 1.7vh 1vw 1.3vh 1vw;
   grid-template-areas: 
-  "header header nav"
+  "header header container3"
   "main main nav"
-  "main main nav"
-  ". footer footer"
+  "container2 container nav"
+  "container2 footer footer"
   ;
 }
+@media only screen and (width: 1290px){
+  .foto-datos-personales{
+  
+    background-color: white;
+  }
 
+  header{
+    background-color: red;
+  }
+}
+section{
+  box-shadow: 0px 0px 10px -5px black;
+}
 header {
   background-color: rgb(51, 51, 51);
   border-radius: 5px;
@@ -33,6 +42,7 @@ header {
   display: flex;
   height: 7vh;
   grid-area: header;
+  box-shadow: 0px 0px 10px -5px black;
 }
 footer{
   background-color: rgb(51, 51, 51);
@@ -44,6 +54,7 @@ footer{
   height: fit-content;
   max-height: 7vh;
   grid-area: footer;
+  box-shadow: 0px 0px 10px -5px black;
 }
 nav{
   align-self: self-end;
@@ -52,22 +63,43 @@ nav{
   height: 100%;
   width: 100%;
   grid-area: nav;
+  box-shadow: 0px 0px 10px -5px black;
+}
+.container{
+  background: url(https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-4.0.3);
+  background-size: 100vw;
+  background-position-y: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  grid-area: container;
+}
+.container2{
+  grid-area:container2;
+  background-color: rgb(48, 64, 41);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.container3{
+  grid-area:container3;
+  background-color: rgb(48, 64, 41);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 button{
     height: 50px;
     background-color: rgba(255, 255, 255, 0);
-    border: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    margin-left: 3%;
     border-radius: 5px;
-    border: 2px solid rgb(157, 81, 228);
+    border: 2px solid rgb(105, 140, 90);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 button:hover{
-    background-color: rgb(157, 81, 228);
+    background-color: rgb(105, 140, 90);
     cursor: pointer;
     
 }
@@ -77,21 +109,27 @@ button:hover p{
 
 .foto-datos-personales{
   
-  width: 97%;
+  width: 98%;
   min-width: 25%;
   height: fit-content;
   background-color: rgb(51, 51, 51);
-  padding: 1.5%;
+  padding: 2.75vh 1% 2.75vh 1%;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: minmax(420px,40%) 60%;
+  grid-template-rows: 1fr 1fr;
   border-radius: 5px;
   font-size: 50px;
-  max-height: 47vh;
+  height: 47vh;
+  grid-template-areas: 
+  "imagen contenido"
+  "imagen contenido"
+  ;
 }
 main{
   display: flex;
   width: 100%;
   flex-direction: column;
+  gap: 1%;
   grid-area: main;
 }
 
@@ -111,7 +149,8 @@ h1{
 }
 
 span{
-  color: white;
+  color: rgb(105, 140, 90);
+  text-shadow: 0px 0px 3px ;
 }
 p{
   color: rgb(151, 151, 151);
@@ -120,17 +159,33 @@ p{
 
 .imagen{
   width: 100%;
-  max-height: 47vh;
+  grid-area: imagen;
 }
-
+h3{
+  color: rgb(105, 140, 90);
+}
 .redes-sociales{
   display: flex;
   align-items: end;
   width: 100%;
+  height: fit-content;
+  gap: 3%;
+  grid-area: bot;
 }
 .contenido{
   height: 100%;
+  width: fit-content;
   display: grid;
-  grid-row: 50% 50%;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas: 
+  "parr"
+  "bot";
+  grid-area: contenido;
+}
+.contenido p{
+  grid-area: parr;
+  text-overflow: initial;
+  width: 100%;
+  height: max-content;
 }
 
