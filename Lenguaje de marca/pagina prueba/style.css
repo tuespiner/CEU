@@ -17,6 +17,12 @@ body {
   height: auto;
   width: 98%;
   padding: 1.7vh 1vw 1.3vh 1vw;
+  grid-template-areas: 
+  "header header nav"
+  "main main nav"
+  "main main nav"
+  ". footer footer"
+  ;
 }
 
 header {
@@ -24,12 +30,9 @@ header {
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  grid-column: 1;
-  grid-row: 1;
-  grid-column-start: 1;
-  grid-column-end: 3;
   display: flex;
   height: 7vh;
+  grid-area: header;
 }
 footer{
   background-color: rgb(51, 51, 51);
@@ -38,22 +41,17 @@ footer{
   align-items: center;
   text-align: center;
   justify-content: center;
-  grid-column: 3;
-  grid-row: 4;
-  grid-column-start: 2;
-  grid-column-end: 4;
   height: fit-content;
   max-height: 7vh;
+  grid-area: footer;
 }
 nav{
   align-self: self-end;
   background-color: rgb(51, 51, 51);
   border-radius: 5px;
   height: 100%;
-  grid-column: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
   width: 100%;
+  grid-area: nav;
 }
 button{
     height: 50px;
@@ -94,12 +92,7 @@ main{
   display: flex;
   width: 100%;
   flex-direction: column;
-  grid-column: 1;
-  grid-row: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-area: main;
 }
 
 p{
