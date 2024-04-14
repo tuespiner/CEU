@@ -1,0 +1,124 @@
+body{
+    width: calc(100% - 2rem);
+    height: 100% ;
+    margin: 0px;
+    background-color: rgb(78, 78, 78);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 7vh calc(23vh - 2rem) calc(40vh - 2rem) calc(23vh - 2rem) 7vh ;
+    grid-template-areas: 
+    "header header header header header header header uno uno"
+    "nav softskills softskills tres cinco cinco cinco uno uno"
+    "nav softskills softskills ubicacion ubicacion ubicacion ubicacion comoSoy comoSoy"
+    "dos dos cuatro cuatro cuatro cuatro cuatro comoSoy comoSoy"
+    "dos dos footer footer footer footer footer footer footer"
+    ;
+    gap: 1rem;
+    padding: 1rem;
+}
+header, footer, nav, section{
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    border-radius: 17px;
+    background-color: rgb(51, 51, 51);
+    box-shadow: 0px 0px 10px -5px black;
+    padding: 1rem;
+}
+header, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+nav button{
+    width: 100%;
+    height: calc(100% / 4 );
+    border-radius: 17px;
+    background-color: rgb(51, 51, 51);
+    border: 0px;
+    color: #e8e8e8;
+    font-size: 25px;
+    transition: 0.3s;
+}
+nav button:hover{
+    background-color: rgb(105, 140, 90);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgb(105, 140, 90);
+    transition: 0.3s;
+}
+nav button:nth-child(2){
+    background-color: rgb(73, 96, 61);
+    box-shadow: inset 0px 0px 5px 0px black;
+}
+.softSkills{
+    grid-area: softskills;
+}
+.comoSoy{
+    grid-area: comoSoy;
+}
+.ubicacion{
+    grid-area: ubicacion;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.ubicacion h3{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    margin-top: 0.5rem;
+    background-color: rgb(51, 51, 51);
+    height: fit-content;
+    width: fit-content;
+    justify-self: center;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px -3px black;
+}
+.decoracion:nth-child(-n+3){
+    background-color: rgb(48, 64, 41);
+}
+.decoracion:nth-child(1){grid-area: uno;}
+.decoracion:nth-child(2){grid-area: dos;}
+.decoracion:nth-child(3){grid-area: tres;}
+.decoracion:nth-child(4){
+    grid-area: cuatro;
+    background: url(https://blenderartists.org/uploads/default/original/4X/b/2/1/b21484dc27c0817df33faaa1e9858baf3b51611e.jpeg);
+    background-size: 100%;
+    background-position: bottom;
+}
+.decoracion:nth-child(5){
+    grid-area: cinco;
+    background: url(https://images.wallpaperscraft.com/image/single/leaves_drops_dew_129757_4928x3264.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    z-index: 0;
+}
+h3{
+    color: rgb(105, 140, 90);
+    margin: 0px;
+    font-size: 30px;
+    z-index: 1;
+}

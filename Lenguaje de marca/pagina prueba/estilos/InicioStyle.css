@@ -1,0 +1,261 @@
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(78, 78, 78);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 7vh calc(52.5vh - 1rem) calc(27.5vh - 0.6rem) 7vh;
+  height: calc(100% - 1.5rem);
+  width: auto;
+  padding: 1rem;
+  grid-template-areas: 
+  "header header container3"
+  "main main nav"
+  "container2 container nav"
+  "container2 footer footer"
+  ;
+}
+
+section{
+  box-shadow: 0px 0px 10px -5px black;
+}
+header {
+  background-color: rgb(51, 51, 51);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 7vh;
+  grid-area: header;
+  box-shadow: 0px 0px 10px -5px black;
+  padding: 0px 1rem 0px 1rem;
+}
+footer{
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  height: 7vh;
+  grid-area: footer;
+  box-shadow: 0px 0px 10px -5px black;
+  padding: 0px 1rem 0px 1rem;
+}
+nav{
+  align-self: self-end;
+  background-color: rgb(51, 51, 51);
+  border-radius: 5px;
+  height: 98.5%;
+  width: auto;
+  grid-area: nav;
+  box-shadow: 0px 0px 10px -5px black;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+nav button{
+  width: 100%;
+  height: 15%;
+  border: 0px;
+  color: #e8e8e8;
+  font-size: 30px;
+}
+nav button:first-child{
+  background-color: rgb(73, 96, 61);
+  box-shadow: inset 0px 0px 5px 0px black;
+}
+.container{
+  background: url(https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-4.0.3);
+  background-size: 100vw;
+  background-position-y: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  grid-area: container;
+}
+.container2{
+  grid-area:container2;
+  background-color: rgb(48, 64, 41);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.container3{
+  grid-area:container3;
+  background-color: rgb(48, 64, 41);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+button{
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(105, 140, 90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover{
+    background-color: rgb(105, 140, 90);
+    cursor: pointer;
+    
+}
+button:hover p{
+  color: white;
+}
+
+.foto-datos-personales{
+  
+  width: calc(100%-2rem);
+  min-width: 25%;
+  height: calc(100%-2rem);
+  background-color: rgb(51, 51, 51);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: minmax(420px,40%) 60%;
+  grid-template-rows: repeat(2 ,calc(24.25vh - 0.5rem));
+  border-radius: 5px;
+  font-size: 50px;
+  grid-template-areas: 
+  "imagen contenido"
+  "imagen contenido"
+  ;
+}
+main{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1%;
+  grid-area: main;
+}
+
+p{
+  overflow: hidden;
+  text-overflow: initial;
+}
+h1{
+  overflow: hidden;
+  text-overflow: initial;
+}
+
+.avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+span{
+  color: rgb(105, 140, 90);
+  text-shadow: 0px 0px 3px ;
+}
+p{
+  color: rgb(151, 151, 151);
+  font-size: 30px;
+}
+
+.imagen {
+  height: 100%;
+  grid-area: imagen;
+}
+.imagen img{
+  width: auto;
+}
+h3{
+  color: rgb(105, 140, 90);
+}
+.redes-sociales{
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: fit-content;
+  gap: 3%;
+  grid-area: bot;
+}
+.contenido{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas: 
+  "parr"
+  "bot";
+  grid-area: contenido;
+}
+.contenido p{
+  grid-area: parr;
+  width: 100%;
+  height: max-content;
+  margin: 0px;
+}
+
+@media (max-width: 1290px){
+
+  .foto-datos-personales{
+    grid-template-areas: 
+      "imagen imagen"
+      "contenido contenido"
+  ;
+  justify-content: center;
+  }
+  .contenido{
+    justify-items: center;
+    text-align: center;
+    width: 60%;
+    justify-self: center;
+  }
+  .redes-sociales{
+    justify-content: center;
+  }
+  nav button{
+    font-size: 25px;
+  }
+  .imagen {
+    height: 24.25vh;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    justify-self: center;
+  }
+
+}
+
+@media (max-width: 600px){
+  body{
+    min-width: calc(330px + 50px + 2rem);
+    grid-template-columns: minmax(50px, 1fr) minmax(330px, 5fr) minmax(1px, 1fr);
+    grid-template-rows: 7vh 10vh 52.5vh 27.5vh 7vh;
+    padding: 1rem 0px 0px 1rem;
+    grid-template-areas: 
+  "header header header"
+  "nav nav nav"
+  "main main main"
+  "container2 container container"
+  "footer footer footer"
+  ;
+  }
+  nav{
+    height: 7.5vh;
+    flex-direction: row;
+  }
+  nav button{
+    height: 100%;
+    font-size: 15px;
+  }
+  .contenido{
+    width: 55%;
+  }
+  .foto-datos-personales{
+    grid-template-rows: repeat(2 ,1fr);
+  }
+
+}

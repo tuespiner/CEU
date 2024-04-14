@@ -1,0 +1,166 @@
+/* Prototype made by Frank, awaiting further comprobation, please delete this message after the final iteration, you f.ckers!) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Creating some variables to make later work easier */
+:root{
+    --red: #FF0000;
+    --white: #FFFFFF;
+}
+
+*{
+    /* Margin and padding set to 0 to comply with Pete's instructions */
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background: linear-gradient(180deg, rgb(38, 41, 45) 75%, rgb(52, 52, 53) 100%); /* Cute AF background gradient */
+    width: 100vw; /* Do not touch!, otherwise the gradient will loop all over the page */
+    height: 100vh; /* Read above */
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 25vw;
+    grid-template-rows: 20vh 1fr;
+    grid-template-areas:
+    "whoarewe whoarewe"
+    "featured_products reviews";
+    height: 80vh;
+    width: 92vw;
+    padding:0px 4vw 0px 4vw;
+}
+/* ------------------------------------WHO ARE WE SECTION ------------------------------- */
+
+#whoarewe{
+    grid-area: whoarewe;
+}
+
+#whoarewe h3, a{
+    color: var(--red);
+}
+
+#whoarewe p {
+    margin-top: 2.5%;
+    color: var(--white);
+    font-size: 13px;
+}
+
+/* ---------------------------------FEATURED PRODUCTS SECTION --------------------------- */
+
+#featured_products {
+    justify-self: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: calc(30px+0.5rem) repeat(3,1fr) calc(30px+0.5rem);
+    grid-template-rows: 5rem repeat(2,1fr);
+    grid-template-areas:
+    "titulo titulo titulo titulo titulo"
+    "f_left c1 c2 c3 f_right"
+    "f_left c4 c5 c6 f_right"
+    ;
+    width: 75%;
+    overflow: auto; /* adds scroll if necessary */
+    grid-area: featured_products;
+    padding: 0px 5vw 0px 5vw;
+    border-top: 2px solid white;
+}
+
+#featured_products .container {
+    background-color: rgb(42, 43, 43);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0px 5px 10px 0px rgb(22, 22, 22);
+}
+
+#featured_products .container img{
+    height: 60%;
+}
+
+#featured_products h1{
+    color: red;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#featured_products hr{
+    margin-bottom: 3rem;
+}
+
+#featured_left {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 30px solid var(--red);
+    margin-right: 10px;
+    cursor: pointer;
+    grid-area: f_left;
+    align-self: center;
+    background-color: #0e0f1100;
+}
+
+#featured_right {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 30px solid var(--red);
+    margin-left: 10px;
+    cursor: pointer;
+    grid-area:f_right;
+    align-self: center;
+    background-color: #0e0f1100;
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.container:first-child{
+    grid-area:c1;
+}
+.container:nth-child(2){
+    grid-area:c2;
+}
+.container:nth-child(3){
+    grid-area:c3;
+}
+.container:nth-child(4){
+    grid-area:c4;
+}
+.container:nth-child(5){
+    grid-area:c5;
+}
+.container:nth-child(6){
+    grid-area:c6;
+}
+/* -------------------------------------REVIEWS SECTION---------------------------------------*/
+#featured_reviews_wrapper {
+    display: flex;
+    
+    flex-grow: 1; /* to make grouping */
+}
+
+#reviews{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-area: reviews;
+}
+
+.review{
+    border-radius: 20%;
+    padding: 2.5%;
+    margin-top: 5%;
+    background: #0e0f11;
+    color: var(--white);
+}
