@@ -27,7 +27,7 @@ public class PersonaService {
 			rs = stmt.executeQuery("select * from personas where dni = '" + dni + "'");  //1) Aquí se pone la query que queremos de sql.
 			
 			if(rs.next()) {							//1) Aquí básicamente lee el dato y da un resultado dependiendo si esta bacío 
-				return this.setPersonaRs(rs);		//para que no de ninguna excepción.
+				return this.personaRs(rs);		//para que no de ninguna excepción.
 			}else {
 				return null;
 			}
@@ -43,38 +43,17 @@ public class PersonaService {
 		}
 	}
 	
-	public Set<Persona> filtro(String nombre, String apellido) throws SQLException{
+	public Set<Persona> filtro(String cad) throws SQLException{
 		ResultSet rs = null;
 		Set<Persona> set = new HashSet<>();
 		try(Connection conn = OpenConn.getNewConnection();		
 		Statement stmt = conn.createStatement()){
-			rs = stmt.executeQuery(this.queryFiltro(nombre, apellido));
-			while(rs.next()) {
-				
-			}
-			
-			
+			rs = stmt.executeQuery("select * from personas where nombre = '"+cad+"' or apellidos= '"+cad+"'");
+			return set = this.setPersonaRs(rs);
 		}
-		return set;
+		
 	}
 	
-	public String queryFiltro(String nombre, String apellido) {
-		String query = "select * from personas where ";
-		String queryName = "nombre = '"+nombre+"'"; 
-		String queryApellido = "apellidos = '"+apellido+"'"; 
-		if(nombre != null) {
-			if(apellido != null) {
-				query = query + queryName +" and "+ queryApellido;
-			}else {
-				query = query + queryName;
-			}
-		}else if (apellido != null){
-			query = query + queryApellido;
-		}else {
-			return null;
-		}
-		return query;
-	}
 	
 	public void setInfoStatementPersona(PreparedStatement stmt, Persona p)  throws SQLException{	//2) Aquí básicamente se le ponen los datos 
 		stmt.setString(1,p.getDni());																//que queremos insertar en la query
@@ -82,14 +61,30 @@ public class PersonaService {
 		stmt.setString(3,p.getApellidos());
 		stmt.setDate(4,p.getFechaService());
 	}
-	
-	public Persona setPersonaRs(ResultSet rs) throws SQLException{		//1) Aquí creamos la persona con los datos que hemos obtenido de la query
-		Persona p = new Persona();										
+	public Persona personaRs(ResultSet rs) throws SQLException{
+		Persona p = new Persona();
 		p.setNombre(rs.getString("NOMBRE"));
 		p.setDni(rs.getString("DNI"));
 		p.setApellidos(rs.getString("APELLIDOS"));
 		p.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO").toLocalDate());
-		return p; 
+		return p;
+	}
+	public Set<Persona> setPersonaRs(ResultSet rs) throws SQLException{		//1) Aquí creamos la persona con los datos que hemos obtenido de la query
+		Set<Persona> set = new HashSet<>();					
+		if(rs.getRow()  >=1) {
+			while(rs.next()) {
+				Persona p = new Persona();
+				p.setNombre(rs.getString("NOMBRE"));
+				p.setDni(rs.getString("DNI"));
+				p.setApellidos(rs.getString("APELLIDOS"));
+				p.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO").toLocalDate());
+				set.add(p);
+			}
+		}else {
+			set = null;
+		}
+		return set;
+		
 	}
 	
 }
