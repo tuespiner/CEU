@@ -27,6 +27,17 @@ nav button:nth-child(2){
 .comoSoy{
     grid-area: comoSoy;
 }
+.comoSoy, .softSkills{
+    color: var(--textColorPersonal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.comoSoy, .softSkills p{
+    width: 90%;
+}
 .ubicacion{
     grid-area: ubicacion;
     padding: 0px;
