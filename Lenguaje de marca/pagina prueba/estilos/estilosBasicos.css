@@ -29,6 +29,12 @@ header, footer{
     justify-content: center;
     align-items: center;
 }
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+}
 nav{
     grid-area: nav;
     display: flex;

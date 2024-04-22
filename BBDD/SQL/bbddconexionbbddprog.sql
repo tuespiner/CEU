@@ -7,4 +7,4 @@ CREATE TABLE personas (
 );
 
 insert into personas values('1','Juan','López Carmona','04-09-2005');
-select * from personas where DNI like '1';
+select * from personas;

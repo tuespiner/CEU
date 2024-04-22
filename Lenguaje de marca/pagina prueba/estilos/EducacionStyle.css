@@ -1,1 +1,28 @@
 @use "estilosBasicos.css";
+
+body{
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 7vh calc(23vh - 2rem) calc(40vh - 2rem) calc(23vh - 2rem) 7vh ;
+    grid-template-areas: 
+    "header header header header header header . ."
+    "nav titulaciones titulaciones instituciones instituciones instituciones . ."
+    "nav titulaciones titulaciones . . . idiomas idiomas"
+    ". titulaciones titulaciones . . . idiomas idiomas"
+    ". footer footer footer footer footer footer footer"
+    ;
+}
+
+header{
+
+}
+.titulaciones{
+    grid-area: titulaciones;
+}
+.instituciones{
+    grid-area: instituciones;
+}
+.idiomas{
+    grid-area: idiomas;
+}
+
+
