@@ -48,7 +48,7 @@ public class PersonaService {
 		Set<Persona> set = new HashSet<>();
 		try(Connection conn = OpenConn.getNewConnection();		
 		Statement stmt = conn.createStatement()){
-			rs = stmt.executeQuery("select * from personas where nombre = '"+cad+"' or apellidos= '"+cad+"'");
+			rs = stmt.executeQuery("select * from personas where nombre like '%"+cad+"%' or apellidos like '%"+cad+"%'");
 			return set = this.setPersonaRs(rs);
 		}
 		
@@ -70,15 +70,11 @@ public class PersonaService {
 		return p;
 	}
 	public Set<Persona> setPersonaRs(ResultSet rs) throws SQLException{		//1) Aquí creamos la persona con los datos que hemos obtenido de la query
-		Set<Persona> set = new HashSet<>();					
-		if(rs.getRow()  >=1) {
+		Set<Persona> set = new HashSet<>();		
+		System.out.println(rs.getFetchSize());
+		if(rs.getFetchSize()  >=1 ) {
 			while(rs.next()) {
-				Persona p = new Persona();
-				p.setNombre(rs.getString("NOMBRE"));
-				p.setDni(rs.getString("DNI"));
-				p.setApellidos(rs.getString("APELLIDOS"));
-				p.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO").toLocalDate());
-				set.add(p);
+				set.add(this.personaRs(rs));
 			}
 		}else {
 			set = null;
