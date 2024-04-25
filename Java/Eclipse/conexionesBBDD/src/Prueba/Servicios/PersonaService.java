@@ -1,7 +1,7 @@
 package Prueba.Servicios;
 
 import java.sql.Connection;
-import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.HashSet;
 import java.util.Set;
 
-import Prueba.Modelo.Persona;
+import Ejercicio_7.Modelo.Persona;
 
 public class PersonaService {
 	
