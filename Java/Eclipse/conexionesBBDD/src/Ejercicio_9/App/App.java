@@ -1,4 +1,4 @@
-package Ejercicio_7.App;
+package Ejercicio_9.App;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -8,18 +8,24 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import Ejercicio_7.Modelo.Persona;
-import Ejercicio_7.Servicios.PersonaService;
+import Ejercicio_9.Modelo.Persona;
+import Ejercicio_9.Servicios.PersonaService;
 
 public class App {
 	private static Scanner sc = new Scanner(System.in);
 	private static PersonaService ps = new PersonaService();
 	public static void main(String[] args) throws SQLException {
-		LocalDate fecha = LocalDate.now();
+		LocalDate fecha = LocalDate.of(2000, 9, 4);
 		String cadNombreApellido = "Hola2";
 		List<Persona> lista = new ArrayList<>();
 		System.out.println(ps.consultarPersona(cadNombreApellido));
-		
+		Persona p = new Persona();
+		p.setNombre(cadNombreApellido);
+		p.setApellidos(cadNombreApellido);
+		p.setDni(cadNombreApellido);
+		p.setFechaNacimiento(fecha);
+		ps.añadirPersona(p);
+		System.out.println(ps.borrarPersonasA());
 		sc.close();
 	}
 	

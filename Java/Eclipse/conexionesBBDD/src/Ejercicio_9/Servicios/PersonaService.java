@@ -1,4 +1,4 @@
-package Ejercicio_7.Servicios;
+package Ejercicio_9.Servicios;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -6,11 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import Ejercicio_7.Modelo.Persona;
+import Ejercicio_9.Modelo.Persona;
 
 public class PersonaService {
 
@@ -80,8 +81,25 @@ public class PersonaService {
 		}
 	}
 
-
+	public Integer borrarPersonasA() throws SQLException{
+		Integer i = 0;
+		for(String dni : this.getAdultos(this.filtro(""))) {
+			this.eliminarPersona(dni);
+			i++;
+		}
+		return i;
+	}
 	
+	public Set<String> getAdultos(Set<Persona> set) throws SQLException{
+		Set<String> adultos = new HashSet<>();
+		LocalDate fechaAdultos =  LocalDate.now().minusYears(18);
+		for(Persona persona : set) {
+			if(persona.getFechaNacimiento() != null && persona.getFechaNacimiento().compareTo(fechaAdultos) <= 0) {
+				adultos.add(persona.getDni());
+			}
+		}
+		return adultos;
+	}
 
 	public void setInfoStatementPersona(Persona p, Connection conn) throws SQLException {
 		PreparedStatement stmt = conn.prepareStatement("INSERT INTO personas VALUES(?,?,?,?)");
@@ -97,7 +115,11 @@ public class PersonaService {
 		p.setNombre(rs.getString("NOMBRE"));
 		p.setDni(rs.getString("DNI"));
 		p.setApellidos(rs.getString("APELLIDOS"));
-		p.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO").toLocalDate());
+		if(rs.getDate("FECHA_NACIMIENTO") == null) {
+			p.setFechaNacimiento(null);
+		}else {
+			p.setFechaNacimiento(rs.getDate("FECHA_NACIMIENTO").toLocalDate());
+		}
 		return p;
 	}
 
