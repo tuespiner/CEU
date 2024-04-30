@@ -16,11 +16,24 @@ public class App {
 	private static PersonaService ps = new PersonaService();
 	public static void main(String[] args) throws SQLException {
 		
+		
+		
 		sc.close();
 	}
 	
-
+	public void menu() {
+		System.out.println("Elige una opción/n/t"
+						 + "1) Crear nuevo pedido/n/t"
+						 + "2) Ver pedido/b/t"
+						 + "3) salir");
+		switch (sc.nextInt()){
+			case 1:
+				
+		}
+	}
 }
+
+
 
 /*for(int i = 0;i<3;i++) {
 			Persona p = new Persona();
