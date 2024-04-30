@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+import Ejercicio_12.Modelo.Pedido;
+import Ejercicio_12.Modelo.PedidoLinea;
 import Ejercicio_12.Modelo.Persona;
 import Ejercicio_12.Servicios.PersonaService;
 
@@ -29,6 +31,27 @@ public class App {
 		switch (sc.nextInt()){
 			case 1:
 				
+		}
+	}
+	
+	public void crearPedido() {
+		Pedido pedido = new Pedido();
+		PedidoLinea pl = new PedidoLinea();
+		Integer i = 0;
+		System.out.println("Dime tu nombre");
+		pedido.setCliente(sc.nextLine());
+		System.out.println("Dime cuantas líneas va a tener el pedido");
+		i = sc.nextInt();sc.nextLine();
+		for(; i>0;i--) {
+			pl = new PedidoLinea();
+			System.out.println("Dime el articulo");
+			pl.setArticulo(sc.nextLine());
+			System.out.println("Dime la cantidad");
+			pl.setCantidad(sc.nextInt());
+			System.out.println("Dime el precio exacto");
+			pl.setPrecioUnitario(sc.nextBigDecimal());
+			pl.setNumeroPedido(pedido.getNumero());
+			pedido.getPedidoLinea().add(pl);
 		}
 	}
 }

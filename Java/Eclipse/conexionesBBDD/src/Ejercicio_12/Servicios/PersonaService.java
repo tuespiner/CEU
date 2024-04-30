@@ -129,6 +129,19 @@ public class PersonaService {
 		}
 		return p;
 	}
+	
+	public Integer ponerNumPedido() throws SQLException{
+		Integer numero = 0;
+		ResultSet rs = null;
+		String consulta = "select numero from pedidos";
+		try (Connection conn = OpenConn.getNewConnection(); PreparedStatement stmt = conn.prepareStatement(consulta)){
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				
+			}
+		}
+		return numero;
+	}
 
 	public Set<Persona> setPersonaRs(ResultSet rs) throws SQLException { // 1) Aquí creamos la persona con los datos que
 																			// hemos obtenido de la query
