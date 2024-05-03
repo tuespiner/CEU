@@ -43,6 +43,12 @@ public class PedidoLinea {
 	public void setPrecioUnitario(BigDecimal precioUnitario) {
 		this.precioUnitario = precioUnitario;
 	}
+
+	@Override
+	public String toString() {
+		return "PedidoLinea [numeroPedido=" + numeroPedido + ", articulo=" + articulo + ", cantidad=" + cantidad
+				+ ", precioUnitario=" + precioUnitario.toString() + "]";
+	}
 	
 	
 }

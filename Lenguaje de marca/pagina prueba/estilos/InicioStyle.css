@@ -2,7 +2,7 @@
 
 body {
   grid-template-columns: minmax(50px , 1fr) minmax(320px , 5fr) 1fr;
-  grid-template-rows: 7vh calc(52.5vh - 1rem) calc(27.5vh - 0.6rem) 7vh;
+  grid-template-rows: 7vh calc(52.5vh - 1rem) calc(27.5vh - 1.5rem) 7vh;
   grid-template-areas: 
   "header header uno"
   "main main nav"

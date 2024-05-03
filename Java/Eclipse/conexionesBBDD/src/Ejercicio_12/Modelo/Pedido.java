@@ -44,6 +44,18 @@ public class Pedido {
 	public void setPedidoLinea(List<PedidoLinea> pedidoLinea) {
 		PedidoLinea = pedidoLinea;
 	}
+
+	@Override
+	public String toString() {
+		String cad = "numero =" + numero + ", cliente =" + cliente + ", Fecha de entrega =" + fechaEntrega + ", Lineas del pedido =";
+		for(PedidoLinea pl: this.PedidoLinea) {
+			cad = cad + "/n/t" + pl;
+		}
+		return cad;
+		
+	}
+	
+	
 	
 	
 }

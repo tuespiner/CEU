@@ -11,6 +11,7 @@ body{
     "dos dos footer footer footer footer footer footer footer"
     ;
 }
+
 header{
     grid-area: header;
 }
@@ -35,8 +36,9 @@ nav button:nth-child(2){
     justify-content: space-around;
     font-size: 30px;
 }
-.comoSoy, .softSkills p{
+.comoSoy p, .softSkills p{
     width: 90%;
+    word-break:break-all;
 }
 .ubicacion{
     grid-area: ubicacion;
@@ -86,5 +88,63 @@ iframe{
     z-index: 0;
 }
 p{
-    size:auto;
+    font-size: 0.7em;
+}
+span{
+    font-size: 1em;
+}
+
+
+@media (width < 1270px){
+    body{
+        grid-template-rows: 7vh calc(23vh - 2rem) calc(30vh - 1.5rem) calc(10vh - 1.5rem) calc(8vh - 1.5rem) calc(15vh - 1.5rem) 7vh ;
+        grid-template-areas: 
+    "header header header header header header header uno uno"
+    "softskills softskills softskills softskills ubicacion ubicacion ubicacion ubicacion ubicacion"
+    "softskills softskills softskills softskills comoSoy comoSoy comoSoy comoSoy comoSoy"
+    "cuatro cuatro cuatro cuatro comoSoy comoSoy comoSoy comoSoy comoSoy"
+    "cuatro cuatro cuatro cuatro cinco cinco cinco cinco cinco"
+    "nav nav nav nav nav nav nav nav nav"
+    "dos dos footer footer footer footer footer footer footer"
+    ;
+    }
+    .decoracion:nth-child(3){
+        display: none;
+    }
+    nav{
+        flex-direction: row;
+    }
+    nav button{
+        height: 100%;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+@media (width < 640px){
+    body{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: 10vh calc(10vh - 1.5rem) calc(13vh - 1.5rem) calc(40vh - 1.5rem) calc(40vh - 1.5rem) calc(8vh - 1.5rem) calc(15vh - 1.5rem) 10vh ;
+        grid-template-areas: 
+    "header header"
+    "ubicacion cinco"
+    "ubicacion cinco"
+    "softskills softskills"
+    "comoSoy comoSoy"
+    "cuatro cuatro"
+    "nav nav"
+    "footer footer"
+    ;
+    }
+    .ubicacion h3{
+        width: calc(100% - 2rem);
+        margin: 0px;
+        border-radius: 14px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        word-break:break-all;
+    }
+    .decoracion:nth-child(1), .decoracion:nth-child(3), .decoracion:nth-child(2){
+        display: none;
+    }
 }
