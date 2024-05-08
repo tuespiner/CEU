@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/formualrioStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php">
+        <div>Nombre:<input type="text" maxlength="20" required></div>
+        <br>
+        <div>Apellidos:<input type="text" maxlength="50" required></div>
+        <br>
+        <div>Dirección:<input type="text"></div>
+        <br>
+        <div>Teléfono:<input type="tel" required></div>
+        <br>
+        <div>Email:<input type="email" required></div>
+        <br>
+        Seleccione tu sexo
+        <br>
+        Hombre:<input type="radio" id="sexo" name="sexo" value="Hombre">
+        Mujer: <input type="radio" id="sexo" name="sexo" value="Mujer">
+        <br>
+        Aficiones:
+        <br>
+        Deporte <input type="checkbox" id="deporte" name="deporte" value="deporte">
+        <br>
+        Cine <input type="checkbox" id="Cine" name="Cine" value="Cine">
+        <br>
+        Teatro <input type="checkbox" id="Teatro" name="Teatro" value="Teatro">
+        <br>
+        Ver televisión <input type="checkbox" id="VerTelevisión" name="VerTelevisión" value="VerTelevisión">
+        <br>
+        Música <input type="checkbox" id="Musica" name="Musica" value="Musica">
+        <br>
+        Estudiar <input type="checkbox" id="Estudiar" name="Estudiar" value="Estudiar">
+        <br>
+        Fecha de nacimiento <input type="date">
+        <br>
+        valoración de la página (1-10) <input type="range" id="valoracion" min="0" max="10" step="1">
+        <br>
+        Provincia <select id="provincia" name="provincia" size="7" >
+            <option value="sv">Sevilla</option>
+            <option value="ma">Málaga</option>
+            <option value="co">Córdoba</option>
+            <option value="ja">Jaén</option>
+            <option value="ca">Cádiz</option>
+            <option value="hu">Huelva</option>
+            <option value="al">Almeria</option>
+        </select>
+        <br>
+        Comentarios <textarea name="comentario" id="comentario" cols="100%" rows="10"></textarea>
+        <br>
+        Adjuntar archivo <input type="file" id="file" name="file">
+        <input type="submit">
+    </form>
+</body>
+</html>

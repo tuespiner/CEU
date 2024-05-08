@@ -147,4 +147,7 @@ span{
     .decoracion:nth-child(1), .decoracion:nth-child(3), .decoracion:nth-child(2){
         display: none;
     }
+    nav button{
+        font-size: 0.8em;
+    }
 }
