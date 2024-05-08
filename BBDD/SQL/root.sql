@@ -1,4 +1,5 @@
 alter session set "_ORACLE_SCRIPT"=true;
+
 drop user examen cascade;
 create user prueba identified by a123456
 default tablespace system 

@@ -1,24 +1,16 @@
-package Ejercicio_12.Modelo;
+package Ejercicio_15.Modelo;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
-import Ejercicio_12.Servicios.PedidosService;
-
-
 public class Pedido {
-	private static PedidosService ps = new PedidosService();
-	
 	private Integer numero;
 	private String cliente;
 	private LocalDate fechaEntrega;
 	private List<PedidoLinea> PedidoLinea;
 	
-	public Pedido() throws SQLException {
-		this.PedidoLinea = new ArrayList<>();
-		this.numero = ps.setNumP();
+	public Pedido() {
+		
 	}
 
 	public Integer getNumero() {

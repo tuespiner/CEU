@@ -1,4 +1,4 @@
-package Ejercicio_12.Servicios;
+package Ejercicio_15.Servicios;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -9,8 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import Ejercicio_12.Modelo.Pedido;
-import Ejercicio_12.Modelo.PedidoLinea;
+import Ejercicio_15.Modelo.Pedido;
+import Ejercicio_15.Modelo.PedidoLinea;
 
 public class PedidosService {
 
@@ -59,6 +59,10 @@ public class PedidosService {
 		}
 	}
 	
+	public void borrarPedido(Integer numero) throws SQLException, NotFoundException{
+		
+	}
+	
 	public void crearPedidoCompleto(Pedido p) throws PedidoException, SQLException{
 		try (Connection conn = OpenConn.getNewConnection()) {
 			try {
@@ -89,22 +93,6 @@ public class PedidosService {
 		stmt.setString(2, pl.getArticulo());
 		stmt.setInt(3, pl.getCantidad());
 		stmt.setBigDecimal(4, pl.getPrecioUnitario());
-	}
-	
-	public Integer setNumP() throws SQLException{
-		Integer numP = null;
-		String query = "select max(numero) from pedidos";
-		ResultSet rs = null;
-		try (Connection conn = OpenConn.getNewConnection();
-				PreparedStatement stmt = conn.prepareStatement(query)) {
-			rs = stmt.executeQuery();
-			if(rs == null) {
-				numP = 1;
-			}else {
-				numP = rs.getInt("max(numero)")+ 1; 
-			}
-		}
-		return numP;
 	}
 	
 	private Pedido rsAPedido(ResultSet rs) throws SQLException{
