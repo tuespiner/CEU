@@ -1,4 +1,4 @@
-package Ejercicio_12.App;
+package Ejercicio_15.App;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import Ejercicio_12.Modelo.Pedido;
-import Ejercicio_12.Modelo.PedidoLinea;
-import Ejercicio_12.Modelo.Persona;
-import Ejercicio_12.Servicios.NotFoundException;
-import Ejercicio_12.Servicios.PedidoException;
-import Ejercicio_12.Servicios.PedidosService;
-import Ejercicio_12.Servicios.PersonaService;
+import Ejercicio_15.Modelo.Pedido;
+import Ejercicio_15.Modelo.PedidoLinea;
+import Ejercicio_15.Modelo.Persona;
+import Ejercicio_15.Servicios.NotFoundException;
+import Ejercicio_15.Servicios.PedidoException;
+import Ejercicio_15.Servicios.PedidosService;
+import Ejercicio_15.Servicios.PersonaService;
 
 public class App {
 	private static Scanner sc = new Scanner(System.in);
@@ -22,13 +22,12 @@ public class App {
 
 	public static void main(String[] args){
 		Boolean salir = false;
-
+		
 		do{
 			System.out.println("Elige una opción\n\t" + "1) Crear nuevo pedido\n\t" + "2) Ver pedido\n\t" + "3) salir");
 			switch (sc.nextInt()) {
 			case 1:
 				try {
-					sc.nextLine();
 					crearPedido();
 				} catch (SQLException e) {
 					System.out.println(e.getMessage());
@@ -77,7 +76,6 @@ public class App {
 			pl.setPrecioUnitario(sc.nextBigDecimal());
 			pl.setNumeroPedido(pedido.getNumero());
 			pedido.getPedidoLinea().add(pl);
-			sc.nextLine();
 		}
 
 		ps.crearPedidoCompleto(pedido);
