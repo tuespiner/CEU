@@ -6,7 +6,7 @@
     --colorH3:rgb(105, 140, 90);
 }
 body{
-    width: calc(100% - 2rem);
+    width: calc(100vw - 2rem);
     height: 100% ;
     margin: 0px;
     background-color: rgb(78, 78, 78);
