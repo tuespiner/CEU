@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página web de noticias con formularios, es un exámen del grado superior DAW"
+    />
+    <meta
+      name="keywords"
+      content="html, css, javascript, examen, ceu,
+      daw, dam"
+    />
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
+    <link rel="stylesheet" href="estilos/styles.css" />
+    <title>Examen 3º Trimestre</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#noticias">Noticias</a>
+            <a href="#datosPersonales">Cuestionario</a>
+            <a href="#conf">Configuración</a>
+            <a href="#sugerencias">Sugerencias</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias">
+            <article>
+                <h2>Rafael Nadal vuelve a competir en Barcelona</h2>
+                <figure>
+                    <img src="https://www.cronicabalear.es/access/public/img/noticias/upload/0_1713291379.jpg" alt="Fotografía de Rafael Nadal sonriendo despues de un partido 
+                    con el puño levantado como si estuviera celebrando">
+                    <figcaption>Rafael Nadal en el Godo</figcaption>
+                </figure>
+                <p>El tenista español, Rafa Nadal, muestra su alegría al finalizar su
+                    partido de primera ronda del Barcelona Open Banc Sabadell - Trofeo Conde
+                    de Godó de tenis disputado este martes ante el italiano Flavio Cobolli.
+                    Rafael Nadal ganó (2-6 y 3-6).</p>
+            </article>
+            <div>
+                <h2>Comienza la Feria de Abril de Sevilla</h2>
+                <figure>
+                    <img src="https://s3.abcstatics.com/abc/www/multimedia/sevilla/2024/04/13/portada_iluminada-U60867637123dC-RWEhRjatrQxE9EM3LcT35vJ-1200x840@diario_abc.jpeg" alt="
+                    Foto de la portada de la feria de abril de sevilla de noche con mucha gente">
+                    <figcaption>Feria de Abril de Sevilla</figcaption>
+                </figure>
+                <p>A las doce en punto de la noche, las 25.000 bombillas de la portada
+                    de la Feria de Abril de Sevilla se encenderán en el real de Los Remedios
+                    con la prueba del Alumbrado para dar comienzo a una fiesta universal, que
+                    fue declarada de interés turístico internacional en 1980. Antes muchos
+                    sevillanos y visitantes habrán disfrutado ya de la tradicional cena del
+                    Pescaíto, en la que los socios de las casetas vuelven a reencontrarse, a
+                    saborear la típica gastronomía feriante y a vivir una de las mejores
+                    semanas del año.</p>
+            </div>
+            <div>
+                <h2>La fortuna del chico de oro de la televisión</h2>
+                <figure>
+                    <img src="https://content20.lecturas.com/medio/2024/04/16/david-broncano_72686e85_240416101036_1280x720.jpg" alt="
+                    Foto del famoso presentador David Broncano entrando por una alfombra roja">
+                    <figcaption>David Broncano</figcaption>
+                </figure>
+                <p>Ha firmado por dos años por TVE a cambio de 28 millones para
+                    competir con Pablo Motos. Su suculento contrato se sumará a su buen
+                    Patrimonio: tiene dos áticos en Madrid y una productora de éxito.</p>
+            </div>
+        </section>
+        <section id="datosPersonales">
+            <form action="https://www.w3schools.com/action_page.php">
+                <fieldset>
+                    <legend>Cuestionario (Datos personales)</legend>
+                    <!--Nombre-->
+                    <label for="nombre">*Nombre:</label>
+                    <input type="text" id="nombre" required>
+                    <br>
+                    <!--Apellidos-->
+                    <label for="apellidos">*Apellidos:</label>
+                    <input type="text" id="apellidos" size="100" required>
+                    <br>
+                    <!--Fecha de nacimiento-->
+                    <label for="fechaNac">*Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNac" min="1900-01-01"   required>
+                    <br>
+                    <!--Dirección-->
+                    <label for="direccion">*Dirección:</label>
+                    <input type="text" id="direccion" size="120" required>
+                    <br>
+                    <!--Correo electrónico-->
+                    <label for="correo">*Correo electrçonico:</label>
+                    <input type="email" id="correo" required>
+                    <br>
+                    <!--Correo electrçonico-->
+                    <label for="tel">*Teléfono (xxxxxxxxx):</label>
+                    <br>
+                    <input type="tel" id="tel" pattern="[0-9]{9}" required>
+                    <br>
+                    <!--Postal-->
+                    <label for="postal">Código postal (xxxxx):</label>
+                    <br>
+                    <input type="text" id="postal" pattern="[0-9]{5}">
+                    <br>
+                    <!--Sexo-->
+                    <label >Sexo:</label>
+                    <!--HOMBRE-->
+                    <input type="radio" id="hombre" name="sexo" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <!--MUJER-->
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <br>
+                    <!--Idiomas-->
+                    <label >Idioma:</label>
+                    <!--INGLES-->
+                    <input type="checkbox" id="ingles" name="ingles" value="ingles">
+                    <label for="ingles">Inglés</label>
+                    <!--FRANCES-->
+                    <input type="checkbox" id="frances" name="frances" value="frances">
+                    <label for="frances">Francés</label>
+                    <!--ALEMAN-->
+                    <input type="checkbox" id="aleman" name="aleman" value="aleman">
+                    <label for="aleman">Aleman</label>
+                    <!--ITALIANO-->
+                    <input type="checkbox" id="italiano" name="italiano" value="italiano">
+                    <label for="italiano">Italiano</label>
+                    <!--OTROS-->
+                    <input type="checkbox" id="otros" name="otros" value="otros">
+                    <label for="otros">Otros</label>
+                    <br>
+                    <!--Enviar-->
+                    <input type="submit" id="submit" value="Enviar" class="form-submit-button">
+                    <!--Enviar-->
+                    <input type="reset" id="submit" value="Limpiar" class="form-submit-button">
+                </fieldset>
+            </form>
+        </section>
+        <section id="conf">
+            <form action="https://www.w3schools.com/action_page.php">
+                <fieldset>
+                    <legend>Configuración</legend>
+                    <!--Archivo-->
+                    <label for="file">Subir imagen:</label>
+                    <input type="file" id="file" name="file">
+                    <br>
+                    <!--Color de fondo-->
+                    <label for="fondo">Seleccione color de Fondo:</label>
+                    <input type="color" id="fondo" name="fondo">
+                    <br>
+                    <!--Contraste-->
+                    <label for="rango">Selecciona el contraste (entre 0 y 100):</label>
+                    <br>
+                    <input type="range" id="rango" name="rango" min="0" max="100" step="10" onchange="actualizarTexto(this.value)">
+                    <input type="number" name="muestraRango" id="muestraRango" min="0" max="100" value="">
+                    <br>
+                    <!--Numero de refresco-->
+                    <label for="refresco">Introduzca un número de refresco (entre 1 a 10) segundos:</label>
+                    <input type="number" id="refresco" name="refresco" min="0" max="10">
+                    <br>
+                    <!--Enviar-->
+                    <input type="submit" id="submit" value="Enviar" class="form-submit-button">
+                    <!--Enviar-->
+                    <input type="reset" id="submit" value="Limpiar" class="form-submit-button">
+                </fieldset>
+            </form>
+        </section>
+        <section id="sugerencias">
+            <form action="https://www.w3schools.com/action_page.php">
+                <fieldset>
+                    <legend>Sugerencias</legend>
+                    <!--Escribe cualquier sugerencia-->
+                    <label for="postal">Escribe cualquier sugerencia:</label>
+                    <br>
+                    <textarea name="sugerencia" id="sugerencia" cols="30" rows="10"></textarea>
+                    <br>
+                    <!--Enviar-->
+                    <input type="submit" id="submit" value="Enviar" class="form-submit-button">
+                    <!--Enviar-->
+                    <input type="reset" id="submit" value="Limpiar" class="form-submit-button">
+                </fieldset>
+            </form>
+        </section>
+        <section id="login">
+            <form action="https://www.w3schools.com/action_page.php">
+                <fieldset>
+                    <legend>Login</legend>
+                    <!--Usuario-->
+                    <label for="usuario">*Usuario:</label>
+                    <input type="text" id="usuario" name="usuario"  required>
+                    <br>
+                    <!--Contraseña-->
+                    <label for="contraseña">*Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña"  required>
+                    <br>
+                    <!--Enviar-->
+                    <input type="submit" id="submit" value="Iniciar Sesión" class="form-submit-button">
+                    <!--Enviar-->
+                    <input type="reset" id="submit" value="Limpiar" class="form-submit-button">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>2024 Mi Página Web Juan López Carmona. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function actualizarTexto(texto) {
+            document.getElementById("muestraRango").value=texto;
+        }
+        function mayorDeEdad() {
+            var fechaActual = new Date();
+            fechaActual.setDate(fechaActual.getDate()-365*18);
+            var mayorEdad = fechaActual.getFullYear()+'-';
+            if(fechaActual.getMonth() < 10){
+                mayorEdad = mayorEdad+'0'+fechaActual.getMonth()+'-';
+            }else{
+                mayorEdad = mayorEdad+fechaActual.getMonth()+'-';
+            }
+            if(fechaActual.getDay() < 10){
+                mayorEdad = mayorEdad+'0'+fechaActual.getDay();
+            }else{
+                mayorEdad = mayorEdad+fechaActual.getDay();
+            }
+            
+            
+            
+            
+            document.getElementById("fechaNac").setAttribute("max", mayorEdad);
+            alert(mayorEdad);
+        }
+        mayorDeEdad();
+    </script>
+</body>
+</html>

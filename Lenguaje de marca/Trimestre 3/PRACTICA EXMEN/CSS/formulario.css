@@ -1,0 +1,33 @@
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1%;
+    border: 1px rgb(192, 192, 192) solid;
+}
+fieldset{
+    border: 1px rgb(192, 192, 192) solid;
+    margin-bottom: 3%;
+}
+b{
+    font-family:serif
+}
+input{
+    border: 1px rgb(192, 192, 192) solid;
+    background-color: rgb(234, 234, 234);
+}
+input[type = "text"],input[type = "tel"],input[type = "date"] ,input[type = "email"],input[type = "password"]{
+    width: 99%;
+    
+    height: 30px;
+    
+}
+input[list]{
+    width: min-content;
+    border-radius: 5px;
+}
+button{
+    color: white;
+    background-color: black;
+    border: 0px;
+    padding: 1%;
+}
