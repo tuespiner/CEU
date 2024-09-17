@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Jugador {
 	private Integer numero;
@@ -31,6 +33,11 @@ public class Jugador {
 	}
 	public void setNacimiento(LocalDate nacimiento) {
 		this.nacimiento = nacimiento;
+	}
+	public BigDecimal getEdad() {
+		Period periodo = LocalDate.now().until(this.nacimiento);
+		BigDecimal edad = new BigDecimal(periodo.getYears());
+		return edad;
 	}
 	@Override
 	public String toString() {

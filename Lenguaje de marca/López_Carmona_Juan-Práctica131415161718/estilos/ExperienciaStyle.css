@@ -2,7 +2,7 @@
 
 body{
     display: grid;
-    grid-template-columns: 1fr 70vw 2fr;
+    grid-template-columns: 1fr minmax(420px, 7fr) 2fr;
     grid-template-rows: 7vh calc(28vh - 2rem) calc(35vh - 2rem) calc(23vh - 2rem) 7vh;
     grid-template-areas: 
     "header header uno"
@@ -120,4 +120,26 @@ p{
 }
 span{
     font-size: 1em;
+}
+
+@media (width < 980px){
+    body{
+        grid-template-rows: 7vh calc(20vh - 2rem) calc(15vh - 2rem) calc(28vh - 2rem) calc(35vh - 2rem) calc(15vh - 2rem) calc(23vh - 2rem) 7vh;
+        grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "dos dos dos"
+    "proyectos proyectos proyectos"
+    "proyectos proyectos proyectos"
+    "uno uno uno"
+    "experiencia experiencia experiencia"
+    "footer footer footer";
+    }
+    nav{
+        flex-direction: row;
+        word-break: break-all;
+    }
+    nav button{
+        height: 100%;
+    }
 }

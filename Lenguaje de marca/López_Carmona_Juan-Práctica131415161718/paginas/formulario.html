@@ -2,59 +2,225 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/estilosBasicos.css">
     <link rel="stylesheet" href="../estilos/formualrioStyle.css">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
 <body>
-    <form action="https://www.w3schools.com/action_page.php">
-        <div>Nombre:<input type="text" maxlength="20" required></div>
-        <br>
-        <div>Apellidos:<input type="text" maxlength="50" required></div>
-        <br>
-        <div>Dirección:<input type="text"></div>
-        <br>
-        <div>Teléfono:<input type="tel" required></div>
-        <br>
-        <div>Email:<input type="email" required></div>
-        <br>
-        Seleccione tu sexo
-        <br>
-        Hombre:<input type="radio" id="sexo" name="sexo" value="Hombre">
-        Mujer: <input type="radio" id="sexo" name="sexo" value="Mujer">
-        <br>
-        Aficiones:
-        <br>
-        Deporte <input type="checkbox" id="deporte" name="deporte" value="deporte">
-        <br>
-        Cine <input type="checkbox" id="Cine" name="Cine" value="Cine">
-        <br>
-        Teatro <input type="checkbox" id="Teatro" name="Teatro" value="Teatro">
-        <br>
-        Ver televisión <input type="checkbox" id="VerTelevisión" name="VerTelevisión" value="VerTelevisión">
-        <br>
-        Música <input type="checkbox" id="Musica" name="Musica" value="Musica">
-        <br>
-        Estudiar <input type="checkbox" id="Estudiar" name="Estudiar" value="Estudiar">
-        <br>
-        Fecha de nacimiento <input type="date">
-        <br>
-        valoración de la página (1-10) <input type="range" id="valoracion" min="0" max="10" step="1">
-        <br>
-        Provincia <select id="provincia" name="provincia" size="7" >
-            <option value="sv">Sevilla</option>
-            <option value="ma">Málaga</option>
-            <option value="co">Córdoba</option>
-            <option value="ja">Jaén</option>
-            <option value="ca">Cádiz</option>
-            <option value="hu">Huelva</option>
-            <option value="al">Almeria</option>
-        </select>
-        <br>
-        Comentarios <textarea name="comentario" id="comentario" cols="100%" rows="10"></textarea>
-        <br>
-        Adjuntar archivo <input type="file" id="file" name="file">
-        <input type="submit">
+    <header>
+        <h3>FORMULARIO</h3>
+    </header>
+    <nav>
+        <button onclick="location.href='../Inicio.html'">INICIO</button>
+        <button onclick="location.href='SobreMi.html'">SOBRE MI</button>
+        <button onclick="location.href='Educacion.html'">EDUCACION</button>
+        <button onclick="location.href='Experiencia.html'">EXPERIENCIA</button>
+        <button onclick="location.href='#'">FORMULARIO</button>
+    </nav>
+    <section class="sugerencias">
+        <h3>SUGERENCIAS</h3>
+        <form action="https://www.w3schools.com/action_page.php">
+            <div>
+                <label for="nomobre">nombre: </label>
+                <input type="text" maxlength="20" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" maxlength="50" id="apellidos" name="apellidos" required>
+            </div>
+            <div>
+                <label for="direccion">Dirección: </label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+            <div>
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+            </div>
+            <div>
+                <label for="correo">Correo electrónico: </label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div>
+                <label for="sexo">Seleccione su sexo: </label>
+                <label for="sexo">Hombre:</label>
+                <input type="radio" id="sexo" name="sexo" value="Hombre">
+                <label for="sexo">Mujer: </label>
+                <input type="radio" id="sexo" name="sexo" value="Mujer">
+            </div>
+            <div>
+                <label for="">Aficiones:</label>
+                <label for="deporte">Deporte</label>
+                <input type="checkbox" id="deporte" name="deporte" value="deporte">
+                <label for="Cine">Cine</label>
+                <input type="checkbox" id="Cine" name="Cine" value="Cine">
+                <label for="Teatro">Teatro</label>
+                <input type="checkbox" id="Teatro" name="Teatro" value="Teatro">
+                <label for="VerTelevisión">Ver televisión</label>
+                <input type="checkbox" id="VerTelevisión" name="VerTelevisión" value="VerTelevisión">
+                <label for="Musica">Música</label>
+                <input type="checkbox" id="Musica" name="Musica" value="Musica">
+                <label for="Estudiar">Estudiar</label>
+                <input type="checkbox" id="Estudiar" name="Estudiar" value="Estudiar">
+            </div>
+            <div>
+                <label for="fechaNac">Fecha de nacimiento: </label>
+                <input type="date" id="fechaNac" name="fechaNac">
+            </div>
+            <div>
+                <label for="valoracion">Valoración de la página (1-10): </label>
+                <input type="range" id="valoracion" name="valoracion" min="0" max="10" step="1">
+            </div> 
+            <div>
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" size="4" >
+                    <option value="sv">Sevilla</option>
+                    <option value="ma">Málaga</option>
+                    <option value="co">Córdoba</option>
+                    <option value="ja">Jaén</option>
+                    <option value="ca">Cádiz</option>
+                    <option value="hu">Huelva</option>
+                    <option value="al">Almeria</option>
+                </select>
+            </div>
+            <div>
+                <label for="comentario">Comentarios:</label>
+                <textarea name="comentario" id="comentario"  rows="10"></textarea>
+            </div>
+            <div>
+                <label for="file">Adjuntar archivo:</label>
+                <input type="file" id="file" name="file">
+            </div> 
+            <input type="submit">
+        </form>
+    </section>
+    <form action="https://www.w3schools.com/action_page.php" class="encuesta">
+         <h3>ENCUESTA</h3>
+         <section>
+            <label for="impresiones">¿Qué le ha parecido?</label>
+            <div>
+                <label for="perfecta">Perfecta</label>
+                <input type="radio" name="impresiones" id="perfecta" value="perfecta">
+                <label for="muyBuena">Muy buena</label>
+                <input type="radio" name="impresiones" id="muyBuena" value="muyBuena">
+                <label for="buena">Buena</label>
+                <input type="radio" name="impresiones" id="buena" value="buena">
+                <label for="mejorable">mejorable</label>
+                <input type="radio" name="impresiones" id="mejorable" value="mejorable">
+                <label for="mala">Mala</label>
+                <input type="radio" name="impresiones" id="mala" value="mala">
+                <label for="perfecta">Perfecta</label>
+                <input type="radio" name="impresiones" id="perfecta" value="perfecta">
+            </div>
+            <label for="nota">¿Danos una nota?</label>
+            <input type="range" id="nota" name="nota" min="0" max="10" step="1" onchange="actualizarTexto(this.value)">
+            <input type="number" id="muestraNota" >
+            <label for="color">¿Los colores estan bien elegidos?</label>
+            <div>
+                <label for="si">Si</label>
+                <input type="radio" name="color" id="si" value="si">
+                <label for="no">No</label>
+                <input type="radio" name="color" id="no" value="no">
+            </div>
+            
+            <label for="intuitivo">¿Es intuitiva?</label>
+            <div>
+                <label for="si">Si</label>
+                <input type="radio" name="intuitivo" id="si" value="si">
+                <label for="no">No</label>
+                <input type="radio" name="intuitivo" id="no" value="no">
+            </div>
+         </section>
+         <section>
+            <label for="original">¿Le a parecido original?</label>
+            <div>
+                <label for="si">Si</label>
+                <input type="radio" name="original" id="si" value="si">
+                <label for="no">No</label>
+                <input type="radio" name="original" id="no" value="no">
+            </div>
+            <label for="originalidad">dinos la nota en originalidad</label>
+            <input type="range" id="originalidad" name="originalidad" min="0" max="10" step="1" onchange="actualizarTexto2(this.value)">
+            <input type="number" id="muestraOriginalidad">
+            <label for="problema">¿Ha habido algun problema en la pagina?</label>
+            <div>
+                <label for="si">Si</label>
+                <input type="radio" name="problema" id="si" value="si">
+                <label for="no">No</label>
+                <input type="radio" name="problema" id="no" value="no">
+            </div>
+            <label for="fluidez">¿Va fluida la pagina?</label>
+            <div>
+                <label for="si">Si</label>
+                <input type="radio" name="fluidez" id="si" value="si">
+                <label for="no">No</label>
+                <input type="radio" name="fluidez" id="no" value="no">
+            </div>
+         </section>
+         <section>
+            <label for="textSugerencia">Sugerencias:</label>
+            <textarea name="textSugerencia" id="textSugerencia" rows="5"></textarea>
+            <input type="submit">
+         </section>
     </form>
+    <footer>
+        <h3 id="h3"></h3>
+    </footer>
+    <script>
+         function actualizarTexto(texto) {
+            document.getElementById("muestraNota").value=texto;
+        }
+        function actualizarTexto2(texto) {
+            document.getElementById("muestraOriginalidad").value=texto;
+        }
+        function fecha(){
+            var fechaActual = new Date();
+            var texto = '';
+            if(fechaActual.getDay() == 0){
+                texto = texto + 'DOMINGO' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 1){
+                texto = texto + 'LUNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 2){
+                texto = texto + 'MARTES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 3){
+                texto = texto + 'MIERCOLES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 4){
+                texto = texto + 'JUEVES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 5){
+                texto = texto + 'VIERNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 6){
+                texto = texto + 'SABADO' + ' ' + fechaActual.getDate() + ' DE';
+            }
+
+            if(fechaActual.getMonth() == 0){
+                texto = texto + ' ENERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 1){
+                texto = texto + ' FEBRERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 2){
+                texto = texto + ' MARZO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 3){
+                texto = texto + ' ABRIL DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 4){
+                texto = texto + ' MAYO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 5){
+                texto = texto + ' JUNIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 6){
+                texto = texto + ' JULIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 7){
+                texto = texto + ' AGOSTO DE ' + fechaActual.getFullYear();    
+            }else if(fechaActual.getMonth() == 8){
+                texto = texto + ' SEPTIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 9){
+                texto = texto + ' OCTUBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 10){
+                texto = texto + ' NOVIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 11){
+                texto = texto + ' DICIEMBRE DE ' + fechaActual.getFullYear();
+            }
+            document.getElementById("h3").textContent = texto;
+        }
+        fecha();
+    </script>
 </body>
 </html>

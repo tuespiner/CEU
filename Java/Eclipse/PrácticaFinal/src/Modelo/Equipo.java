@@ -1,11 +1,16 @@
 package Modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Equipo {
 	private String codigo;
 	private String nombre;
 	private List<Jugador> jugadores;
+	
+	public Equipo() {
+		this.jugadores = new ArrayList<>();
+	}
 	
 	public String getCodigo() {
 		return codigo;
@@ -29,8 +34,10 @@ public class Equipo {
 	public String toString() {
 		Integer i = 1;
 		String cad = "EQUIPO: "+this.codigo+" / "+this.nombre+"\n>>> PLANTILLA:\n\t";
-		for(Jugador j : this.jugadores) {
-			cad = cad+"\n\t"+i+j;
+		if(this.jugadores != null) {
+			for(Jugador j : this.jugadores) {
+				cad = cad+"\n\t"+i+j;
+			}
 		}
 		return cad;
 	}
