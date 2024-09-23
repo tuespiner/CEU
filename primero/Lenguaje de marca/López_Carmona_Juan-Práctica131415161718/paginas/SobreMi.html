@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/estilosBasicos.css">
+    <link rel="stylesheet" href="../estilos/SobreMiStyle.css">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <header>
+        <h3>SOBRE MI</h3>
+    </header>
+    <nav>
+        <button onclick="location.href='../Inicio.html'">INICIO</button>
+        <button onclick="location.href='#'">SOBRE MI</button>
+        <button onclick="location.href='Educacion.html'">EDUCACION</button>
+        <button onclick="location.href='Experiencia.html'">EXPERIENCIA</button>
+        <button onclick="location.href='formulario.html'">FORMULARIO</button>
+    </nav>
+    <section class="softSkills">
+        <h3>SOFT SKILLS</h3>
+        <p>Como apasionado y profesional del <span>diseño web y la programación</span>, mi meta es alcanzar el más alto nivel de excelencia en mi campo. Aspiro a <span>colaborar con empresas 
+            innovadoras</span> que buscan transformar la experiencia digital y <span>llevar a sus equipos a nuevos horizontes</span> de éxito</p>
+    </section>
+    <section class="comoSoy">
+        <h3>CÓMO SOY</h3>
+        <p>Soy un chico joven con ansias de <span>aprender y mejorar</span>, trabajador y puntual con grandes capacidades de <span>liderazgo y resolución de problemas</span>,
+             adaptable y me se manejar en equipos.</p>
+            <h3>¡¡Me encantan los retos!!</h3>
+    </section>
+    <section class="ubicacion">
+        <h3>UBICACIÓN</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6340.6469072769505!2d-6.1300641!3d37.38218225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd121392e87678a9%3A0xf4cf423aa8468fd9!2s41807%20Espartinas%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1713124314333!5m2!1ses!2ses" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <h3 id="h3"></h3>
+    </footer>
+    <script>
+        function fecha(){
+            var fechaActual = new Date();
+            var texto = '';
+            if(fechaActual.getDay() == 0){
+                texto = texto + 'DOMINGO' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 1){
+                texto = texto + 'LUNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 2){
+                texto = texto + 'MARTES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 3){
+                texto = texto + 'MIERCOLES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 4){
+                texto = texto + 'JUEVES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 5){
+                texto = texto + 'VIERNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 6){
+                texto = texto + 'SABADO' + ' ' + fechaActual.getDate() + ' DE';
+            }
+
+            if(fechaActual.getMonth() == 0){
+                texto = texto + ' ENERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 1){
+                texto = texto + ' FEBRERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 2){
+                texto = texto + ' MARZO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 3){
+                texto = texto + ' ABRIL DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 4){
+                texto = texto + ' MAYO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 5){
+                texto = texto + ' JUNIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 6){
+                texto = texto + ' JULIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 7){
+                texto = texto + ' AGOSTO DE ' + fechaActual.getFullYear();    
+            }else if(fechaActual.getMonth() == 8){
+                texto = texto + ' SEPTIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 9){
+                texto = texto + ' OCTUBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 10){
+                texto = texto + ' NOVIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 11){
+                texto = texto + ' DICIEMBRE DE ' + fechaActual.getFullYear();
+            }
+            document.getElementById("h3").textContent = texto;
+        }
+        fecha();
+    </script>
+</body>
+</html>

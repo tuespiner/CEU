@@ -1,0 +1,96 @@
+body{
+    width: calc(100vw - 2rem);
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, minmax(180px, 30vw)) repeat(2, 1fr);
+    grid-template-rows: 7vh calc(43vh - 2.5rem) calc(43vh - 2.5rem) 7vh;
+    grid-template-areas: 
+    "nav header header header header header"
+    "nav sugerencias sugerencias encuesta encuesta encuesta"
+    "nav sugerencias sugerencias encuesta encuesta encuesta"
+    "footer footer footer footer footer footer";
+    max-height: calc(100vh - 2rem);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+label{
+    color: var(--textColorPersonal);
+}
+input, textarea, select{
+    background-color: var(--colorH3);
+    border: 0px;
+    border-radius: 5px;
+    padding: 0.2rem;
+    box-shadow: inset 0px 0px 5px var(--colorFondoContainers);
+}
+.sugerencias{
+    grid-area: sugerencias;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sugerencias textarea{
+    width: 100%;
+}
+.encuesta {
+    grid-area: encuesta;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 52px 60% 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "h3 h3"
+    "col1 col2"
+    "col3 col3";
+}
+.encuesta section{
+    background-color: var(--colorFondoContainers);
+    border-radius: 17px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.encuesta section div{
+    display: block;
+}
+.encuesta section:nth-child(1){grid-area: col1;}
+.encuesta section:nth-child(2){grid-area: col2;}
+.encuesta section:nth-child(4){
+        grid-area: col3;
+    justify-content: space-between;}
+.encuesta h3{
+    grid-area: h3;
+    background-color: var(--colorFondoContainers);
+    border-radius: 17px;
+    padding:  0.5rem 0rem 0.5rem 0rem;
+}
+nav button:nth-child(5){
+    background-color: var(--colorFondoHijoBoton); 
+    box-shadow: inset 0px 0px 5px 0px black;
+}
+@media (width < 1070px){
+    body{
+        grid-template-rows: 7vh calc(20vh - 2rem) repeat(4, calc(43vh - 2.5rem)) 7vh;
+        grid-template-areas: 
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "sugerencias sugerencias sugerencias sugerencias sugerencias sugerencias"
+    "sugerencias sugerencias sugerencias sugerencias sugerencias sugerencias"
+    "encuesta encuesta encuesta encuesta encuesta encuesta"
+    "encuesta encuesta encuesta encuesta encuesta encuesta"
+    "footer footer footer footer footer footer";
+    }
+    nav{
+        flex-direction: row;
+    }
+    nav button{
+        height: 100%;
+        word-break:break-all;
+    }
+}

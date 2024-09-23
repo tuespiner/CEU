@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilos/estilosBasicos.css">
+    <link rel="stylesheet" href="../estilos/ExperienciaStyle.css">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <header>
+        <h3>EXPERIENCIA</h3>
+    </header>
+    <nav>
+        <button onclick="location.href='../Inicio.html'">INICIO</button>
+        <button onclick="location.href='SobreMi.html'">SOBRE MI</button>
+        <button onclick="location.href='Educacion.html'">EDUCACION</button>
+        <button onclick="location.href='#'">EXPERIENCIA</button>
+        <button onclick="location.href='formulario.html'">FORMULARIO</button>
+    </nav>
+    <section class="proyectos">
+        <h3>PROYECTOS</h3>
+        <div class="conteinerProyectos">
+            <div class="tarjetasP">    <!---->
+                <div>
+                    <img src="../Imagenes/imagenProyecto.png" alt="">
+                </div>
+                <div>
+                    <h4>MI PORTAFOLIO</h4>
+                    <p>Este es mi primer proyecto, mi portafolio donde puedes saber un poco mas de mi y de las cosas que he hecho</p>
+                    <div>
+                        <img src="../Imagenes/icons8-html.svg" alt="simbolo de html 5">
+                        <img src="../Imagenes/icons8-css.svg" alt="simbolo de css 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experiencia">
+        <h3>EXPERIENCIA</h3>
+        <div class="containerTarjetasE">
+            <div class="tarjetasE">
+                <h4>AYUNTAMIENTO ESPARTINAS</h4>
+                <div>
+                    <p>10/04/2023</p>
+                    <div></div>
+                    <p>13/06/2023</p>
+                </div>
+                <p><span>Puesto:</span>Técnico informatico</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h3 id="h3"></h3>
+    </footer>
+    
+    <!--
+        ESTO DEBERIA HACER QUE EL SCROLL SEA CON LA RUEDITA PERO NO FUNCIONA
+        <script>
+        const scrollable = document.querySelector(".tarjetasP");
+
+        scrollable.addEventListener("wheel", function(e){
+            if(e.wheelDelta > 0){
+                this.scrollleft -= 50;
+            }else{
+                this.scrollleft += 50;
+            }
+        },{passive: true});
+    </script>-->
+    <script>
+        function fecha(){
+            var fechaActual = new Date();
+            var texto = '';
+            if(fechaActual.getDay() == 0){
+                texto = texto + 'DOMINGO' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 1){
+                texto = texto + 'LUNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 2){
+                texto = texto + 'MARTES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 3){
+                texto = texto + 'MIERCOLES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 4){
+                texto = texto + 'JUEVES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 5){
+                texto = texto + 'VIERNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 6){
+                texto = texto + 'SABADO' + ' ' + fechaActual.getDate() + ' DE';
+            }
+
+            if(fechaActual.getMonth() == 0){
+                texto = texto + ' ENERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 1){
+                texto = texto + ' FEBRERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 2){
+                texto = texto + ' MARZO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 3){
+                texto = texto + ' ABRIL DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 4){
+                texto = texto + ' MAYO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 5){
+                texto = texto + ' JUNIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 6){
+                texto = texto + ' JULIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 7){
+                texto = texto + ' AGOSTO DE ' + fechaActual.getFullYear();    
+            }else if(fechaActual.getMonth() == 8){
+                texto = texto + ' SEPTIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 9){
+                texto = texto + ' OCTUBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 10){
+                texto = texto + ' NOVIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 11){
+                texto = texto + ' DICIEMBRE DE ' + fechaActual.getFullYear();
+            }
+            document.getElementById("h3").textContent = texto;
+        }
+        fecha();
+    </script>
+</body>
+</html>

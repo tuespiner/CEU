@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="../CSS/formulario.css" />
+  </head>
+  <body>
+    <form action="https://www.w3schools.com/action_page.php">
+      <p>
+        <b>FORMULARIO DE PAGO</b> (Los campos obligatorios se han marcado con *)
+      </p>
+      <fieldset id="contacto" class="informacion">
+        <legend><b>Información de contacto</b></legend>
+        <fieldset>
+          <legend>Profesión</legend>
+          <input
+            type="radio"
+            id="idProfesor"
+            name="profesion"
+            value="Profesor/a"
+          />
+          <label for="idProfesor">Profesor/a</label><br />
+          <input
+            type="radio"
+            id="idEstudiante"
+            name="profesion"
+            value="Estudiante"
+          />
+          <label for="idEstudiante">Estudiante</label><br />
+          <input
+            type="radio"
+            id="idProfOtro"
+            name="profesion"
+            value="Profesor/a"
+          />
+          <label for="idProfOtro">Otro</label><br />
+        </fieldset>
+        <fieldset id="Tratamiento">
+          <legend>Tratamiento</legend>
+          <input type="radio" id="idSr/Sra" name="tratamiento" value="Sr/Sra" />
+          <label for="idSr/Sra">Sr/Sra</label><br />
+          <input type="radio" id="idDr/Dra" name="tratamiento" value="Dr/Dra" />
+          <label for="idDr/Dra">Dr/Dra</label><br />
+          <input
+            type="radio"
+            id="idTraOtro"
+            name="tratamiento"
+            value="Profesor/a"
+          />
+          <label for="idTraOtro">Otro</label><br />
+        </fieldset>
+        <label for="idNombre">Nombre: *</label><br />
+        <input type="text" id="idNombre" name="Nombre" required />
+        <br />
+        <label for="idCorreo">Correo: *</label><br />
+        <input type="email" id="idCorreo" name="Correo" required />
+        <br />
+        <label for="idTelefono">Número de telefono:</label><br />
+        <input
+          type="tel"
+          id="idTelefono"
+          name="idTelefono"
+          pattern="[0-9]{9}"
+          required
+        />
+        <br />
+        <label for="idContraseña">Contraseña: *</label><br />
+        <input
+          type="password"
+          id="idContraseña"
+          name="Contraseña"
+          required
+        /><br />
+      </fieldset>
+      <fieldset id="pago" class="informacion">
+        <legend><b>Información de pago</b></legend>
+        <label for="idTarjeta">Tipo de tarjeta:</label>
+        <input list="idTipos" id="idTarjeta" name="Tajeta" />
+        <datalist id="idTipos" name="tipos">
+          <option value="Visa"></option>
+          <option value="Mastercard"></option>
+        </datalist>
+        <br />
+        <br />
+        <label for="idNumeroTarjeta">Número de tarjeta: *</label><br />
+        <input
+          type="text"
+          id="idNumeroTarjeta"
+          name="NumeroTarjeta"
+          pattern="[0-9]{16}"
+          required
+        /><br />
+        <label for="idFechaCaducidad">Fecha de caducidad: *</label><br />
+        <input
+          type="date"
+          id="idFechaCaducidad"
+          name="FechaCaducidad"
+          required
+        />
+        <br />
+        <label for="idCorreoPaypal">Cuenta de PayPal: *</label><br />
+        <input type="email" id="idCorreoPaypal" name="PayPal" required />
+        <br />
+        <br />
+        <label for="idMetodoPago">Método de pago preferido:</label>
+        <input list="idMetodos" id="idMetodoPago" name="MetodoPago" />
+        <datalist id="idMetodos" name="metodos">
+          <option value="Tarjeta de crédito"></option>
+          <option value="Tarjeta de débito"></option>
+          <option value="Transferencia bancaria"></option>
+        </datalist>
+      </fieldset>
+      <button type="submit">VALIDAR EL PAGO</button>
+    </form>
+  </body>
+</html>

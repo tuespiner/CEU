@@ -1,0 +1,154 @@
+@use "estilosBasicos.css";
+
+body{
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 7vh calc(23vh - 2rem) calc(40vh - 2rem) calc(23vh - 2rem) 7vh ;
+    grid-template-areas: 
+    "header header header header header header header uno uno"
+    "nav softskills softskills tres cinco cinco cinco uno uno"
+    "nav softskills softskills ubicacion ubicacion ubicacion ubicacion comoSoy comoSoy"
+    "dos dos cuatro cuatro cuatro cuatro cuatro comoSoy comoSoy"
+    "dos dos footer footer footer footer footer footer footer"
+    ;
+}
+
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+}
+nav button:nth-child(2){
+    background-color: var(--colorFondoHijoBoton);
+    box-shadow: inset 0px 0px 5px 0px black;
+}
+.softSkills{
+    grid-area: softskills;
+}
+.comoSoy{
+    grid-area: comoSoy;
+}
+.comoSoy, .softSkills{
+    color: var(--textColorPersonal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.comoSoy p, .softSkills p{
+    width: 90%;
+    word-break:break-all;
+}
+.ubicacion{
+    grid-area: ubicacion;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.ubicacion h3{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    margin-top: 0.5rem;
+    background-color: var(--colorFondoContainers);
+    height: fit-content;
+    width: fit-content;
+    justify-self: center;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px -3px black;
+}
+.decoracion:nth-child(-n+3){
+    background-color: var(--colorDecoracion);
+}
+.decoracion:nth-child(1){grid-area: uno;}
+.decoracion:nth-child(2){grid-area: dos;}
+.decoracion:nth-child(3){grid-area: tres;}
+.decoracion:nth-child(4){
+    grid-area: cuatro;
+    background: url(https://blenderartists.org/uploads/default/original/4X/b/2/1/b21484dc27c0817df33faaa1e9858baf3b51611e.jpeg);
+    background-size: 100%;
+    background-position: bottom;
+}
+.decoracion:nth-child(5){
+    grid-area: cinco;
+    background: url(https://images.wallpaperscraft.com/image/single/leaves_drops_dew_129757_4928x3264.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    z-index: 0;
+}
+p{
+    font-size: 0.7em;
+}
+span{
+    font-size: 1em;
+}
+
+
+@media (width < 1270px){
+    body{
+        grid-template-rows: 7vh calc(23vh - 2rem) calc(30vh - 1.5rem) calc(10vh - 1.5rem) calc(8vh - 1.5rem) calc(15vh - 1.5rem) 7vh ;
+        grid-template-areas: 
+    "header header header header header header header uno uno"
+    "softskills softskills softskills softskills ubicacion ubicacion ubicacion ubicacion ubicacion"
+    "softskills softskills softskills softskills comoSoy comoSoy comoSoy comoSoy comoSoy"
+    "cuatro cuatro cuatro cuatro comoSoy comoSoy comoSoy comoSoy comoSoy"
+    "cuatro cuatro cuatro cuatro cinco cinco cinco cinco cinco"
+    "nav nav nav nav nav nav nav nav nav"
+    "dos dos footer footer footer footer footer footer footer"
+    ;
+    }
+    .decoracion:nth-child(3){
+        display: none;
+    }
+    nav{
+        flex-direction: row;
+    }
+    nav button{
+        height: 100%;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+@media (width < 830px){
+    body{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: 10vh calc(10vh - 1.5rem) calc(13vh - 1.5rem) calc(40vh - 1.5rem) calc(40vh - 1.5rem) calc(8vh - 1.5rem) calc(15vh - 1.5rem) 10vh ;
+        grid-template-areas: 
+    "header header"
+    "ubicacion cinco"
+    "ubicacion cinco"
+    "softskills softskills"
+    "comoSoy comoSoy"
+    "cuatro cuatro"
+    "nav nav"
+    "footer footer"
+    ;
+    }
+    .ubicacion h3{
+        width: calc(100% - 2rem);
+        margin: 0px;
+        border-radius: 14px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        word-break:break-all;
+    }
+    .decoracion:nth-child(1), .decoracion:nth-child(3), .decoracion:nth-child(2){
+        display: none;
+    }
+    nav button{
+        font-size: 0.8em;
+        word-break:break-all;
+    }
+}

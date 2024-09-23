@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos/InicioStyle.css">
+    <link rel="stylesheet" href="estilos/estilosBasicos.css">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <title>portafolio Juan López Carmona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <section class="decoracion"></section>
+    <header>
+        <h3>PORTAFOLIO JUAN LÓPEZ CARMONA</h3>
+    </header>
+    <nav>
+        <button onclick="location.href='#'">INICIO</button>
+        <button onclick="location.href='paginas/SobreMi.html'">SOBRE MI</button>
+        <button onclick="location.href='paginas/Educacion.html'">EDUCACIÓN</button>
+        <button onclick="location.href='paginas/Experiencia.html'">EXPERIENCIA</button>
+        <button onclick="location.href='paginas/formulario.html'">FORMULARIO</button>
+    </nav>
+        <section class="fotoDatosPersonales">
+            <img src="Imagenes/avatar.png" class="avatar" alt="Imagen tipo carnet de Juan López carmona">
+            <div>
+                <p>Hola, mi nombre es <span>Juan López Carmona</span> y soy un desarrollador full stack </p>
+                <div>
+                    <button>
+                        <p>HOLA</p>
+                    </button>
+                    <button>
+                        <p>HOLA</p>
+                    </button>  
+                    <button>
+                        <p>HOLA</p>
+                    </button>
+                </div>
+           </div>
+        </section>
+    <footer>
+        <h3 id="h3"></h3>
+    </footer>
+    <script>
+        function fecha(){
+            let fechaActual = new Date();
+            let texto = '';
+            if(fechaActual.getDay() == 0){
+                texto = texto + 'DOMINGO' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 1){
+                texto = texto + 'LUNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 2){
+                texto = texto + 'MARTES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 3){
+                texto = texto + 'MIERCOLES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 4){
+                texto = texto + 'JUEVES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 5){
+                texto = texto + 'VIERNES' + ' ' + fechaActual.getDate() + ' DE';
+            }else if(fechaActual.getDay() == 6){
+                texto = texto + 'SABADO' + ' ' + fechaActual.getDate() + ' DE';
+            }
+
+            if(fechaActual.getMonth() == 0){
+                texto = texto + ' ENERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 1){
+                texto = texto + ' FEBRERO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 2){
+                texto = texto + ' MARZO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 3){
+                texto = texto + ' ABRIL DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 4){
+                texto = texto + ' MAYO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 5){
+                texto = texto + ' JUNIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 6){
+                texto = texto + ' JULIO DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 7){
+                texto = texto + ' AGOSTO DE ' + fechaActual.getFullYear();    
+            }else if(fechaActual.getMonth() == 8){
+                texto = texto + ' SEPTIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 9){
+                texto = texto + ' OCTUBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 10){
+                texto = texto + ' NOVIEMBRE DE ' + fechaActual.getFullYear();
+            }else if(fechaActual.getMonth() == 11){
+                texto = texto + ' DICIEMBRE DE ' + fechaActual.getFullYear();
+            }
+            document.getElementById("h3").textContent = texto;
+        }
+        fecha();
+    </script>
+</body>
+</html>
