@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ventana 1</title>
+</head>
+<body>
+    <button onclick="boton1()">boton 1</button>
+    <button onclick="boton2()">boton 2</button>
+    <script>
+        function boton1(){
+            window.opener.ventana2.document.write("La ventana 1 te saluda");
+        }
+        function boton2(){
+            window.opener.ventana2.document.body.style.baclgroundColor=" #7DDA58";
+        }
+    </script>
+</body>
+</html>

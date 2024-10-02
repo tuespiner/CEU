@@ -126,6 +126,19 @@ function Ejercicio11(){
         alert(`Buenas noches ${nombre}`);
     }
 }
-function Ejercicio12(){
-    
+function Ejercicio15(){
+    var abrirVentana = confirm("¿Abrir una ventana?");
+    if(abrirVentana){
+        var nuevaVentana = window.open("","Nueva ventana", "toolbar=no, location=no, menubar=no, width=200px, height=80px, top=500px, left=500px, resizable=yes, scrollbar=yes");
+        nuevaVentana.document.write("<h1>Entorno Cliente</h1>");
+    }
+}
+function Ejercicio16(){
+    var ejercicio16 = window.open("indexEj16.html","index","width=1920px,height=1020px");
+}
+function Ejercicio17(){
+    var ejercicio17 = window.open("indexEj17.html","Selector de colores","width=600px,height=600px,left=500px,top=200px");
+}
+function Ejercicio21(){
+    var ejercicio21 = window.open("indexEj21.html","Ejercicio 21","width=1920px,height=1020px");
 }
