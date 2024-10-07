@@ -142,3 +142,12 @@ function Ejercicio17(){
 function Ejercicio21(){
     var ejercicio21 = window.open("indexEj21.html","Ejercicio 21","width=1920px,height=1020px");
 }
+function Ejercicio18(){
+    var ejercicio18 = window.open("indexEj18.html","Ejercicio 18", "width=500px,height=500px");
+}
+function Ejercicio19(){
+    var ejercicio19 = window.open("indexEj19.html","Ejercicio 19", "width=500px,height=500px");
+}
+function Ejercicio20(){
+    var ejercicio20 = window.open("indexEj20.html","Ejercicio 20", "width=500px,height=500px");
+}

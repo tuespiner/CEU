@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+<body>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+        }
+    </style>
+    <script>
+        function colorAleatorio(){
+            var random = parseInt(Math.random()*(1-5)+1); 
+            console.log(random);
+            var color = "";
+            switch(random){
+                case 1:
+                    color = "yellow";
+                    break;
+                case 2:
+                    color = "red";
+                    break;
+                case 3:
+                    color = "blue";
+                    break;
+                case 4:
+                    color = "pink";
+                    break;
+                case 5:
+                    color = "orange";
+                    break;
+            }
+            return color;
+        }
+        function crearCuadrado(){
+            var color = colorAleatorio();
+            var left = parseInt(Math.random()*(1-100)+1);
+            document.write(`<div style="background-color: ${color};left:${left}%;"></div>`)
+        }
+    </script>
+</body>
+</html>
