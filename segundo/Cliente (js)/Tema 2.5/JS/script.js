@@ -151,3 +151,6 @@ function Ejercicio19(){
 function Ejercicio20(){
     var ejercicio20 = window.open("indexEj20.html","Ejercicio 20", "width=500px,height=500px");
 }
+function Ejercicio22(){
+    window.location.href="indexEj22.html";
+}
