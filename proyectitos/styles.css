@@ -1,0 +1,62 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+div{
+    width: 0px;
+    height: 0px;
+    padding: 100px 200px;
+    background-color: blue;
+    transform: skewY(-15deg);
+    z-index: 1;
+}
+div::before{
+    content: "";
+    padding: 100px 50px;
+    background-color: violet;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 300px);
+    transform: skewY(30deg);
+    transform-origin: right;
+    z-index: 1;
+}
+div::after{
+    content: "";
+    padding: 29px 200px;
+    background-color: rgb(226, 81, 226);
+    position: absolute;
+    top: calc(50% - 158px);
+    left: calc(50% - 200px);
+    transform-origin: bottom;
+    transform: skewX(60deg);
+    z-index: 1;
+}
+.fondoEstrellas{
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    background-color: rgba(0, 0, 255, 0);
+    transform: skewY(0deg);
+    display: flex;
+}
+.fondoEstrellas::before{
+    display: none;
+}
+.fondoEstrellas::after{
+    display: none;
+}
+.estrellas{
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    box-shadow: 10vw 0px 0px white;
+}

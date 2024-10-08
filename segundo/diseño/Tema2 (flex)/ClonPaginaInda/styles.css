@@ -1,0 +1,36 @@
+body{
+    width: 100vw;
+    margin: 0px;
+}
+header{
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+main{
+    width: calc(100% - 4rem);
+    padding: 2rem;
+}
+.textoh1{
+    width: 65%;
+}
+main div:nth-child(1){
+    display: flex;
+}
+main:first-child:nth-child(2){
+    width: 30%;
+    display: flex;
+    
+}
+.material-symbols-outlined {
+    padding:2rem;
+    color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
