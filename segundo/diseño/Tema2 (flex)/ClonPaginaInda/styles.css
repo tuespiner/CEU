@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
 body{
     width: 100vw;
     margin: 0px;
+    font-family: Afacad Flux;
 }
 header{
     height: auto;
@@ -9,28 +11,93 @@ header{
     display: flex;
     justify-content: end;
     align-items: center;
+    box-shadow: 0px 0px 5px ;
+}
+header > svg{
+    padding: 1.5rem;
+    width: 40px;
+    height: 40px;
 }
 main{
-    width: calc(100% - 4rem);
-    padding: 2rem;
+    width: 100vw;
 }
-.textoh1{
-    width: 65%;
+div{
+    padding: 1rem;
 }
-main div:nth-child(1){
+h1{
+    font-weight: bold;
+}
+main > div:nth-child(1){
     display: flex;
+    border-bottom: 1px solid rgba(145, 143, 143, 0.336);
 }
-main:first-child:nth-child(2){
-    width: 30%;
+main > div:nth-child(1) > div:nth-child(1 ){
+    width: 60%;
+}
+main > div:nth-child(1) > div:nth-child(2){
+    width: 35%;
     display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 0.5rem;
     
 }
-.material-symbols-outlined {
-    padding:2rem;
-    color: white;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+main > div:nth-child(1) > div:nth-child(3){
+    width: 5%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.facebook, .carritoCompra{
+    width: 50px;
+    height: 50px;
+}
+.x{
+    width: 34px;
+    height: 34px;
+    background-color: black;
+    padding: 0.5rem;
+}
+.mail{
+    background-color: grey;
+    width: calc(50px - 1rem);
+    height: calc(50px - 1rem);
+    padding: 0.5rem;
+}
+main > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+main > div:nth-child(2) div{
+    width: 20%;
+}
+main > div:nth-child(2) div h2{
+    color: rgb(59, 134, 245);
+}
+.whatsapp{
+    width: calc(50px - 1rem);
+    height: calc(50px - 1rem);
+    padding: 0.5rem;
+    background-color: #00e676;
+}
+section{
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+}
+section > div{
+    padding: 0.5rem;
+    width: 33vw;
+    display: flex;
+    justify-content: center;
+}
+section > div:nth-child(1){
+    background-color: #3b579d;
+}
+section > div:nth-child(2){
+    background-color: black;
+}
+section > div:nth-child(3){
+    background-color: #00e676;
 }
