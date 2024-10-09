@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        function sumatorio(){
+            do{
+                var num = Number(prompt("Dime un numero mayor que 0"));
+                console.log(num);
+            }while(isNaN(num) || num <=0);
+            var sumatorio = 0;
+            for(let i = num; i>0; i--){
+                sumatorio = sumatorio + i;
+            }
+            return sumatorio;
+        }
+        console.log(sumatorio());
+    </script>
+</body>
+</html>

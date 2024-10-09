@@ -89,10 +89,10 @@ public class App2 {
 		return ResponseEntity.notFound().build();
 	}
 	
-	@PatchMapping
-	public Alumnos modifElementAlumno(@RequestBody Alumnos modif) {
+	@PatchMapping("/{id}")
+	public Alumnos modifElementAlumno(@RequestBody Alumnos modif, @PathVariable String id) {
 		for(Alumnos alumno : alumnos) {
-			if(alumno.getId().equals(modif.getId())) {
+			if(alumno.getId().equals(id)) {
 				if(modif.getNombre()!=null) {
 					alumno.setNombre(modif.getNombre());				
 				}

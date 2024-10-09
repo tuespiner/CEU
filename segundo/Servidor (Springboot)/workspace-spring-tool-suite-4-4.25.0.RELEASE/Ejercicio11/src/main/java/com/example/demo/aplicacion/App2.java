@@ -34,10 +34,14 @@ public class App2 {
 	
 	public App2() {
 		this.alumnos = new ArrayList<Alumnos>();
-		Alumnos alumno1 = new Alumnos("1","juan","juanspiner89@gmail.com",19);
-		Alumnos alumno2 = new Alumnos("2","juan","juanspiner89@gmail.com",19);
-		Alumnos alumno3 = new Alumnos("3","juan","juanspiner89@gmail.com",19);
-		Alumnos alumno4 = new Alumnos("4","juan","juanspiner89@gmail.com",19);
+		Direccion direccion1 = new Direccion("calle 1", 1, "sevilla");
+		Alumnos alumno1 = new Alumnos("1","juan","juanspiner89@gmail.com",19,direccion1);
+		Direccion direccion2 = new Direccion("calle 2", 1, "sevilla");
+		Alumnos alumno2 = new Alumnos("2","juan","juanspiner89@gmail.com",19,direccion2);
+		Direccion direccion3 = new Direccion("calle 3", 2, "madrid");
+		Alumnos alumno3 = new Alumnos("3","juan","juanspiner89@gmail.com",19,direccion3);
+		Direccion direccion4 = new Direccion("calle 1", 3, "cordoba");
+		Alumnos alumno4 = new Alumnos("4","juan","juanspiner89@gmail.com",19,direccion4);
 		alumnos.add(alumno1);
 		alumnos.add(alumno2);
 		alumnos.add(alumno3);
@@ -60,7 +64,7 @@ public class App2 {
 	
 	@PostMapping
 	public ResponseEntity<Alumnos> setAlumno(@RequestBody Alumnos add) {
-		Alumnos aluNuevo = new Alumnos(add.getId(),add.getNombre(),add.getEmail(),add.getEdad());
+		Alumnos aluNuevo = new Alumnos(add.getId(),add.getNombre(),add.getEmail(),add.getEdad(),add.getDireccion());
 		this.alumnos.add(aluNuevo);
 		return ResponseEntity.noContent().build();
 	}
@@ -90,10 +94,10 @@ public class App2 {
 		return ResponseEntity.notFound().build();
 	}
 	
-	@PatchMapping
-	public Alumnos modifElementAlumno(@RequestBody Alumnos modif) {
+	@PatchMapping("/{id}")
+	public Alumnos modifElementAlumno(@RequestBody Alumnos modif, @PathVariable String id) {
 		for(Alumnos alumno : alumnos) {
-			if(alumno.getId().equals(modif.getId())) {
+			if(alumno.getId().equals(id)) {
 				if(modif.getNombre()!=null) {
 					alumno.setNombre(modif.getNombre());				
 				}
@@ -109,7 +113,7 @@ public class App2 {
 		return null;
 	}
 	
-	@GetMapping
+	@GetMapping("/direcciones")
 	public ResponseEntity<List<Direccion>> getDirecciones(){
 		List<Direccion> direcciones = new ArrayList<>();
 		for(Alumnos alumno : alumnos) {
@@ -118,11 +122,11 @@ public class App2 {
 		return ResponseEntity.ok(direcciones);
 	}
 	
-	@GetMapping("/{codigoPostal}")
+	@GetMapping("/direcciones/codigoPostal/{codigoPostal}")
 	public ResponseEntity<List<Direccion>> getDireccionesPorCodigoPostal(@PathVariable Integer codigoPostal){
 		List<Direccion> direccionPorCodigoPostal = new ArrayList<>();
 		for(Alumnos alumno : alumnos) {
-			if( alumno.getDireccion().getCodigoPostal()== codigoPostal) {
+			if( alumno.getDireccion().getCodigoPostal() == codigoPostal) {
 				direccionPorCodigoPostal.add(alumno.getDireccion());
 			}
 		}
@@ -130,6 +134,17 @@ public class App2 {
 			return ResponseEntity.ok(direccionPorCodigoPostal);
 		}
 		return ResponseEntity.notFound().build();
+	}
+	
+	@GetMapping("/direcciones/ciudad/{ciudad}")
+	public ResponseEntity<Integer> contarAlumnosPorCiudad(@PathVariable String ciudad){
+		Integer contador = 0;
+		for(Alumnos alumno : alumnos) {
+			if(alumno.getDireccion().getCiudad().equals(ciudad)) {
+				contador++;
+			}
+		}
+		return ResponseEntity.ok(contador);
 	}
 
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pedirNum(){
+            var num = parseInt(prompt("dime un numero entre el 1 y el 20"));
+            window.opener.num = num;
+            window.close();
+            var cad = "<ul>\n";
+                for(let i = 1; i <= num; i++){
+                    cad = `${}`;
+                }
+        }
+        pedirNum();
+    </script>
+</body>
+</html>

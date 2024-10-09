@@ -7,11 +7,12 @@ public class Alumnos {
 	private int edad;
 	private Direccion direccion;
 	
-	public Alumnos(String id, String nombre,String email, int edad) {
+	public Alumnos(String id, String nombre,String email, int edad, Direccion direccion) {
 		this.id = id;
 		this.nombre = nombre;
 		this.email = email;
 		this.edad = edad;
+		this.direccion = direccion;
 	}
 
 	public String getId() {

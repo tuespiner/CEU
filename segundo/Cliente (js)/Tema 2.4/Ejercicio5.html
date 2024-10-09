@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <style>
+        table{
+            margin-bottom: 2rem;
+        }
+    </style>
+    <script>
+        function crearTabla(filas = 10, columnas = 4, color = "black"){
+            var borde = `1px solid ${color}`;
+            var innerhtml = `<table style="border:${borde};">\n`;
+            for(let i =1; i <= filas; i++){
+                var cadColCompletas = "";
+                for(let j = 1; j <= columnas; j++){
+                    cadColCompletas = `${cadColCompletas}<td style="border:${borde};">fila ${i}, columna ${j}</td>\n`;
+                }
+                var cadFila = `<tr style="border:${borde};">\n${cadColCompletas}\n</tr>\n`;
+                innerhtml = innerhtml + cadFila;
+            }
+            document.write(`${innerhtml}\n</table>`);
+        }
+        crearTabla();
+        crearTabla(20,10);
+        function diezTablas(){
+            for(let i = 0; i <10; i++){
+            crearTabla(5,4,"green");
+        }
+        }
+        diezTablas();
+    </script>
+</body>
+</html>

@@ -24,27 +24,20 @@
         function colorAleatorio(){
             var random = parseInt(Math.random()*(5)+1); 
             console.log(random);
-            var color = "";
-            switch(random){
-                case 1:
-                    color = "yellow";
-                    break;
-                case 2:
-                    color = "red";
-                    break;
-                case 3:
-                    color = "blue";
-                    break;
-                case 4:
-                    color = "pink";
-                    break;
-                case 5:
-                    color = "orange";
-                    break;
+            for(let i = 0; i <3;i++){
+                let decimal = parseInt(Math.random()*(255));
+                if(i == 0){
+                    var red = decimal;
+                }else if(i ==1){
+                    var green = decimal;
+                }else{
+                    var blue = decimal;
+                }
             }
+            var color = `rgb(${red}, ${green}, ${blue})`;
             return color;
         }
-        var cadena;
+        var cadena ="";
         var contador = 0;
         function crearCuadrado(){
             var color = colorAleatorio();
@@ -54,14 +47,14 @@
             console.log("He creado un div" + (contador++));
             
         }
-        function para(){
+        function printarCuadrados(){
             for(i=0;i<=2000;i++){
                 crearCuadrado();
             }
             document.body.innerHTML+=cadena;
             console.log("listo");
         }
-        para()
+        printarCuadrados()
     </script>
 </body>
 </html>

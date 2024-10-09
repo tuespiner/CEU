@@ -5,6 +5,11 @@ public class Direccion {
 	private Integer codigoPostal;
 	private String ciudad;
 	
+	public Direccion(String calle, Integer codigoPostal, String ciudad) {
+		this.calle = calle;
+		this.codigoPostal = codigoPostal;
+		this.ciudad = ciudad;
+	}
 	public String getCalle() {
 		return calle;
 	}
