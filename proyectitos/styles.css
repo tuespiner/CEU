@@ -55,6 +55,7 @@ div::after{
     display: none;
 }
 .estrellas{
-    width: --tamaño;
-    height: --tamaño;
+    width: var(--tamaño);
+    height: var(--tamaño);
+    box-shadow: 0px 0px 0px white;
 }
