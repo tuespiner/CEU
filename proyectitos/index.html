@@ -7,34 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style id="estilo">
+    </style>
     <div>
     </div>  
     <div class="fondoEstrellas">
-        <span class="estrellas" id="estrellas"></span>
+        <span class="estrellas" id="estrellas1"></span>
+        <span class="estrellas" id="estrellas2"></span>
+        <span class="estrellas" id="estrellas3"></span>
     </div>
-    <script>
-        function estrellas(color){
-            var x = parseInt(Math.random()*(100));
-            var y = parseInt(Math.random()*(100));
-            let cadSombra = `${x}vw ${y}vh 0px white`;
-            return cadSombra;
-        }
-        function crearEstrellas(){
-            let cadSombra = "";
-            let cantEstrellas = 200;
-            for(let i = 0; i <= cantEstrellas; i++){
-                if(i <= (cantEstrellas-1)){
-                    cadSombra = cadSombra + estrellas() + ",";
-                }else{
-                    cadSombra = cadSombra + estrellas() ;
-                }
-                console.log(i);
-            }
-            var estrella = document.getElementById("estrellas");
-            console.log(cadSombra);
-            estrella.style.boxShadow = cadSombra;
-        }
-        crearEstrellas();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

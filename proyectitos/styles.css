@@ -55,8 +55,6 @@ div::after{
     display: none;
 }
 .estrellas{
-    width: 2px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 10vw 0px 0px rgb(255, 3, 3);
+    width: --tamaño;
+    height: --tamaño;
 }
