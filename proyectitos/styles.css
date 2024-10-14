@@ -5,7 +5,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background: linear-gradient(#051327 , black );
 }
 
 div{
@@ -16,7 +16,7 @@ div{
     transform: skewY(-15deg);
     z-index: 1;
 }
-div::before{
+div::before, div::after{
     content: "";
     padding: 100px 50px;
     background-color: violet;
@@ -28,15 +28,12 @@ div::before{
     z-index: 1;
 }
 div::after{
-    content: "";
     padding: 29px 200px;
     background-color: rgb(226, 81, 226);
-    position: absolute;
     top: calc(50% - 158px);
     left: calc(50% - 200px);
     transform-origin: bottom;
     transform: skewX(60deg);
-    z-index: 1;
 }
 .fondoEstrellas{
     position: fixed;
@@ -55,7 +52,9 @@ div::after{
     display: none;
 }
 .estrellas{
+    --tamaño:2px;
     width: var(--tamaño);
     height: var(--tamaño);
     box-shadow: 0px 0px 0px white;
+    border-radius: 100%;
 }

@@ -9,9 +9,10 @@ function abrirVentana(){
     }
     var terminarIntervalo = () =>{
         clearInterval(intervalo)
+        document.getElementById("resultado").innerHTML=`Ya han pasado ${segundos} segudnos y se ha cerrado la ventana emergente`;
         ventana.window.close();
     }
     let intervalo = setInterval(contadorFunction,1000);
     let timeout = setTimeout(terminarIntervalo,(segundos*1000));
-    document.getElementById("resultado").innerHTML=`Ya han pasado ${segundos} segudnos y se ha cerrado la ventana emergente`;
+    
 }

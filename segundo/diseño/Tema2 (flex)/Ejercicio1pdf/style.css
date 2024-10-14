@@ -1,0 +1,35 @@
+body{
+    width: 100%;
+    margin: 0px;
+}
+div{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    width: calc(100% - 2rem);
+}
+div > div{
+    border: 2px solid black;
+    width: calc((100% / 3) - 3rem);
+    height: 300px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+div > div:nth-child(1){
+    background-color: rgb(250, 105, 61);
+}
+div > div:nth-child(2){
+    background-color: rgb(54, 118, 236);
+}
+div > div:nth-child(3){
+    background-color: rgb(62, 172, 62);
+}
+@media  (width <= 600px){
+    div > div{
+        width: 100%;
+    }
+    div{
+        flex-wrap: wrap;
+    }
+}
