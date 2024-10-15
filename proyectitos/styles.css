@@ -14,7 +14,8 @@ div{
     padding: 100px 200px;
     background-color: blue;
     transform: skewY(-15deg);
-    z-index: 1;
+    z-index: 200;
+    transition: 0.5s;
 }
 div::before, div::after{
     content: "";
@@ -26,6 +27,10 @@ div::before, div::after{
     transform: skewY(30deg);
     transform-origin: right;
     z-index: 1;
+    transition: 0.5s;
+}
+div::before{
+    transition: 0.25s;
 }
 div::after{
     padding: 29px 200px;
@@ -34,6 +39,22 @@ div::after{
     left: calc(50% - 200px);
     transform-origin: bottom;
     transform: skewX(60deg);
+}
+div:hover{
+    transform: skewy(15deg);
+}
+div:hover::before{
+    
+    padding: 100px 0px;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+
+}
+div:hover::after{
+    transform: skewx(-60deg);
+}
+.fondoEstrellas:hover{
+    transform: skewy(0deg);
 }
 .fondoEstrellas{
     position: fixed;
