@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+<body>
+    <h1>Abrir selector de colores en nueva ventana</h1>
+    <button onclick="color()">Abrir Ventana</button>
+    <script>
+        function color(){
+            var color = prompt("Dime un color en estos formatos (red o #11111 o 1,1,1)");
+            if(color.indexOf(",")==1){
+                color = `rgb(${color})`
+            }
+            window.opener.document.body.style.backgroundColor=`${color}`;
+            window.close();
+        }
+    </script>
+</body>
+</html>

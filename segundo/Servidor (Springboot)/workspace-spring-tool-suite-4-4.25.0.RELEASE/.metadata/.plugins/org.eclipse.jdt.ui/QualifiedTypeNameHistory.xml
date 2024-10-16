@@ -3,5 +3,8 @@
     <fullyQualifiedTypeName name="javax.swing.Spring"/>
     <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="com.example.demo.modelo.Pelicula"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

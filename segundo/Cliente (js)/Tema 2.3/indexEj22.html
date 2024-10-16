@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+<body>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0px;
+        }
+        div{
+            padding: 50px;
+            position: fixed;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+    </style>
+    <div style="background-color: blue;left: 50vw;top: 10vh;"></div>
+    <script>
+        function colorAleatorio(){
+            var random = parseInt(Math.random()*(5)+1); 
+            console.log(random);
+            for(let i = 0; i <3;i++){
+                let decimal = parseInt(Math.random()*(255));
+                if(i == 0){
+                    var red = decimal;
+                }else if(i ==1){
+                    var green = decimal;
+                }else{
+                    var blue = decimal;
+                }
+            }
+            var color = `rgb(${red}, ${green}, ${blue})`;
+            return color;
+        }
+        var cadena ="";
+        var contador = 0;
+        function crearCuadrado(){
+            var color = colorAleatorio();
+            var left = parseInt(Math.random()*(101));
+            var top = parseInt(Math.random()*(101));
+            cadena = cadena + `<div style="background-color: ${color}; left: ${left}vw; top: ${top}vh;">${contador}</div>`;
+            console.log("He creado un div" + (contador++));
+            
+        }
+        function printarCuadrados(){
+            for(i=0;i<=2000;i++){
+                crearCuadrado();
+            }
+            document.body.innerHTML+=cadena;
+            console.log("listo");
+        }
+        printarCuadrados()
+    </script>
+</body>
+</html>
