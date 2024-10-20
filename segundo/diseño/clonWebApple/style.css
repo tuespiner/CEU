@@ -76,7 +76,7 @@ main > section:nth-child(4) button{
     color: white;
     border-color: white;
 }
-main > section:nth-child(4) button:first-child{
+main > section:nth-child(4) button:first-child, main > section:nth-child(4) button:hover{
     background-color: white;
     color: black;
 }
@@ -88,7 +88,7 @@ main > section:nth-child(5){
 main > section:nth-child(6){
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 25vw);
     grid-auto-flow: row;
     gap: 1rem;
     padding: 0rem 1rem 1rem 1rem;
@@ -96,9 +96,24 @@ main > section:nth-child(6){
     height: auto;
 }
 main > section:nth-child(6) > div{
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 5rem);
+    height: calc(100% - 5rem);
+    padding: 2.5rem;
     background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+main > section:nth-child(6) > div:nth-child(2){
+    justify-content: end;
+}
+main > section:nth-child(6) h2{
+    margin: 0px;
+    font-size: 45px;
+}
+main > section:nth-child(6) p{
+    font-size: 20px;
 }
 main p{
     color: black;
@@ -112,6 +127,7 @@ main p{
     gap: 1rem;
     overflow: scroll;
     text-align: start;
+    scroll-snap-align: center;
 }
 .slider > div{
     padding: 4rem;
@@ -133,6 +149,9 @@ main p{
     color:black!Important;
     border-color: white;
 }
+.slider span{
+    font-weight: bold;
+}
 main > p{
     width: 30vw;
 }
@@ -148,9 +167,14 @@ main > section > h1 , p , h3{
     margin: 0px;
 }
 footer{
-    height: 80vh;
-    width: 100%;
+    height: calc(80vh - 2rem);
+    width: calc(100% - 2rem);
+    padding: 1rem;
     background-color: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    
 }
 
 button{
@@ -172,6 +196,7 @@ button:first-child{
 button:hover{
     background-color: #0077ed;
     color: white;
+    cursor: pointer;
 }
 h1{
     font-size: 70px;
@@ -183,4 +208,21 @@ h3{
 }
 img{
     height: 20px;
+}
+footer div{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: grey;
+    font-size: 12px;
+}
+ol{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+hr{
+    width: 100%;
 }
