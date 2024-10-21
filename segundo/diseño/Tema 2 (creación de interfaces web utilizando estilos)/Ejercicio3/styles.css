@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body{
+    margin: 0px;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Nunito Sans;
+}
+body > div{
+    display: flex;
+    width: 80%;
+}
+body > div > div{
+    width: calc((100% / 3) - 2rem);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+svg{
+    width:20px;
+}
+@media (width < 1024px){
+    body > div > div{
+        width: calc((100% / 2) - 2rem);
+    }
+    body > div > div:first-child{
+        order: 2;
+    }
+    body > div > div:nth-child(2){
+        order: 3;
+        width: 100%;
+        border: 2px solid black;
+    }
+    body > div > div:nth-child(3){
+        order: 1; 
+    }
+    body > div{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (width < 475px){
+    body{
+        width: calc(100% - 1rem);
+        padding: 0.5rem;
+    }
+    body > div{
+        width: 100%;
+    }
+    body > div > div{
+        width: 100%;
+    }
+    body > div > div:nth-child(2){
+        border: 0px;
+    }
+    body > div > div:nth-child(1){
+        background-color: #eeeeee;
+    }
+}

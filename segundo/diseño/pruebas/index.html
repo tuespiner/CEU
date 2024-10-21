@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            width: 100%;
+            margin: 0px;
+            height: 100vh;
+        }
+        #uno:checked ~ div:nth-child(4){
+            display: block;
+        }
+        #dos:checked ~ div:nth-child(5){
+            display: block;
+        }
+        div:nth-child(5){
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        div:nth-child(4){
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <input type="checkbox" id="uno">
+    <input type="checkbox" id="dos">
+    <div>
+    </div>
+    <div>
+    </div>
+</body>
+</html>
