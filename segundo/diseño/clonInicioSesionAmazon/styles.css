@@ -7,6 +7,7 @@ body{
     width: 100%;
     margin: 0px;
     font-family: amazon ember;
+    height: 100vh;
 }
 label{
     font-weight: 600;
@@ -17,7 +18,7 @@ img{
 header{
     height: 50px;
     padding: 1rem;
-    width: 100%;
+    width: calc(100% - 2rem);
     display: flex;
     justify-content: center;
 }
@@ -56,28 +57,48 @@ form > input:last-child{
 label{
     display: flex;
     justify-content: space-between;
+    max-height: 20px;
 }
 h2{
     margin: 0px;
 }
-.contraseña > label{
-    width: 20px;
+.contraseñaConteiner > label{
+    width: 25px;
     overflow: visible;
 }
 svg{
     height: 25px;
     position: relative;
-    top: 36.5px;
+    top: 31.5px;
     left: 232px;
     transition: 0.3s;
     display: none;
 }
-#svg1 ~ #Layer_2_2{
-    display: block;
+svg:hover{
+    scale: 1.2;
+    cursor: pointer;
 }
-#svg1:checked ~ #Layer_2_1{
-    display: block;
-}
-#svg1:checked ~ #Layer_2_2{
+#svg1{
     display: none;
+}
+#svg1 ~ label > #Layer_2_2{
+    display: block;
+}
+#svg1 ~ label > #Layer_2_1{
+    display: none;
+}
+#svg1:checked ~ label > #Layer_2_1{
+    display: block;
+}
+#svg1:checked ~ label > #Layer_2_2{
+    display: none;
+}
+#svg1:checked ~ #contraseña{
+    color: black;
+}
+footer{
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: max-content;
+    background-color: grey;
 }
