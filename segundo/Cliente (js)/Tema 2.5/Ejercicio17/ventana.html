@@ -25,11 +25,12 @@
             display: flex;
         }
         p{
+            font-weight: bold;
             margin: 0px;
-            width: 20%;
+            width: 25%;
         }
         input{
-            
+            border: 1px solid black;
             border-radius: 5px;
         }
         h1{
@@ -37,7 +38,7 @@
         }
     </style>
     <h1>Creación Objeto Taxi</h1>
-    <form action="index.html">
+    <form id="formulario">
         <div class="separador">
             <p>Tipo de motor:</p>
             <input type="text" name="tipoMotor" id="tipoMotor" value="numPasajeros">
@@ -46,14 +47,19 @@
             <p>Numero de pasajeros:</p>
             <input type="number" name="numPasajeros" id="numPasajeros" value="numPasajeros">
         </div>
-        <label for="carga">Carga: </label>
-        <input type="number" name="carga" id="carga" value="carga">
-        <div class="separador"></div>
-        <label for="velocidad">Velocidad: </label>
-        <input type="number" name="velocidad" id="velocidad" value="velocidad">
-        <div class="separador"></div>
-        <label for="ruedas">Ruedas: </label>
-        <input type="number" name="ruedas" id="ruedas" value="ruedas">
+        <div class="separador">
+            <p>Carga:</p>
+            <input type="number" name="carga" id="carga" value="carga">
+        </div>
+        <div class="separador">
+            <p>Velicidad: </p>
+            <input type="number" name="velocidad" id="velocidad" value="velocidad">
+        </div>
+        <div class="separador">
+            <p>Ruedas: </p>
+            <input type="number" name="ruedas" id="ruedas" value="ruedas">
+        </div>
+        <input type="submit" name="Enviar" value="Enviar" onclick="datosObjeto()">
     </form>
 </body>
 </html>
