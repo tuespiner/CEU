@@ -6,3 +6,9 @@ const productos = [
     {nombre: "producto5", precio: 3.5, categoria: {nombre: "categoria5", descripcion: "descripcion5"}},
 ];
 
+var categoria = productos.filter((cat) => cat.categoria.nombre == "Electrónica");
+categoria.forEach((obj) => {
+    var cad = `Nombre: ${obj.nombre}\nPrecio: ${obj.precio}€\nCategoria:\n\tNombre: ${obj.categoria.nombre}\n\tDescriptión: ${obj.categoria.descripcion}`
+    console.log(cad);
+})
+

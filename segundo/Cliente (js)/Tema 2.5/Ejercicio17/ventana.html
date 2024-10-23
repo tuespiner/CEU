@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana creacion objeto taxi</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0px;
+            width: 100%;
+            padding: 2rem;
+            font-family: verdana;
+        }
+        form{
+            border:1.5px solid black;
+            border-radius: 15px;
+            padding: 1rem;
+            width: 50%;
+        }
+        .separador{
+            width: 100%;
+            padding: .5rem;
+            display: flex;
+        }
+        p{
+            margin: 0px;
+            width: 20%;
+        }
+        input{
+            
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(0, 123, 255);
+        }
+    </style>
+    <h1>Creación Objeto Taxi</h1>
+    <form action="index.html">
+        <div class="separador">
+            <p>Tipo de motor:</p>
+            <input type="text" name="tipoMotor" id="tipoMotor" value="numPasajeros">
+        </div>
+        <div class="separador">
+            <p>Numero de pasajeros:</p>
+            <input type="number" name="numPasajeros" id="numPasajeros" value="numPasajeros">
+        </div>
+        <label for="carga">Carga: </label>
+        <input type="number" name="carga" id="carga" value="carga">
+        <div class="separador"></div>
+        <label for="velocidad">Velocidad: </label>
+        <input type="number" name="velocidad" id="velocidad" value="velocidad">
+        <div class="separador"></div>
+        <label for="ruedas">Ruedas: </label>
+        <input type="number" name="ruedas" id="ruedas" value="ruedas">
+    </form>
+</body>
+</html>
