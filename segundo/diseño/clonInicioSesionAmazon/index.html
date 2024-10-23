@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es_ES">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,19 +16,31 @@
             <form action="#">
                 <div>
                     <label for="correo">Correo (teléfono para cuentas móviles)</label>
-                <input type="text" name="correoTelefono"  id="correo">
+                    <input type="text" name="correoTelefono"  id="correo">
                 </div>
                 <div>
-                    <label for="contraseñaConteiner">
+                    <!--<label for="contraseñaConteiner">
                         contraseña
-                        <input type="checkbox" name="svg1" id="svg1" onclick="cambiarDePssATxt()">
                         <label for="svg1">
+                            <input type="checkbox" name="svg1" id="svg1" onclick="cambiarDePssATxt()">
                             <svg id="Layer_2_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" for="svg1"><path d="m30.787 15.383c-.268-.342-6.661-8.383-14.787-8.383s-14.519 8.041-14.787 8.383a1 1 0 0 0 0 1.234c.268.342 6.661 8.383 14.787 8.383s14.519-8.041 14.787-8.383a1 1 0 0 0 0-1.234zm-14.787 5.617a5 5 0 1 1 5-5 5.006 5.006 0 0 1 -5 5z"/></svg>
                             <svg id="Layer_2_2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" for="svg1"><path d="m26.707 5.293a1 1 0 0 0 -1.414 0l-3.174 3.174a14.471 14.471 0 0 0 -6.119-1.467c-8.126 0-14.519 8.041-14.787 8.383a1 1 0 0 0 0 1.234 27.724 27.724 0 0 0 6.823 5.933l-2.743 2.743a1 1 0 1 0 1.414 1.414l20-20a1 1 0 0 0 0-1.414zm-15.707 10.707a5.006 5.006 0 0 1 5-5 4.892 4.892 0 0 1 2.73.856l-6.874 6.874a4.892 4.892 0 0 1 -.856-2.73z"/><path d="m30.787 15.383a27.937 27.937 0 0 0 -5.116-4.812l-4.741 4.741a4.874 4.874 0 0 1 .07.688 5.006 5.006 0 0 1 -5 5 4.874 4.874 0 0 1 -.688-.07l-3.4 3.4a13.529 13.529 0 0 0 4.088.67c8.126 0 14.519-8.041 14.787-8.383a1 1 0 0 0 0-1.234z"/></svg>
                         </label>
                         <a href="#">¿Olvidaste tu contraseña?</a>
                     </label>
-                    <input type="password" name="contraseña"  id="contraseña">
+                    <input type="password" name="contraseña"  id="contraseña">-->
+                    <label for="contraseñaConteiner">
+                        contraseña
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </label>
+                    <div class="inputContraseña">
+                        <input type="password" name="contraseña"  id="contraseña">
+                        <label for="svg1">
+                            <input type="checkbox" name="svg1" id="svg1" onclick="cambiarDePssATxt()">
+                            <svg id="Layer_2_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" for="svg1"><path d="m30.787 15.383c-.268-.342-6.661-8.383-14.787-8.383s-14.519 8.041-14.787 8.383a1 1 0 0 0 0 1.234c.268.342 6.661 8.383 14.787 8.383s14.519-8.041 14.787-8.383a1 1 0 0 0 0-1.234zm-14.787 5.617a5 5 0 1 1 5-5 5.006 5.006 0 0 1 -5 5z"/></svg>
+                            <svg id="Layer_2_2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" for="svg1"><path d="m26.707 5.293a1 1 0 0 0 -1.414 0l-3.174 3.174a14.471 14.471 0 0 0 -6.119-1.467c-8.126 0-14.519 8.041-14.787 8.383a1 1 0 0 0 0 1.234 27.724 27.724 0 0 0 6.823 5.933l-2.743 2.743a1 1 0 1 0 1.414 1.414l20-20a1 1 0 0 0 0-1.414zm-15.707 10.707a5.006 5.006 0 0 1 5-5 4.892 4.892 0 0 1 2.73.856l-6.874 6.874a4.892 4.892 0 0 1 -.856-2.73z"/><path d="m30.787 15.383a27.937 27.937 0 0 0 -5.116-4.812l-4.741 4.741a4.874 4.874 0 0 1 .07.688 5.006 5.006 0 0 1 -5 5 4.874 4.874 0 0 1 -.688-.07l-3.4 3.4a13.529 13.529 0 0 0 4.088.67c8.126 0 14.519-8.041 14.787-8.383a1 1 0 0 0 0-1.234z"/></svg>
+                        </label>
+                    </div>
                 </div>
                 <input type="submit" name="IniciarSesión" value="Iniciar Sesion">
             </form>

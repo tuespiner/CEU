@@ -66,14 +66,43 @@ h2{
     width: 25px;
     overflow: visible;
 }
-svg{
+
+/*svg{
     height: 25px;
     position: relative;
     top: 31.5px;
     left: 232px;
     transition: 0.3s;
     display: none;
+}*/
+.inputContraseña{
+    flex-direction: row;
+    gap: 0px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    align-items: center;
+    float: inline-end;
 }
+.inputContraseña > input{
+    width: 100%;
+    border: 0px;
+}
+.inputContraseña > label{
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: calc(50% + 200px);
+}
+svg{
+    height: 25px;
+    transition: 0.3s;
+    display: none;
+    position: relative;
+    left: calc(-25px - 0.5rem);
+}
+
 svg:hover{
     scale: 1.2;
     cursor: pointer;
@@ -81,16 +110,16 @@ svg:hover{
 #svg1{
     display: none;
 }
-#svg1 ~ label > #Layer_2_2{
+#svg1 ~ #Layer_2_2{
     display: block;
 }
-#svg1 ~ label > #Layer_2_1{
+#svg1 ~ #Layer_2_1{
     display: none;
 }
-#svg1:checked ~ label > #Layer_2_1{
+#svg1:checked ~ #Layer_2_1{
     display: block;
 }
-#svg1:checked ~ label > #Layer_2_2{
+#svg1:checked ~ #Layer_2_2{
     display: none;
 }
 #svg1:checked ~ #contraseña{
