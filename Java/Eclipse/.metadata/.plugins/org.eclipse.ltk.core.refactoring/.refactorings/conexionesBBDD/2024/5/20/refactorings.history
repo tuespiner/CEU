@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;OpenConnection.java&apos; to &apos;PrácticaFinal/src/Servicio&apos;&#x0D;&#x0A;- Original project: &apos;conexionesBBDD&apos;&#x0D;&#x0A;- Destination element: &apos;PrácticaFinal/src/Servicio&apos;&#x0D;&#x0A;- Original element: &apos;Ejercicio_15.Servicios.OpenConnection.java&apos;" description="Copy compilation unit" destination="=PrácticaFinal/src&lt;Servicio" element1="/src&lt;Ejercicio_15.Servicios{OpenConnection.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716106502440" units="1" version="1.0"/>
+</session>
