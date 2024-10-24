@@ -48,10 +48,8 @@ function crearObjetoPrompt(){
     }
     }
 
-
     console.log(taxi.numRuedas)
     taxi.saludar();
-
     //taxiGeneral = taxi;
     //saludo();
 }   
