@@ -8,6 +8,9 @@ body{
     margin: 0px;
     font-family: amazon ember;
     height: 100vh;
+    display: grid;
+    grid-template-rows: calc(50px + 2rem) 1fr minmax(50px, 100%);
+    gap: 1rem;
 }
 label{
     font-weight: 600;
@@ -51,7 +54,7 @@ input{
     border-radius: 4px;
     border: 1px solid rgb(180, 180, 180);
 }
-form > input:last-child{
+.inicioSesion > form:nth-child(2) > input:last-child{
     background: linear-gradient(#ffe69a, #f1cb5c);
 }
 label{
@@ -128,6 +131,28 @@ svg:hover{
 footer{
     padding: 1rem;
     width: calc(100% - 2rem);
-    height: max-content;
-    background-color: grey;
+    height: calc(100% - 2rem);
+    border-top: 3px solid rgb(223, 223, 223);
+}
+
+footer  > p{
+    margin: 0px;
+}
+.registrarse{
+    gap: .5rem;
+}
+.registrarse legend{
+    justify-self: center;
+}
+.registrarse div{
+    display: flex;
+    flex-direction: row;
+}
+.registrarse div hr{
+    width: 25%;
+    align-self: center;
+    height: 0px;
+}
+.registrarse div p{
+    margin: 0px;
 }
