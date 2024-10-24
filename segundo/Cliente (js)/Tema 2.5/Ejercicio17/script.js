@@ -48,8 +48,7 @@ function crearObjetoPrompt(){
     }
     }
 
-
-    console.log(taxi.numRuedas)
+    console.log("HOla que tal")
     taxi.saludar();
 
     //taxiGeneral = taxi;
