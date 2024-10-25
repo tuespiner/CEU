@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            width: 100%;
+            margin: 0px;
+        }
+        span{
+            position: absolute;
+            padding: .25rem 7.5rem;
+            box-shadow: inset 0px 0px 10px -5px;
+            border-radius: 5px;
+            left: 10px;
+            top: 10px;
+        }
+        span::before{
+            content: "";
+            position: absolute;
+            background-color: orange;
+            animation: animacion;
+            animation-duration: 3s;
+            left: 0px;
+            top: 0px;
+            padding: .25rem 0px;
+            border-radius: 5px;
+        }
+        @keyframes animacion{
+            from{
+                padding-left: 0%;
+            }to{
+                padding-left: 100%;
+            }
+        }
+    </style>
+    <span></span>
+</body>
+</html>
