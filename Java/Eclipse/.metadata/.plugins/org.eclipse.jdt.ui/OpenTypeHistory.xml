@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=Excepciones/C:\/Users\/USUARIO\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\/jre\/lib\/jrt-fs.jar`java.base&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1698476490000"/>
-    <typeInfo handle="=conexionesBBDD/C:\/Users\/USUARIO\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\/jre\/lib\/jrt-fs.jar`java.base&lt;java.io(ObjectStreamClass$ExceptionInfo.class[ExceptionInfo" modifiers="10" timestamp="1698476490000"/>
-    <typeInfo handle="=Excepciones/C:\/Users\/USUARIO\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\/jre\/lib\/jrt-fs.jar`java.base&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1698476490000"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

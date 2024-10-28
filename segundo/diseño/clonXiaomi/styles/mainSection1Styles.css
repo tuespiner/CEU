@@ -1,0 +1,134 @@
+/*TODO: El div padre*/
+.slider{
+    width: 100%;
+    padding: 3rem 0px 1rem 0px;
+    display: flex;
+}
+/** Botones derecho e izquierdo*/
+.botonIzqu{
+    width: 0%;
+    padding:  1rem 0rem 1rem 2rem;
+}
+.slider div:last-child {
+    width: 0%;
+    padding:  1rem 2rem 1rem 0rem;
+}
+/*TODO: Div que contiene las secciones de imagen y texto*/
+.slider div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    min-width: calc(100% - 4rem);
+}
+.slider div:nth-child(2) div{
+    display: flex;
+    &:first-child{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: calc(40% - 2rem);
+    }
+}
+.slider div:nth-child(2) div:first-child{
+    gap: .5rem;
+    /* Lo que esta puesto abajo con el & se llama nesting, es un a propiedad
+    que ha salido hace poco tiempo, lo que hace es referirse con el & a el elemento
+    de arriba, en este caso el .slider div:nth-child(2) div:first-child;
+     y lo que pongo despues es como si puesiera h1 despues del .slider etc*/
+    & div{
+        /* Esto equivale a:
+         .slider div:nth-child(2) div:first-child > h1,
+         .slider div:nth-child(2) div:first-child > p,
+         .slider div:nth-child(2) div:first-child > div*/
+        width: 50%;
+        margin: 0px;
+    }
+    & > div{
+        padding: 0px;
+    }
+    & p span{
+        font-weight: 600;
+        box-shadow: 0px 0px 0px 0px ;
+    }
+    & div:last-child{
+        max-width: 50%;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        & button{
+           height: fit-content; 
+           padding:.25rem 3rem;
+           border-radius: 10px;
+           border: 0px;
+           background-color: black;
+           color: white;
+           font-weight: bold;
+        }
+        & p{
+            margin: 0px;
+            &:first-child{
+                width: 50%;
+                font-size: larger;
+            }
+        }
+    }
+    & h1{
+        font-size: 35px;
+    }
+    .price{
+        font-size: larger;
+        padding: 0px;
+    }
+}
+.slider img{
+    width: 60%;
+}
+/* TODO: Timers de abajo de las fotos*/
+.slider div:nth-child(2) div:last-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: white;
+}
+.slider div:nth-child(2) div:last-child span{
+    width: 7.5%;
+    padding: .25rem;
+    box-shadow: inset 0px 0px 10px -5px ;
+    height: 0px;
+    border-radius: 5px ;    
+}
+
+.slider div:nth-child(2) div:last-child span::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: orange;
+    padding: 0px 0rem;
+    height: .25rem;
+    border-radius: 5px;
+    left: 0px;
+}
+.slider div:nth-child(2) div:last-child span:nth-child(2){
+    margin-right: calc(7.5% + 1rem);
+}
+.slider div:nth-child(2) div:last-child span:nth-child(3){
+    position: absolute;
+    width: calc(7.5% - 1rem);
+    left: calc(50% + 1rem);
+}
+.slider div:nth-child(2) div:last-child span:nth-child(3)::before{
+    animation: animacionSpan;
+    animation-duration: 6s;
+}
+@keyframes animacionSpan{
+    from{
+        padding-right: 0%;
+        padding-top: .25rem;
+    }
+    to{
+        padding-right: 100%;
+        padding-top: .25rem;
+    }
+}
