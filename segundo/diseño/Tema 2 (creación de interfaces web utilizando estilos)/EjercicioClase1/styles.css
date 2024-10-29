@@ -1,0 +1,61 @@
+body{
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: .5rem;
+}
+h2{
+    margin: 0px;
+}
+form div{
+    border: 1px solid #767676;
+    display: flex;
+    align-items: center;
+    border-radius: 2.5px;
+    &::before{
+        --size:40px;
+        content: '';
+        background-image: url(https://cdn0.iconfinder.com/data/icons/streamline-emoji-1/48/106-hear-no-evil-monkey-256.png);
+        background-size: cover;
+        height: var(--size);
+        width: var(--size);
+        display: inline-block;
+        margin: .25rem;
+        transition: .3s;
+    }
+    &:hover{
+        &::before{
+            background-image: url(https://cdn0.iconfinder.com/data/icons/streamline-emoji-1/48/107-speak-no-evil-monkey-256.png);
+        }
+    }
+    &:focus-within{
+        outline: auto;
+        &::before{
+            background-image: url(https://cdn0.iconfinder.com/data/icons/streamline-emoji-1/48/105-see-no-evil-monkey-256.png);
+        }
+        form div:hover{
+            background-image: url(https://cdn0.iconfinder.com/data/icons/streamline-emoji-1/48/105-see-no-evil-monkey-256.png);
+        }
+       
+    }
+    
+    
+
+}
+input[type=password]{
+    width: calc(100% - 40px);
+    border: 0px;
+    outline: 0px;
+}
+input[type=text]{
+    padding: .25rem;
+    height: 40px;
+}
