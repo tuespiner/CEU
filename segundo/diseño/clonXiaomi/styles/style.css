@@ -296,6 +296,9 @@ footer{
                         }
                     }
                 }
+                &:first-child{
+                    
+                }
             }
         }
         &:last-child{
