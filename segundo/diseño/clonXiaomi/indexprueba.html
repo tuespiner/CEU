@@ -8,36 +8,34 @@
 <body>
     <style>
         body{
-            width: 100%;
+            width: calc(100% -2rem);
             margin: 0px;
+            padding: 1rem;
         }
-        span{
-            position: absolute;
-            padding: .25rem 7.5rem;
-            box-shadow: inset 0px 0px 10px -5px;
-            border-radius: 5px;
-            left: 10px;
-            top: 10px;
+        div{
+            width: 50px;
+            height: 50px;
+            padding: .5rem;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
         }
-        span::before{
+        div::before, div::after{
             content: "";
+            display: block;
+            width: 30px;
+            height: .2rem;
+            background-color: white;
+            transform:  rotate(45deg);
             position: absolute;
-            background-color: orange;
-            animation: animacion;
-            animation-duration: 3s;
-            left: 0px;
-            top: 0px;
-            padding: .25rem 0px;
-            border-radius: 5px;
+            border-radius: 15px;
         }
-        @keyframes animacion{
-            from{
-                padding-left: 0%;
-            }to{
-                padding-left: 100%;
-            }
+        div::after{
+            transform: rotate(-45deg);
         }
     </style>
-    <span></span>
+    <div></div>
 </body>
 </html>
