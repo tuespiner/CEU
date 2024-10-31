@@ -1,14 +1,19 @@
 @font-face {
     font-family: fuente xiaomi;
     src: url(../fonts/source-sans-pro/SourceSansPro-Regular.ttf);
-
 }
 body{
     margin: 0px;
     width: 100%;
     font-family: fuente xiaomi;
 }
+i{
+   color: #d0d0d0; 
+}
 /*HEADER*/
+#x{
+    font-size: 20px;
+}
 header{
     width: 100%;
 }
@@ -29,10 +34,14 @@ header p{
 }
 header > section:first-child{
     background-color: black;
+    align-items: center;
 }
 header > section:nth-child(2){
     box-shadow: 0px 0px 10px -4px rgb(184, 184, 184);
     color: black;
+    & i{
+        color: black;
+    }
 }
 header > section:nth-child(2)  a{
     color: black;
@@ -42,9 +51,13 @@ header ul{
     margin: 0px;
     list-style: none;
     padding: 0px;
+    align-items: center;
 }
 header section:nth-child(2)  ul > li{
     padding: 0rem 1rem 0rem 1rem ;
+    & img{
+        width: 30px;
+    }
 }
 header section:nth-child(2) ul > li:first-child{
     padding-left: 2rem;
@@ -59,21 +72,23 @@ header section:nth-child(2) ul:last-child > li:last-child{
     display: flex;
 
 }
-.botonIzqu{
-    width: 0%;
-    padding:  1rem 0rem 1rem 2rem;
+.botonIzqu, .slider div:last-child{
+    width: 30px;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
     & > img{
         width: 30px;
+        height: 30px;
     }
 }
 .slider div:last-child {
-    width: 0%;
-    padding:  1rem 2rem 1rem 0rem;
+    padding: 0rem 2rem 0rem 0rem;
 }
 .slider > div:nth-child(2){
     display: flex;
     flex-wrap: wrap;
-    min-width: calc(100% - 4rem);
+    min-width: calc(100% - 4rem - 60px);
 }
 .slider div:nth-child(2) div{
     display: flex;
@@ -89,28 +104,41 @@ header section:nth-child(2) ul:last-child > li:last-child{
     }
 }
 .slider div:nth-child(2) div:first-child{
-    gap: .5rem;
-    /* Lo que esta puesto abajo con el & se llama nesting, es un a propiedad
-    que ha salido hace poco tiempo, lo que hace es referirse con el & a el elemento
-    de arriba, en este caso el .slider div:nth-child(2) div:first-child;
-     y lo que pongo despues es como si puesiera h1 despues del .slider etc*/
+    gap: 3rem;
     & div{
-        /* Esto equivale a:
-         .slider div:nth-child(2) div:first-child > h1,
-         .slider div:nth-child(2) div:first-child > p,
-         .slider div:nth-child(2) div:first-child > div*/
         width: 50%;
+        display: flex;
         margin: 0px;
-    }
-    & > div{
         padding: 0px;
+        gap: .5rem;
+        &:first-child{
+            align-items: start;
+            & h1, p{
+                margin: 0px;
+            }
+            & h1{
+                font-size: 40px;
+            }
+            & span{
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+        &:last-child{
+            & p:last-child{
+                display: flex;
+                justify-content: center;
+                gap: .25rem;
+            }
+            & img{
+                height: 20px;
+            }
+        }
     }
     & p span{
-        font-weight: 600;
         box-shadow: 0px 0px 0px 0px ;
     }
     & div:last-child{
-        max-width: 50%;
         align-items: center;
         justify-content: start;
         flex-wrap: wrap;
@@ -129,11 +157,9 @@ header section:nth-child(2) ul:last-child > li:last-child{
             &:first-child{
                 width: 100%;
                 font-size: larger;
+                font-weight: bold;
             }
         }
-    }
-    & h1{
-        font-size: 35px;
     }
 }
 .price{
@@ -187,8 +213,18 @@ header section:nth-child(2) ul:last-child > li:last-child{
     align-items: center;
     background-color: #f7f7f7;
     & > div{
-        &:first-child {
+        &:nth-child(2) {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            & p:first-child{
+                color: orange;
+                font-weight: bold;
+                border-bottom: 2px solid orange;
+                margin: 0px;
+                padding: 1rem 0rem;
+            }
         }
         &:last-child{
             --borde: 1rem solid white;
@@ -214,6 +250,17 @@ header section:nth-child(2) ul:last-child > li:last-child{
             width: 50%;
             border-top-left-radius: var(--radius);
         }
+        & h3{
+            font-size: 30px;
+            margin-bottom: 1rem;
+        }
+        & span{
+            &:nth-child(2),&:last-child{
+                font-weight: bold;
+            }
+        }
+        
+
     }
 }
 
@@ -276,6 +323,22 @@ footer{
                 border-radius: 15px;
                 &:nth-child(2){
                     border: 0px;
+                    gap: 1.5rem;
+                    display: flex;
+                    & a{
+                        color: rgba(255, 255, 255, 0);
+                        &:first-child img{
+                            --widthFacebook:calc(25px + 1rem);
+                            width: var(--widthFacebook);
+                            height: var(--widthFacebook);
+                            padding: 0px;
+                        }
+                    }
+                    & img{
+                        & i{
+                        }
+                        
+                    }
                 }
                 &:nth-child(4){
                     display: flex;
