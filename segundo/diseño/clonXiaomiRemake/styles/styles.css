@@ -1,0 +1,167 @@
+@font-face {
+    font-family: fuente xiaomi;
+    src: url(../fonts/MiSans-Latin\ 1.woff2);
+}
+body{
+    margin: 0px;
+    width: 100%;
+    font-family: fuente xiaomi;
+}
+/*HEADER*/
+header{
+    width: 100%;
+    & section{
+        width: calc(100% - 1rem);
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child{
+            background-color: black;
+            color: white;
+            & > p{
+                font-size: 15px;
+            }
+            & > i{
+                font-size: 20px;
+            }
+        }
+        &:last-child{
+            box-shadow: 0px 0px 15px -10px grey;
+            & > ul{
+                display: flex;
+                margin: 0px;
+                padding: 0px;
+                align-items: center;
+                & li{
+                    list-style: none;
+                    margin: 0rem 1rem;
+                    & a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+                & img{
+                    width: 30px;
+                }
+            }
+        }
+        & p{
+            margin: 0px;
+        }
+    }
+}
+/*SLIDER*/
+.slider, .slider div, .Popular{
+    display: flex;
+}
+.slider{
+    padding: 1rem 2rem;
+    width: calc(100% - 4rem);
+    flex-direction: row;
+    & > div{
+        &:first-child, &:last-child{
+            align-items: center;
+        }
+        &:nth-child(2){
+            width: 100%;
+            flex-wrap: wrap;
+            & > div{
+                &:first-child{
+                    width: 40%;
+                    gap: 3rem;
+                    align-items: center;
+                    flex-direction: column;
+                    & > div{
+                        width: 20vw;
+                        &:first-child{
+                            flex-direction: column;
+                        }
+                        &:last-child{
+                            flex-wrap: wrap;
+                            gap: 1rem;
+                            & button{
+                                width: fit-content;
+                                padding: .25rem 2.5rem;
+                            }
+                            & > p{
+                                &:first-child, &:last-child{
+                                    margin: 0px;
+                                }
+                                &:first-child{
+                                    width: 100%;
+                                }
+                                &:last-child{
+                                    width: fit-content;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    width: 100%;
+                    justify-content: center;
+                    gap: 2rem;
+                    & > span{
+                        height: .5rem;
+                        width: 100px;
+                        background-color: rgba(128, 128, 128, 0.164);
+                        border-radius: 15px;
+                        &:nth-child(3){
+                            &::before{
+                                content: "";
+                                display: block;
+                                border-radius: 15px;
+                                padding: .25rem;
+                                width: 40%;
+                                background-color:orange;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            & > img{
+                width: 60%;
+            }
+            
+        }
+    }
+}
+/*POPULAR*/
+.Popular{
+    width: calc(100% - 8rem);
+    padding: 4rem 4rem 2rem 4rem;
+    background-color: #f7f7f7;
+    flex-direction: column;
+    align-items: center;
+    & > div{
+        &, &:first-child, &:last-child{
+            display: flex;
+        } 
+        &:nth-child(2){
+            gap: 2rem;
+            & p{
+               margin: 0px;
+               padding: 1rem 0rem;
+               &:first-child{
+                    color: orange;
+                    font-weight: bold;
+                    border-bottom: 2px solid orange;
+               } 
+            }
+        }
+        &:last-child{
+            width: 100%;
+            border: 1rem solid white;
+            border-bottom: 0px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            & img, & div{
+                width: 50%;
+            }
+        }
+    }
+}
+/*FOOTER*/
