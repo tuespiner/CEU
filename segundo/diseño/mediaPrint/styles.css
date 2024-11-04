@@ -1,0 +1,46 @@
+.contenedor p{
+    font-size: 3rem;
+}
+.seccion{
+    padding: 5rem;
+    background-color: grey;
+    width: min-content;
+    transition: .3s;
+    & p{
+        transition: .3s;
+    }
+    &:hover{
+        background-color: red;
+        & p{
+            color: orange;
+        }
+    }
+}
+@media print{
+    .contenedor p{
+        font-size: 1rem;
+    }
+}
+
+.contenedor a{
+    &:link{
+        color: pink;
+        font-size: 4rem;
+    }
+    &:visited{
+        color: green;
+    }
+    &:hover{
+        color: greenyellow;
+    }
+    &:focus{
+        color: blue;
+    }
+    &:active{
+        color: orange;
+    }
+    &:target{
+
+    }
+}
+

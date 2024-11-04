@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+    width: 100%;
+}
+div{
+    color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    width: fit-content;
+    &:first-child{  
+        background-color: #4CAF50;
+        border-right: 1rem solid black;
+        border-bottom: 2rem dashed #999999;
+        width: 50%;
+    }
+    &:nth-child(2){
+        border-top: 1rem solid #4CAF50;
+        border-bottom: 1rem solid #4CAF50;
+        border-left: 2rem solid black;
+        width: 75%;
+        background-color: #000000;
+    }
+}
+
+@media (max-width: 425px){
+    div{
+        margin-bottom: 0px;
+        margin-top: 1rem;
+        &:first-child{
+            width: auto;
+            background-color: #999999;
+            border:1rem solid #999999;
+        }
+        &:nth-child(2){
+            width: auto;
+            border-right: 2rem solid black;
+            border-bottom: 2rem solid white;
+        }
+    }
+}
