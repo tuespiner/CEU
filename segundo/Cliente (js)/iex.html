@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="es_ES">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra papel o tijera</title>
-</head>
-<body>
-    <script>
-        function obtenerValorUsuario(){
-            do{
-                var valor = prompt("Piedra papel o tijeras, escribelo")
-                console.log(valor)
-            }while(valor != "piedra" || valor != "tijeras" || valor != "papel");
-
-        }
-        obtenerValorUsuario();
-    </script>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 11</title>
+    <style>
+      .rojo {
+        color: red;
+      }
+      .verde{
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="edad" placeholder="Escribe la edad" />
+       
+      <input type="submit" id="enviar" />
+    </form>
+    <div id="resultado"></div>
+  </body>
+  <script src="script.js"></script>
 </html>
