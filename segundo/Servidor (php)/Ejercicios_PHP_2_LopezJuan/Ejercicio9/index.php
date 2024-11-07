@@ -10,12 +10,11 @@
     $Nombre = $_REQUEST["nombre"];
     $Edad = $_REQUEST["edad"];
     $Email = $_REQUEST["mail"];
-    echo $Email;
+    echo gettype(filter_var($Email, FILTER_VALIDATE_EMAIL));
     $error = "";
     echo $error;
     if(filter_var($Email, FILTER_VALIDATE_EMAIL) !== true){
         $error = $error . "<li>El email es incorrecto</li>";
-        echo "mamahuevo";
     }else if(($Edad > 3 && $Edad < 130) !== true){
         $error = $error . "<li>La edad no es correcta, tiene que estar entre 3 y 130 y ser un numero</li>";
     }else if(filter_var($Nombre, FILTER_VALIDATE_INT) !== true){
