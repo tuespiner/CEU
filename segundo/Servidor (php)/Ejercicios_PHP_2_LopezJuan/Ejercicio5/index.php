@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <title>Resultado</title>
 <?php
 session_start();
@@ -16,3 +16,4 @@ print $num4;
 print $num5;
 print $num6;
 ?>
+</html>

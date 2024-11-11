@@ -29,6 +29,7 @@ label{
     &:hover::before{
         background-color: green;
         opacity: .3;
+        cursor: pointer;
     }
 }
 input:checked ~ label::before{
@@ -41,7 +42,10 @@ footer{
     left: 0px;
     color: white;
     filter: drop-shadow(0px 0px 10px black);
-    & div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & > div{
         &:first-child{
             width: fit-content;
             display: flex;
@@ -57,6 +61,43 @@ footer{
                 width: 10rem;
                 border-left: 1px solid var(--color);
                 clip-path: polygon(0% 0, 100% 100%, 100% 100%, 0 100%);
+                background-color: var(--color);
+            }
+        }
+        &:last-child{
+            display: flex;
+            & div {
+                width: 305px;
+                height: 43px;
+                background-color: black;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                & svg{
+                    width: 43px;
+                    height: 43px;
+                    transition: .3s;
+                    &:hover{
+                        scale: 1.2;
+                        cursor: pointer;
+                    }
+                    &:first-child{
+                        filter: drop-shadow(0px 0px 5px white);
+                    }
+                    &:last-child{
+                        filter: drop-shadow(0px 0px 5px #007bb5);
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                display: flex;
+                height: auto;
+                width: 10rem;
+                border-left: 1px solid var(--color);
+                clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
                 background-color: var(--color);
             }
         }
@@ -93,4 +134,8 @@ header{
 }
 h1{
     margin: 0px;
+}
+
+.octicon-mark-github{
+    fill: white;
 }
