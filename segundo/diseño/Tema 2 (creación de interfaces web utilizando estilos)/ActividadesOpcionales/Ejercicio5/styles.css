@@ -1,0 +1,110 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    background-color: #212530;
+    color: white;
+    width: 450px;
+    & > div{
+        width: 100%;
+        display: flex;
+        & button{
+            width: 50%;
+            background-color: #575761;
+            border: 0px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem 0rem;
+            & p{
+                font-size: 18px;
+                margin: 0px;
+                padding: .5rem 0px;
+                width: fit-content;
+            }
+            &:first-child{
+                background-color: #212530;
+                & p{
+                    border-bottom: 2px solid #646bb8;
+                }
+            }
+        }
+    }
+    & form{
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        & > div {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            & h2{
+                margin-bottom: 0px;
+                font-weight: 400;
+                font-size: 18px;
+            }
+            & p{
+                font-size: 14px;
+            }
+            & label{
+                margin-bottom: .5rem;
+                font-size: 11px;
+            }
+            & input[type="email"]{
+                padding: 1rem;
+                outline: none;
+            }
+            & div{
+                &:nth-child(5){
+                    display: flex;
+                    margin: 1.5rem 0px;
+                    width: 100%;
+                    justify-content: space-between;                    
+                    & input{
+                        padding: .75rem 0rem;
+                        width: 50%;
+                        background-color: #53536f;
+                        border: 0px;
+                        color: white;
+                    }
+                    & a{
+                        width: fit-content;
+                        color: #838df3;
+                        font-size: 11px;
+                    }
+                }
+                &:last-child{
+                    & p{
+                        font-size: 12px;
+                    }
+                    & button{
+                        width: 75%;
+                        display: flex;
+                        padding: 0px;
+                        border: 0px;
+                        border-radius: 5px;
+                        align-items: center;
+                        & img, & svg{
+                            fill: white;
+                            height: 25px;
+                        }
+                        & p{
+                            margin: 0px;
+                        }
+                        &:last-child{
+                            margin-top: 1rem;
+                            background-color: #1977f3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
