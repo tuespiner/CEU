@@ -37,4 +37,42 @@ public class ClienteRepositorio {
 	public void deleteCliente(Integer id) {
 		entityManager.remove(getCliente(id));
 	}
+	
+	public Cliente getClienteNombre(String nombre) {
+		List<Cliente> lista = getClientes();
+		for(Cliente cli : lista){
+			if(cli.getNombre().equals(nombre)) {
+				return cli;
+			}
+		}
+		return null;
+	}
+	
+	@Transactional
+	public Boolean putCliente(Integer id, Cliente cliente) {
+		cliente.setId(id);
+		if(entityManager.find(Cliente.class, id) != null) {
+			entityManager.merge(cliente);
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	@Transactional
+	public Boolean patchCliente(Integer id, Cliente cliente) {
+		Cliente cambiar = entityManager.find(Cliente.class, id);
+		if(cambiar != null) {
+			if(cliente.getApellidos() != null) {
+				cambiar.setApellidos(cliente.getApellidos());
+			}
+			if(cliente.getNombre() != null) {
+				cambiar.setNombre(cliente.getNombre());
+			}
+			entityManager.merge(cambiar);
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
