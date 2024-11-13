@@ -28,7 +28,14 @@ public class VehiculoRepositorio {
 	}
 	
 	@Transactional
-	public void postVehiculo(Vehiculo vehiculo) {
+	public Vehiculo postVehiculo(Vehiculo vehiculo) {
 		entityManager.persist(vehiculo);
+		return vehiculo;
+	}
+	
+	@Transactional
+	public void deleteVehiculo(Integer id) {
+		Vehiculo vehiculo = getVehiculo(id);
+		entityManager.remove(vehiculo);
 	}
 }

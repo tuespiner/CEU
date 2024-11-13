@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,9 +37,36 @@ public class VehiculoController {
 	}
 	
 	@PostMapping("/crear")
-	public ResponseEntity<Void> postVehiculo(@RequestBody Vehiculo vehiculo){
-		service.postVehiculo(vehiculo);
+	public ResponseEntity<Vehiculo> postVehiculo(@RequestBody Vehiculo vehiculo){
+		Vehiculo vehiculoDevuelto = service.postVehiculo(vehiculo);
+		if(vehiculoDevuelto != null) {
+			return ResponseEntity.ok(vehiculoDevuelto);
+		}
 		return ResponseEntity.noContent().build();
 	}
+	
+	@DeleteMapping("/eliminar/{id}")
+	public ResponseEntity<Void> deleteVehiculo(@PathVariable Integer id){
+		service.deleteVehiculo(id);
+		return ResponseEntity.noContent().build();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

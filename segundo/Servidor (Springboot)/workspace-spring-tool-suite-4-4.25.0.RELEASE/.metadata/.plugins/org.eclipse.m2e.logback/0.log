@@ -4879,3 +4879,92 @@
 2024-11-12 17:48:44,043 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-11-12 17:48:44,048 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-11-12 17:48:44,051 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-12 20:21:22,305 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-13 17:33:06,198 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-11-13 17:35:23,940 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:23,959 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:23,963 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio11\src\test\resources
+2024-11-13 17:35:25,518 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:25,531 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:25,535 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio12\src\test\resources
+2024-11-13 17:35:26,409 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:26,428 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:26,433 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio13\src\test\resources
+2024-11-13 17:35:27,118 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:27,136 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:27,140 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio14\src\test\resources
+2024-11-13 17:35:28,592 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:28,607 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:28,610 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio15\src\test\resources
+2024-11-13 17:35:30,006 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:30,020 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:30,023 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio1DDBB\src\test\resources
+2024-11-13 17:35:30,726 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:30,739 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:30,742 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:35:31,369 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:31,380 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:31,384 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio9\src\test\resources
+2024-11-13 17:35:31,987 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:32,002 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:32,006 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3\src\test\resources
+2024-11-13 17:35:33,635 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:33,650 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:33,662 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\si\src\test\resources
+2024-11-13 17:35:35,886 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:35,891 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:35,893 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:35:43,930 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:35:43,933 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:35:43,935 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:36:06,760 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:36:06,764 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:36:06,767 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:36:12,416 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:36:12,427 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:36:12,429 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:36:44,532 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:36:44,537 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:36:44,540 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:36:46,596 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:36:46,599 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:36:46,602 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:36:54,503 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:36:54,507 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:36:54,510 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:37:00,640 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:37:00,644 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:37:00,647 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:37:02,068 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:37:02,071 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:37:02,074 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:37:20,015 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:37:20,017 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:37:20,019 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:38:08,988 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:38:08,993 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:38:08,996 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:38:28,528 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:38:28,530 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:38:28,532 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:38:41,769 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:38:41,771 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:38:41,773 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:39:00,807 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:39:00,810 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:39:00,812 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:39:58,015 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:39:58,018 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:39:58,021 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:40:09,736 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:40:09,740 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:40:09,743 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 17:40:20,566 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 17:40:20,571 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 17:40:20,574 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 18:28:57,725 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 18:28:57,738 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 18:28:57,740 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources
+2024-11-13 18:29:00,327 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-11-13 18:29:00,331 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-11-13 18:29:00,334 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Ejercicio3DDBB\src\test\resources

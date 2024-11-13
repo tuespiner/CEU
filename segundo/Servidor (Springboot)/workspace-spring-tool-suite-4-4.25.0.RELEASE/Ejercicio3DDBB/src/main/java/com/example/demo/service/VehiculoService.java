@@ -21,7 +21,11 @@ public class VehiculoService {
 		return repo.getVehiculo(id);
 	}
 	
-	public void postVehiculo(Vehiculo vehiculo) {
-		repo.postVehiculo(vehiculo);
+	public Vehiculo postVehiculo(Vehiculo vehiculo) {
+		return repo.postVehiculo(vehiculo);
+	}
+	
+	public void deleteVehiculo(Integer id) {
+		repo.deleteVehiculo(id);
 	}
 }
