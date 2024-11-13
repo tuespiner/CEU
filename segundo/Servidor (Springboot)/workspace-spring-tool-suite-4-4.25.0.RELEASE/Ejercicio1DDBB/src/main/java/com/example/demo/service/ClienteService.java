@@ -32,4 +32,13 @@ public class ClienteService {
 	public void deleteCliente(Integer id) {
 		repo.deleteCliente(id);
 	}
+	public Cliente getClienteNombre(String nombre) {
+		return repo.getClienteNombre(nombre);
+	}
+	public Boolean putCliente(Integer id, Cliente cliente) {
+		return repo.putCliente(id, cliente);
+	}
+	public Boolean patchCliente(Integer id, Cliente cliente) {
+		return repo.patchCliente(id, cliente);
+	}
 }

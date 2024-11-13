@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -44,8 +45,29 @@ public class ClienteController {
 		return ResponseEntity.noContent().build();
 	}
 	
-	@PutMapping("/modif/comp/{id}")
-	public ResponseEntity<Void> putCliente(@PathVariable Integer id){
+	@PutMapping("/modif/put/{id}")
+	public ResponseEntity<Void> putCliente(@PathVariable Integer id, @RequestBody Cliente cliente){
+		if(service.putCliente(id, cliente) == false) {
+			return ResponseEntity.notFound().build();
+		}
 		return ResponseEntity.noContent().build();
+	}
+	
+	@PatchMapping("/modif/patch/{id}")
+		public ResponseEntity<Void> patchCliente(@PathVariable Integer id, @RequestBody Cliente cliente){
+			Boolean bolean = service.patchCliente(id, cliente);
+			if(bolean == false) {
+				return ResponseEntity.notFound().build();
+			}
+			return ResponseEntity.noContent().build();
+		}
+	
+	@GetMapping("/nombre/{nombre}")
+	public ResponseEntity<Cliente> getClienteNombre(@PathVariable String nombre){
+		Cliente cliente = service.getClienteNombre(nombre);
+		if(cliente == null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok(cliente);
 	}
 }

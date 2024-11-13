@@ -197,3 +197,13 @@ body{
         }
     }
 }
+
+@media (width < 500px){
+    body{
+        flex-direction: column;
+        align-items: center;
+        & section{
+            align-items: center;
+        }
+    }
+}
