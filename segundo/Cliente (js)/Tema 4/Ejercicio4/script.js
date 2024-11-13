@@ -1,0 +1,1 @@
+document.body.removeChild(document.body.children[0])
