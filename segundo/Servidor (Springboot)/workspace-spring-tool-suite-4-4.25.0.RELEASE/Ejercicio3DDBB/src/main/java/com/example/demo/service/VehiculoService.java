@@ -25,7 +25,27 @@ public class VehiculoService {
 		return repo.postVehiculo(vehiculo);
 	}
 	
+	public void putVehiculo(Integer id, Vehiculo vehiculo) {
+		repo.putVehiculo(id, vehiculo);
+	}
+	
 	public void deleteVehiculo(Integer id) {
 		repo.deleteVehiculo(id);
+	}
+	
+	public void actualizarEstado(Integer id, String estado) {
+		repo.actualizarEstado(id, estado);
+	}
+	
+	public void actualizarKilometraje(Integer id, Double km) {
+		repo.actualizarKilometraje(id, km);
+	}
+	
+	public List<Vehiculo> obtenerVehiculosEstado(String estado){
+		return repo.obtenerVehiculosEstado(estado);
+	}
+	
+	public List<Vehiculo> obtenerVehiculosAño(Integer ini, Integer fin){
+		return repo.obtenerVehiculosAño(ini, fin);
 	}
 }

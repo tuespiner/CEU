@@ -34,8 +34,42 @@ public class VehiculoRepositorio {
 	}
 	
 	@Transactional
+	public void putVehiculo(Integer id, Vehiculo vehiculo) {
+		vehiculo.setId(id);
+		entityManager.merge(vehiculo);
+	}
+	
+	@Transactional
 	public void deleteVehiculo(Integer id) {
 		Vehiculo vehiculo = getVehiculo(id);
 		entityManager.remove(vehiculo);
+	}
+	
+	@Transactional
+	public void actualizarEstado(Integer id, String estado) {
+		Vehiculo vehiculo = entityManager.find(Vehiculo.class, id);
+		if(vehiculo != null) {
+			vehiculo.setEstado(estado);
+			entityManager.merge(vehiculo);
+		}
+	}
+	
+	@Transactional
+	public void actualizarKilometraje(Integer id, Double km) {
+		Vehiculo vehiculo = entityManager.find(Vehiculo.class, id);
+		vehiculo.setKilometraje(km);
+		entityManager.merge(vehiculo);
+	}
+	
+	public List<Vehiculo> obtenerVehiculosEstado(String estado){
+		List<Vehiculo> todos = getVehiculos();
+		todos.stream().filter(vehiculo -> vehiculo.getEstado().equals(estado));
+		return todos;
+	}
+	
+	public List<Vehiculo> obtenerVehiculosAño(Integer ini, Integer fin){
+		List<Vehiculo> todos = getVehiculos();
+		todos.stream().filter(vehiculo -> vehiculo.getAnyo() >= ini && vehiculo.getAnyo() <= fin);
+		return todos;
 	}
 }
