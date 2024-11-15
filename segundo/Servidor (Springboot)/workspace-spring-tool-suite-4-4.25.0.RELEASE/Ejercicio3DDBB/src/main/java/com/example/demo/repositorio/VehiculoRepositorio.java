@@ -19,7 +19,7 @@ public class VehiculoRepositorio {
 	
 	public List<Vehiculo> getVehiculos(){
 		Query<Vehiculo> query = (Query<Vehiculo>) entityManager.
-				createQuery("select v from Vehiculo v", Vehiculo.class);
+		createQuery("select v from Vehiculo v", Vehiculo.class);
 		return query.getResultList();
 	}
 	
