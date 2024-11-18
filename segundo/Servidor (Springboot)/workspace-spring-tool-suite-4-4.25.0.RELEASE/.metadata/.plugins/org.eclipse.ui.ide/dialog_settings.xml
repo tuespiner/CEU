@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
-		<item value="org.eclipse.buildship:3.1.10.v20240802-1314"/>
+		<item value="org.eclipse.buildship:3.1.10.v20240802-1211"/>
 		<item value="org.eclipse.egit.gitflow.feature:7.0.0.202409031743-r"/>
 		<item value="org.eclipse.egit:7.0.0.202409031743-r"/>
 		<item value="org.eclipse.emf.common:2.32.0.v20240731-0952"/>
@@ -39,16 +39,16 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE"/>
 			<item value="F:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE"/>
+			<item value="C:\Users\jlopez6832\Desktop\repositorios\CEU\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="669"/>
-			<item key="DIALOG_Y_ORIGIN" value="191"/>
-			<item key="DIALOG_WIDTH" value="599"/>
+			<item key="DIALOG_X_ORIGIN" value="706"/>
+			<item key="DIALOG_Y_ORIGIN" value="187"/>
+			<item key="DIALOG_WIDTH" value="525"/>
 			<item key="DIALOG_HEIGHT" value="710"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
