@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
-		<item value="org.eclipse.buildship:3.1.10.v20240802-1211"/>
+		<item value="org.eclipse.buildship:3.1.10.v20240802-1314"/>
 		<item value="org.eclipse.egit.gitflow.feature:7.0.0.202409031743-r"/>
 		<item value="org.eclipse.egit:7.0.0.202409031743-r"/>
 		<item value="org.eclipse.emf.common:2.32.0.v20240731-0952"/>
@@ -74,5 +74,13 @@
 		<item key="DIALOG_WIDTH" value="500"/>
 		<item key="DIALOG_HEIGHT" value="389"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="555"/>
+		<item key="DIALOG_Y_ORIGIN" value="341"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>

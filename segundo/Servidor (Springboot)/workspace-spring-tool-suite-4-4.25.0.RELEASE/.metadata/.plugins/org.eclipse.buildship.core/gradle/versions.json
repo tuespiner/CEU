@@ -1,6 +1,25 @@
 [ {
+<<<<<<< HEAD
   "version" : "8.12-20241117002939+0000",
   "buildTime" : "20241117002939+0000",
+=======
+  "version" : "8.11.1-20241119012204+0000",
+  "buildTime" : "20241119012204+0000",
+  "current" : false,
+  "snapshot" : true,
+  "nightly" : false,
+  "releaseNightly" : true,
+  "activeRc" : false,
+  "rcFor" : "",
+  "milestoneFor" : "",
+  "broken" : false,
+  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241119012204+0000-bin.zip",
+  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241119012204+0000-bin.zip.sha256",
+  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241119012204+0000-wrapper.jar.sha256"
+}, {
+  "version" : "8.12-20241119001452+0000",
+  "buildTime" : "20241119001452+0000",
+>>>>>>> a1bf17538f9b34a24ec600d054e9af028dc08511
   "current" : false,
   "snapshot" : true,
   "nightly" : true,
@@ -9,6 +28,7 @@
   "rcFor" : "",
   "milestoneFor" : "",
   "broken" : false,
+<<<<<<< HEAD
   "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241117002939+0000-bin.zip",
   "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241117002939+0000-bin.zip.sha256",
   "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241117002939+0000-wrapper.jar.sha256"
@@ -26,6 +46,11 @@
   "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241116012204+0000-bin.zip",
   "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241116012204+0000-bin.zip.sha256",
   "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.11.1-20241116012204+0000-wrapper.jar.sha256"
+=======
+  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241119001452+0000-bin.zip",
+  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241119001452+0000-bin.zip.sha256",
+  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-8.12-20241119001452+0000-wrapper.jar.sha256"
+>>>>>>> a1bf17538f9b34a24ec600d054e9af028dc08511
 }, {
   "version" : "8.11",
   "buildTime" : "20241111135801+0000",
