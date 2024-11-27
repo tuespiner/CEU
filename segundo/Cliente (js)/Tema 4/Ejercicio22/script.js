@@ -16,13 +16,18 @@ window.addEventListener("DOMContentLoaded", () =>{
     var marcar = document.createElement("th")
     marcar.innerHTML="Marcar"
     tr.appendChild(marcar);
+    //Función de creación de la tabla
     function crearElemento(objeto){
+        //creación de la fila
         let tr = document.createElement("tr");
-        tr.id = objeto.id;
-        tr.className = "elemento"
+        tr.id = objeto.id; // se le pone el id
+        tr.className = "elemento" // se le pone el nombre de la clase
+        //variable td (esto es como una variable comodín)
         let td = document.createElement("td")
         for(let i = 0; i < 4; i++){
+            //creación de la columna
             let td = document.createElement("td")
+            //los if son para ver que va en cada columna, la 0 es esto, la 1 es esto, etc
             if(i == 0){
                 let a = document.createElement("a")
                 a.href = "#"
@@ -39,8 +44,10 @@ window.addEventListener("DOMContentLoaded", () =>{
                 td.value="marcar"
                 contador++
             }
+            //se añade la columna a la fila
             tr.appendChild(td);
         }
+        //se añade la fila a la tabla
         tbody.appendChild(tr)
     }
     
