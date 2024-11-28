@@ -134,14 +134,20 @@ main{
             display: grid;
             grid-template-rows: .25fr 2.5fr .5fr;
             gap:1rem;
-            & div{
-                display: flex;
-                justify-content: center;
-                width: calc(100% - 2rem);
-                padding: 1rem;
-                gap: 1rem;
-                & img{
-                    height: 35px;
+            & > div{
+                &:nth-child(2){
+
+                }
+                &:last-child{
+                    display: flex;
+                    justify-content: center;
+                    width: calc(100% - 2rem);
+                    padding: 1rem;
+                    gap: 1rem;
+                    & img{
+                        height: 35px;
+                    }
+                    
                 }
             }
         }
@@ -160,6 +166,8 @@ main{
                 }
                 & p{
                     margin: 0px;
+                    padding: 0rem 1rem;
+                    font-size: large;
                 }
                 & img{
                     &:nth-child(4), &:nth-child(5){
@@ -167,6 +175,7 @@ main{
                     }
                 }
             }
+            
         }
     }
     &:nth-child(2){
