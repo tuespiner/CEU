@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "juan",
+        "notas": [
+            10,
+            9,
+            8,
+            7
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "ana",
+        "notas": [
+            10,
+            9,
+            8,
+            7
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "juangra",
+        "notas": [
+            7,
+            5,
+            8,
+            7
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "pablo",
+        "notas": [
+            7,
+            10,
+            3,
+            9
+        ]
+    }
+]
