@@ -11,6 +11,14 @@ window.addEventListener("DOMContentLoaded", () =>{
                 console.log("ci")
                 let json = JSON.parse(xhr.responseText)
                 console.log(json)
+                let p = document.getElementById("p")
+                p.textContent = json.answer
+                let boton2 = document.createElement("button")
+                boton2.textContent = "ver Imagen"
+                document.body.append(buton2)
+                boton2.addEventListener("click", () =>{
+                    
+                })
             }else{
                 console.log("Non")
             }
