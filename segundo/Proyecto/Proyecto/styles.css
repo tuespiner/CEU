@@ -4,4 +4,12 @@ body{
     margin: 0px;
     /*color de fondo*/
     background-color: #61b9ad;
+    & header{
+        width: calc(100% - 2rem);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+    }
 }
