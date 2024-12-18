@@ -7,6 +7,9 @@ async function iniciarApi(){
         }
         const data = await response.json()
         cambiarEquipo(data.squadName, data.homeTown, data.formed)
+        data.members.forEach(elemento =>{
+            crearSuperheroe(elemento.name, elemento.secretIdentity, elemento.age, elemento.powers)
+        })
     }catch(error){
         console.log(error.message)
     }
@@ -28,10 +31,23 @@ function crearSuperheroe(nombre, identidad, edad, poderes){
     elemento.innerHTML = nombre
     div.append(elemento)
     for(let i = 0; i < array.length; i++){
-        elemento = document.createElement("p")
-        elemento.innerHTML = array[i]
+        if(typeof(array[i]) == "object"){
+            let p = document.createElement("p")
+            p.innerHTML = "Poderes"
+            div.append(p)
+            elemento = document.createElement("ul")
+            array[i].forEach(poder =>{
+                let li = document.createElement("li")
+                li.innerHTML = poder
+                elemento.append(li)
+            })
+        }else{
+            elemento = document.createElement("p")
+            elemento.innerHTML = array[i]
+        }
         div.append(elemento)
     }
+    section.append(div)
 }
 window.addEventListener("DOMContentLoaded", () =>{
     iniciarApi()
