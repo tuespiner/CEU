@@ -11,5 +11,11 @@ public class Tema4Ejercicio8Application implements CommandLineRunner{
 		SpringApplication.run(Tema4Ejercicio8Application.class, args);
 	}
 
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }
