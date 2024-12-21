@@ -55,6 +55,7 @@ body{
     }
     & footer{
         width: calc(100% - 2rem);
+        height: 15vh;
         padding: 1rem;
         background-color: #5d302d;
         display: grid;
@@ -62,23 +63,40 @@ body{
         grid-template-areas: 
         "contacto redes-sociales subir";
         color: white;
-        & > div { 
-            & .contacto{
-                grid-area: contacto;
-            }
-            & .redes-sociales{
-                grid-area: redes-sociales;
+        & .contacto{
+            grid-area: contacto;
+        }
+        & .redes-sociales{
+            grid-area: redes-sociales;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            & div{
                 display: flex;
-                & p{
-                    height: fit-content;
-                }
+                gap: 1rem;
+                width: 100%;
             }
-            & > a{
+            & p{
+                height: fit-content;
+            }
+        }
+        & .subir { 
+            display: flex;
+            justify-content: end;
+            padding: 1rem;
+            & button{
+                border: 0px;
                 grid-area: subir;
                 background-color: white;
                 width: 50px;
                 height: 50px;
                 clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0 100%);
+                transition: .3s;
+                &:hover{
+                    scale: 1.3;
+                    cursor: pointer;
+                }
             }
         }
     }
