@@ -1,7 +1,7 @@
 body{ 
     /*Formateo de la página*/
     width: 100%; 
-    margin: 0px;
+    margin: 0px; 
     /*color de fondo*/
     background-color: #61b9ad;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,8 +53,36 @@ body{
             color: black;
         }
     }
+    & footer{
+        width: calc(100% - 2rem);
+        padding: 1rem;
+        background-color: #5d302d;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "contacto redes-sociales subir";
+        color: white;
+        & > div { 
+            & .contacto{
+                grid-area: contacto;
+            }
+            & .redes-sociales{
+                grid-area: redes-sociales;
+                display: flex;
+                & p{
+                    height: fit-content;
+                }
+            }
+            & > a{
+                grid-area: subir;
+                background-color: white;
+                width: 50px;
+                height: 50px;
+                clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0 100%);
+            }
+        }
+    }
 }
-
 .imagen-inicio{
     z-index: 1;
     width: 100%;
@@ -69,4 +97,29 @@ body{
         font-size: 120px;
         margin: 0px;
     }
+}
+.carrusel{
+    border-top: 1rem solid #5d302d;
+    border-bottom: 1rem solid #5d302d;
+    width: 100%;
+    display: flex;
+    background-color: #e9aec4;
+    box-shadow: inset 0px 0px 15px -5px;
+    & img {
+        border-radius: 15px;
+    }
+}
+.instalaciones, .desayunos-meriendas{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    & h2{
+        color: white;
+        margin: 0px 6rem;
+    }
+}
+.instalaciones{
+    align-items: end;
+}
+.desayunos-meriendas{
 }
