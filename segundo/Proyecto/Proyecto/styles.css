@@ -54,6 +54,14 @@ body{
             color: black;
         }
     }
+    & main{
+        & > div{
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            margin-top: 1rem;
+        }
+    }
     & footer{
         width: calc(100% - 2rem);
         height: 15vh;
@@ -109,20 +117,31 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
-    clip-path: polygon(0% 0, 100% 0%, 100% 80%, 0 100%);
+    clip-path: polygon(0% 0, 100% 0%, 100% 85%, 0 100%);
     justify-content: center;
+    background: url(Imagenes/imagen-fachada-bariloche.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    color: white;
     & h1{
         font-size: 120px;
         margin: 0px;
+    }
+    & h2, & h1{
+        text-shadow: 1px 1px 3px black;
+        border-bottom: .5rem solid #61b9ad;
     }
 }
 .carrusel{
     border-top: 1rem solid #5d302d;
     border-bottom: 1rem solid #5d302d;
     min-width: 110vw;
+    height: 150px;
     display: flex;
+    gap: 1rem;
     background-color: #e9aec4;
+    padding: 1rem;
     rotate: 4.64deg;
     box-shadow: inset 0px 0px 15px -5px;
     & img {
@@ -132,7 +151,7 @@ body{
 .instalaciones, .desayunos-meriendas{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     & h2{
         color: white;
         margin: 0px 6rem;
@@ -147,4 +166,24 @@ body{
     align-items: end;
 }
 .desayunos-meriendas{
+    & .carrusel{
+        rotate:-4.64deg;
+    }
+}
+
+.ubi-reseñas{
+    padding: 2rem;
+    width: calc(100% - 4rem);
+    background-color: #e9aec4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    & iframe{
+        width: 100%;
+        border-radius: 15px;
+    }
+    & div{
+        width: 100%;
+        height: 100%;
+    }
 }
