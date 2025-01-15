@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    background-color: #5d99f3;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 20px;
+    max-width: 900px;
+    background: rgb(144, 180, 166);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+  }
+  button {
+    background-color: #203b86;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #288aa8;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    list-style-type: square;
+  }
+  ul li {
+    padding: 0.5rem 0;
+  }
+
+  h1{
+    margin: 0.5rem 0;
+  }
+  h2{
+      margin: 1.5rem 0;
+      color:rgb(73, 102, 18)
+  }
+  h3{
+      color:rgb(224, 54, 105);
+  }
+  h4{
+      color:chocolate
+  }
+  p{
+    color:#203b86
+  }
+
+  #informacionPersonaje {
+    background-color: #f0f9ff;
+    border: 2px solid #007BFF;
+    border-radius: 15px; 
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif;
+  }
+
+  #detallePeliculas {
+    background-color: #fff4e6; 
+    border: 2px solid #FF7043; 
+    border-radius: 15px; 
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+      /* Estilo para el encabezado de la página (head) */
+      head {
+          background-color: #f4f4f4; /* Color de fondo para el head */
+          padding: 20px;
+      }
