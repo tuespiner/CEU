@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="com.example.demo.repository.HotelRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Autor"/>
+    <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
 </qualifiedTypeNameHistroy>
