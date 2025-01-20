@@ -17,6 +17,7 @@ public class AutorServiceImpl implements AutorService{
 	@Autowired
 	private AutorRepository repo;
 	
+	@Override
 	public List<Autor> getAutores(){
 		return repo.getAutores();
 	}

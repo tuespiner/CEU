@@ -2,12 +2,7 @@
 <launchHistory>
     <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
         <mruHistory>
-<<<<<<< HEAD
-            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio12Casa - Tema4Ejercicio12CasaApplication&quot;/&gt;&#13;&#10;"/>
-=======
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio12 - Tema4Ejercicio12Application&quot;/&gt;&#13;&#10;"/>
-            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio10 - Tema4Ejercicio10Application&quot;/&gt;&#13;&#10;"/>
->>>>>>> 18e27b87711fb55de08a83595e868049f7e51bae
         </mruHistory>
         <favorites/>
     </launchGroup>
@@ -21,12 +16,7 @@
     </launchGroup>
     <launchGroup id="org.eclipse.debug.ui.launchGroup.run">
         <mruHistory>
-<<<<<<< HEAD
-            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio12Casa - Tema4Ejercicio12CasaApplication&quot;/&gt;&#13;&#10;"/>
-=======
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio12 - Tema4Ejercicio12Application&quot;/&gt;&#13;&#10;"/>
-            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Tema4Ejercicio10 - Tema4Ejercicio10Application&quot;/&gt;&#13;&#10;"/>
->>>>>>> 18e27b87711fb55de08a83595e868049f7e51bae
         </mruHistory>
         <favorites/>
     </launchGroup>
