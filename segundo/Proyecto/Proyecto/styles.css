@@ -6,52 +6,43 @@ body{
     background-color: #61b9ad;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    /*Estilos compartidos por el header y el nav*/
-    & nav, & header{
-        z-index: 10;
-        & button{
-            min-width: 80px;
-            height: 80px;
-            border-radius: 15px;
-            border: 0px;
-        }
-        & div, &{
-            padding: .5rem;
-            background-color: #5d302d;
-            border-radius: calc(15px + .5rem);
-        }
-    }
-    /*Estilos del header*/
     & header{
-        width: calc(100% - 2rem);
         padding: 1rem;
-        display: flex;
-        background-color: #5d302d00; /*Color transparente de fondo*/
-        justify-content: space-between;
+        width: calc(100% - 2rem);
         position: fixed;
         top: 0px;
-        & div{
-            gap: .5rem;
+        left: 0px;
+        z-index: 10;
+        & nav{
+            width: 100%;
             display: flex;
+            justify-content: space-between;
             & button{
+                border: .5rem solid #5d302d;
+                border-radius: 15px;
+                height: calc(80px + 1rem);
+                width: calc(80px + 1rem);
                 padding: 0px;
                 & img{
                     width: 80px;
                 }
             }
-        }
-    }
-    & nav{
-        display: flex;
-        flex-direction: column;
-        width: 80px;
-        position: fixed;
-        left: 1rem;
-        gap: .5rem;
-        top: calc(3rem + 80px);
-        & a {
-            text-decoration: none;
-            color: black;
+            & div{
+                background-color: #5d302d;
+                border-radius: 15px;
+                display: flex;
+                gap: .5rem;
+                border: .5rem solid #5d302d;
+                & button{
+                    border: 0px;
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+            &::after{
+                content: "";
+                width: calc(80px + 1rem);
+            }
         }
     }
     & main{
@@ -119,18 +110,19 @@ body{
     align-items: center;
     clip-path: polygon(0% 0, 100% 0%, 100% 85%, 0 100%);
     justify-content: center;
-    background: url(Imagenes/imagen-fachada-bariloche.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 50%;
+    
     color: white;
     & h1{
         font-size: 120px;
         margin: 0px;
     }
-    & h2, & h1{
-        text-shadow: 1px 1px 3px black;
-        border-bottom: .5rem solid #61b9ad;
+    & h1, & h2{
+        position: absolute;
+    }
+    & img{
+        width: 100%;
+        height: auto;
+        filter: brightness(60%);
     }
 }
 .carrusel{
