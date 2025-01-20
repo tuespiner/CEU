@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.134+C:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\.metadata\.plugins\org.eclipse.jdt.core
 739684371.index
 913530650.index
@@ -48,6 +49,10 @@ INDEX VERSION 1.134+C:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-s
 2175841621.index
 2708407153.index
 1105529462.index
+=======
+INDEX VERSION 1.134+C:\Users\jlopez6832\Desktop\repositorio\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\.metadata\.plugins\org.eclipse.jdt.core
+1562378239.index
+>>>>>>> 18e27b87711fb55de08a83595e868049f7e51bae
 3286889335.index
 2748797401.index
 107717839.index
