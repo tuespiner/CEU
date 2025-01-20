@@ -1,0 +1,15 @@
+<h1 [class]="rojo">Componente alumno</h1>
+<div>
+    <p>Nombre: {{nombre}}</p>
+    <p>Apellido: {{apellido}}</p>
+    <p>Edad: {{edad}}</p>
+    <p>DNI; {{dni}}</p>
+</div>
+<p>Edad * 5: {{edad * 5}}</p>
+<p>{{edad >= 18 ? 'Mayor de edad': 'Menor de edad'}}</p>
+<input type="text" #nuevoDni (keyup) ="(0)" [disabled]="abilitado"/>
+<input type="checkbox" [checked]="this.edad < 18">
+<input type="checkbox" #cheked (click)="showAlert(this.cheked.checked)">
+
+
+

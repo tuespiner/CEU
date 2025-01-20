@@ -12,3 +12,18 @@
 
 <p>Edad: {{edad}}</p>
 <p>Mayor o menor: {{getEdad() > 18 ? 'Mayor' : 'Menor'}}</p>
+
+<app-user-profile></app-user-profile>
+
+<p [class]=naranja >{{name}}</p>
+
+<img [src]=src alt="">
+
+<input type="checkbox" [checked]="chekeado">
+<input type="text" [value]='name' [disabled]="disabilitado">
+<div>
+    <p>Nombre de la asignatura: {{asignatura.nombre}}</p>
+    <p>Codigo de la asignatura: {{asignatura.codigo}}</p>
+</div>
+
+<app-alumno></app-alumno>
