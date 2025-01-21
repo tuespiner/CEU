@@ -12,4 +12,5 @@ public interface LibroService {
 	
 	void saveLibro(Libro libro);
 	
+	void refreshTitle(String titulo, int id);
 }

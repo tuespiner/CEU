@@ -1,5 +1,7 @@
 package com.example.demo.respository;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.Libro;
@@ -21,6 +23,18 @@ public class LibroRepositoryImpl implements LibroRepository{
 	@Override
 	public void refreshTitle(String titulo, int id) {
 		
+	}
+
+	@Override
+	public void refreshLibro(Libro libro) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Libro> getLibros() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -20,4 +20,9 @@ public class LibroServiceImpl implements LibroService{
 		repo.saveLibro(libro);
 	}
 
+	@Override
+	public void refreshTitle(String titulo, int id) {
+		repo.refreshTitle(titulo, id);
+	}
+
 }
