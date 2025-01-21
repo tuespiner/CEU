@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -23,14 +24,17 @@ public class Autor {
 	@OneToMany
 	@JoinColumn(name = "autor_id")
 	private List<Libro> libros;
+	
 	public Autor() {
-		
+		List<Libro> libros = new ArrayList();
+		this.libros = libros;
 	}
 	
-	public Autor(String nombre) {
+	public Autor(String nombre, List<Libro> libros) {
 		this.nombre = nombre;
+		this.libros = libros;
 	}
-
+	
 	public int getId() {
 		return id;
 	}
@@ -45,6 +49,14 @@ public class Autor {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public List<Libro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<Libro> libros) {
+		this.libros = libros;
 	}
 	
 	

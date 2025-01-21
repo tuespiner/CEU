@@ -66,6 +66,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema4-Ejercicio12-inma"/>
+			<item value="E:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema4Ejercicio12"/>
 			<item value="E:\CEU\segundo\Servidor (Springboot)\workspace-spring-tool-suite-4-4.25.0.RELEASE"/>
 		</list>
 		<list key="projectNameTemplate">

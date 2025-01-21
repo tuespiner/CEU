@@ -1,5 +1,13 @@
 package com.example.demo.respository;
 
-public interface LibroRepository {
+import org.springframework.stereotype.Repository;
 
+import com.example.demo.model.Libro;
+
+@Repository
+public interface LibroRepository {
+	
+	void saveLibro(Libro libro);
+	 
+	void refreshTitle(String titulo, int id);
 }

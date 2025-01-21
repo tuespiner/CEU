@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="com.example.demo.repository.HotelRepository"/>
     <fullyQualifiedTypeName name="com.example.demo.model.Autor"/>
     <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
+    <fullyQualifiedTypeName name="com.example.demo.respository.LibroRepository"/>
 </qualifiedTypeNameHistroy>

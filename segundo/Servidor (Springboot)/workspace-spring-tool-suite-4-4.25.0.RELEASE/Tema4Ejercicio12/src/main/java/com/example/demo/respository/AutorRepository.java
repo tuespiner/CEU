@@ -12,4 +12,13 @@ public interface AutorRepository{
 	
 	List<Autor> getAutores();
 	
+	Autor getAutor(int id);
+	
+	void saveAutor(Autor autor);
+	
+	void refreshAutor(Autor autor);
+	
+	void deleteAutor(int id);
+	
+	
 }

@@ -22,4 +22,24 @@ public class AutorRepositoryImpl implements AutorRepository{
 		return query.getResultList();
 	}
 
+	@Override
+	public void saveAutor(Autor autor) {
+		manager.persist(autor);
+	}
+
+	@Override
+	public Autor getAutor(int id) {
+		return manager.find(Autor.class, id);
+	}
+
+	@Override
+	public void refreshAutor(Autor autor) {
+		manager.merge(autor);
+	}
+
+	@Override
+	public void deleteAutor(int id) {
+		manager.remove(getAutor(id));
+	}
+
 }
