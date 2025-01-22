@@ -1,0 +1,10 @@
+<h1>{{titulo}}</h1>
+
+<p>Titulo: {{ libro.titulo }}</p>
+<p>Autor: {{ libro.autor }}</p>
+<p>Precio: {{ libro.precio }}</p>
+<p [class.aviso]="libro.stock == 0">Stock: {{ libro.stock}}</p>
+<p>Cantidad: {{ libro.cantidad }}</p>
+<img src="{{libro.imagen}}" (mouseenter)="libro.imprimirPosicion($event)">
+<button (click)="libro.aumentaDisminuye('+')">aumenta</button>
+<button (click)="libro.aumentaDisminuye('-')" [disabled]="libro.cantidad == 0">disminuye</button>

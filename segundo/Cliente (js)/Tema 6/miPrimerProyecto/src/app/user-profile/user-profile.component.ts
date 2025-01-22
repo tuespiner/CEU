@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-profile',
@@ -8,9 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent {
-  nombre: String = 'Juanito'
+  @Input() //para que puedas poner los parametros en el padre
+  nombre: string = 'Juanito'
+  @Input()
   rol: String = 'CEO'
   titulo: String = 'Componente User'
   title: String = 'holii'
+  @Output()
+  selected = new EventEmitter<string>();
   
+  seleccionar(){
+    this.selected.emit(this.nombre)
+  }
 }
+

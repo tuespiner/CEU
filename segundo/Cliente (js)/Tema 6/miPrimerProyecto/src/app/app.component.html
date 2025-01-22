@@ -26,4 +26,9 @@
     <p>Codigo de la asignatura: {{asignatura.codigo}}</p>
 </div>
 
-<app-alumno></app-alumno>
+<app-alumno></app-alumno>\
+<app-datos-libro></app-datos-libro>
+
+<app-user-profile nombre="hola" rol="adios"></app-user-profile>
+
+<app-user-profile nombre="hola2" rol="adios2" (selected)="seleccionarPadre($event)"></app-user-profile>
