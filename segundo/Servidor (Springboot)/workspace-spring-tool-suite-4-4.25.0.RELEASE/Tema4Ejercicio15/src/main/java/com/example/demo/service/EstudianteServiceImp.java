@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Curso;
 import com.example.demo.model.Estudiante;
 import com.example.demo.repository.EstudianteRepository;
 
@@ -45,6 +46,4 @@ public class EstudianteServiceImp implements EstudianteService{
 		estudiantes.stream().filter(e -> e.getNombre().contains(cad));
 		return estudiantes;
 	}
-	
-	
 }

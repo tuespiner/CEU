@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.Curso;
 import com.example.demo.model.Estudiante;
 import com.example.demo.repository.CursoRepository;
+import com.example.demo.repository.EstudianteRepository;
 
 import jakarta.transaction.Transactional;
 
@@ -17,6 +18,9 @@ public class CursoServiceImp implements CursoService{
 
 	@Autowired
 	private CursoRepository repo;
+	
+	@Autowired
+	private EstudianteService serviceEstudiante;
 
 	@Override
 	public void saveCurso(Curso curso) {
@@ -31,7 +35,9 @@ public class CursoServiceImp implements CursoService{
 	@Override
 	public void saveEstudianteCurso(Estudiante estudiante, int id) {
 		Curso curso = getCurso(id);
+		estudiante.getCursos().add(curso);
 		curso.getEstudiantes().add(estudiante);
+		serviceEstudiante.saveEstudiante(estudiante);
 		saveCurso(curso);
 	}
 
