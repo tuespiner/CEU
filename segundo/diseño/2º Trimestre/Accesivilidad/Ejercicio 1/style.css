@@ -1,0 +1,9 @@
+body{
+    & .saltar-main{
+        position: absolute;
+        top: -50px;
+        &:focus{
+            top: 0px;
+        }
+    }
+}
