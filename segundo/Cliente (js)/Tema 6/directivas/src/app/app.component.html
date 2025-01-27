@@ -1,0 +1,22 @@
+<form>
+  <h1>{{titulo}}</h1>
+  <div>
+    <label for="Nombre">Nombre: </label>
+   <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre">
+  </div>
+  <div>
+    <label for="apellido">Apellidos: </label>
+    <input type="text" id="apellido" name="apellidos" [(ngModel)]="apellidos">
+  </div>
+  <button (click)="pulsar()">Añadir</button>
+  <p *ngIf="pulsado; else otraCosa">{{ mensaje }}</p>
+  <ng-template #otraCosa>
+    <p>Ninguna alta</p>
+  </ng-template>
+
+  <ol *ngFor="let persona of personas">
+    <li>Nombre: {{persona.nombre}}</li>
+    <li>Apellidos: {{persona.apellidos}}</li>
+    <li>Edad: {{persona.edad}}</li>
+  </ol>
+</form>

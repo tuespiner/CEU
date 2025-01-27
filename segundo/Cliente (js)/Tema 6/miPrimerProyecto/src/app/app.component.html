@@ -32,3 +32,6 @@
 <app-user-profile nombre="hola" rol="adios"></app-user-profile>
 
 <app-user-profile nombre="hola2" rol="adios2" (selected)="seleccionarPadre($event)"></app-user-profile>
+
+<input type="text" [(ngModel)]="numLibro">
+<app-datos-libro queLibro="{{numLibro}}" (selected)="getTitulo($event)"></app-datos-libro>
