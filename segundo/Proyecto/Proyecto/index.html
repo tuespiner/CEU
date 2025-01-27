@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es_ES">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,81 +8,189 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="Imagenes/Logo Bariloche.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-            <nav>
-                <button>
-                    <img src="Imagenes/logo bariloche.png" alt="">
-                </button>
-                <div>
-                    <button><a href="#inicio">Inicio</a></button>
-                    <button><a href="#instalaciones">Nuesto bar</a></button>
-                    <button><a href="#desayunosMeriendas">Desayunos meriendas</a></button>
-                    <button><a href="#tartas">Tartas</a></button>
-                    <button><a href="#reseñas">Reseñas ubicación</a></button>
-                </div>
-            </nav>
+        <nav>
+            <button>
+                <img src="Imagenes/logo bariloche.png" alt="">
+            </button>
+            <div>
+                <button><a href="#inicio">Inicio</a></button>
+                <button><a href="#instalaciones">Nuesto bar</a></button>
+                <button><a href="#desayunosMeriendas">Desayunos meriendas</a></button>
+                <button><a href="#tartas">Tartas</a></button>
+                <button><a href="#reseñas">Reseñas ubicación</a></button>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="imagen-inicio" id="inicio">
             <h1>BARILOCHE</h1>
             <h2>!Qué bueno que viniste¡</h2>
-            <img src="Imagenes/imagen-fachada-bariloche.jpg" alt="">
         </section>
         <div>
             <section class="instalaciones" id="instalaciones">
                 <h2>¿CÓMO ES NUESTRO BAR?</h2>
                 <div>
-                    <div class="carrusel"></div>
+                    <div class="carrusel" reverse="true">
+                        <div class="carrousel-list">
+                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt=""></div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="desayunos-meriendas" id="desayunosMeriendas">
                 <h2>¿Y NUESTROS DESAYUNOS / MERIENDAS?</h2>
                 <div>
-                    <div class="carrusel"></div>
-                </div>
-            </section>
-            <section class="tartas" id="tartas">
-    
-            </section>
-            <section class="ubi-reseñas" id="reseñas">
-                <div>
-                    <h3>RESEÑAS</h3>
-                    <div>
-                        
+                    <div class="carrusel">
+                        <div class="carrousel-list">
+                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt=""></div>
+                        </div>
                     </div>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396.29161675480816!2d-6.1243314149473225!3d37.38195800824884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1213231d625e43%3A0x16ea27360d14eaaf!2sLas%20Monjas%20Terraza%20Bar!5e0!3m2!1ses!2ses!4v1733158524923!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
         </div>
+        <section class="tartas" id="tartas">
+            <div>
+                <h1>NUESTRAS TARTAS</h1>
+            </div>
+            <div>
+                <div class="img-tarta"></div>
+                <div class="info-tarta">
+                    <div>
+                        <h1>Tarta de queso</h1>
+                        <p>Tarta de queso azul casera súper cremosa.</p>
+                    </div>
+                    <span>
+                        18€
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="img-tarta"></div>
+                <div class="info-tarta">
+                    <div>
+                        <h1>Red velvet</h1>
+                        <p>Tarta elaborada con receta original estadounidense.</p>
+                    </div>
+                    <span>
+                        20€
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="img-tarta"></div>
+                <div class="info-tarta">
+                    <div>
+                        <h1>Tarta de la abuela</h1>
+                        <p>Hecha con galletas caseras horneadas para recordar los viejos tiempos</p>
+                    </div>
+                    <span>
+                        13€
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="img-tarta"></div>
+                <div class="info-tarta">
+                    <div>
+                        <h1>Muerte por chocolate</h1>
+                        <p>Hecha con chocolate de primera calidad y más chocolate y más chocolate ...</p>
+                    </div>
+                    <span>
+                        16€
+                    </span>
+                </div>
+            </div>
+
+        </section>
+        <section class="ubi-reseñas" id="reseñas">
+            <div>
+                <h3>RESEÑAS</h3>
+                <div>
+                    <div class="resena">
+                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <div>
+                            <h4>Maricarmen</h4>
+                            <p>Sitio ideal para ir a tomarse un cafelito con tus amigos y acompañarlo con un pastelito
+                                casero.</p>
+                        </div>
+                    </div>
+                    <div class="resena">
+                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <div>
+                            <h4>Juan Luis</h4>
+                            <p>Llevo toda la vida comprando las tartas en el mercadona, les di una oportunidad a las
+                                suyas y me ganaron, 10 / 10.</p>
+                        </div>
+                    </div>
+                    <div class="resena">
+                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <div>
+                            <h4>Raul</h4>
+                            <p>Desayunos de todo tipo, para celiacos incluso y una lista de ingredientes para
+                                personalizar enormes, nunca lo habia visto en otro bar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.3327706851233!2d-6.126384523315824!3d37.38196187208703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd121390a0159a6f%3A0x19c4fbd527be76b!2sPasteler%C3%ADa%20Bariloche%20Apalankao%20Street%20Tapas!5e0!3m2!1ses!2ses!4v1737931906300!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
     <footer>
         <div class="contacto">
-            <p>Teléfono</p>
-            <p>Correo</p>
+            <p>Teléfono: 626 18 92 21</p>
+            <p>Correo: barilocheEspartinas@gmail.com</p>
         </div>
         <div class="redes-sociales">
             <div>
                 <a href="#">
-                    <?xml version="1.0" ?>
-                    <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-                    <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path d="M28.765,50.319h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.319z   M3,4h60v60H3V4z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#3A589B;"/>
+                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title />
+                        <path
+                            d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM385.62,232.382c-27.184,0-53.634-8.822-74-23.75l-.162,101.5a92.457,92.457,0,1,1-80.178-91.721v49.845a43.657,43.657,0,1,0,31.288,41.876V109.333h51.275a71.773,71.773,0,0,0,71.774,71.773Z" />
                     </svg>
                 </a>
                 <a href="#">
-                    <?xml version="1.0" ?><svg id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
-                        .st0{fill:url(#SVGID_1_);}
-                        .st1{fill:#FFFFFF;}
-                    </style>
-                    <linearGradient gradientTransform="matrix(1 0 0 -1 0 32)" gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="5.8035" x2="26.1965" y1="-1.6608" y2="33.6608"><stop offset="0" style="stop-color:#FEC053"/><stop offset="0.327" style="stop-color:#F2203E"/><stop offset="0.648" style="stop-color:#B729A8"/><stop offset="1" style="stop-color:#5342D6"/></linearGradient><path class="st0" d="M4,0h24c2.2,0,4,1.8,4,4v24c0,2.2-1.8,4-4,4H4c-2.2,0-4-1.8-4-4V4C0,1.8,1.8,0,4,0z"/><path class="st1" d="M21.2,5H10.8C7.6,5,5,7.7,5,10.9v10.2c0,3.2,2.6,5.9,5.8,5.9h10.4c3.2,0,5.8-2.7,5.8-5.9V10.9  C27,7.7,24.4,5,21.2,5z M25,20.9c0,2.2-1.8,4.1-4,4.1H11c-2.2,0-4-1.9-4-4.1v-9.9C7,8.8,8.7,7,11,7h10c2.2,0,4,1.9,4,4.1L25,20.9z"/><path class="st1" d="M16,10.4c-3.1-0.1-5.7,2.4-5.8,5.5c-0.1,3.1,2.4,5.7,5.5,5.8c3.1,0.1,5.7-2.4,5.8-5.5c0,0,0-0.1,0-0.1  C21.6,12.9,19.1,10.4,16,10.4z M16,19.6c-2,0-3.7-1.6-3.7-3.6s1.6-3.7,3.6-3.7c2,0,3.7,1.6,3.7,3.6c0,0,0,0.1,0,0.1  C19.6,18,18,19.6,16,19.6z"/>
-                    <ellipse class="st1" cx="21.8" cy="10" rx="1.2" ry="1.3"/>
-                </svg>
+                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title />
+                        <path
+                            d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0Zm67.59,153.428s-26.194-2.064-36.513,1.746c-17.056,6.3-17.462,21.034-17.462,35.084v28.694h52.149l-7.62,54.888H269.615V409.333h-58.9V273.84H161.744V218.952h48.974V172.4c0-49.292,37.942-67.151,60.563-69.294s52.309,4.286,52.309,4.286Z" />
+                    </svg>
                 </a>
                 <a href="#">
-
+                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title />
+                        <path
+                            d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
+                        <path d="M256,211.545A44.455,44.455,0,1,0,300.455,256,44.455,44.455,0,0,0,256,211.545Z" />
+                        <path
+                            d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.333,312.5A76.836,76.836,0,0,1,312.5,389.333H199.5A76.837,76.837,0,0,1,122.666,312.5V199.5A76.836,76.836,0,0,1,199.5,122.667H312.5A76.836,76.836,0,0,1,389.333,199.5Z" />
+                    </svg>
                 </a>
-                <a href="#"></a>
             </div>
             <p>Todos los derechos reservados</p>
         </div>
@@ -91,4 +200,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
