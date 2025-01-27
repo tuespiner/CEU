@@ -21,11 +21,14 @@ public interface AutorRepository{
 	
 	void deleteAutor(int id);
 	
+<<<<<<< HEAD
 	void insertLibro(Libro libro, int id);
 	
 	void deleteLibroAutor(Libro libro);
 	
 	List<Libro> getLibros();
 	
+=======
+>>>>>>> be0434bc7a2f9f070aaca12adafbb01e273dc247
 	
 }

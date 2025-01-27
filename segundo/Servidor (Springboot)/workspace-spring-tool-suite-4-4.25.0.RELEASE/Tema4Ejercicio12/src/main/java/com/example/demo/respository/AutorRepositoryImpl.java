@@ -24,16 +24,27 @@ public class AutorRepositoryImpl implements AutorRepository{
 	}
 
 	@Override
+<<<<<<< HEAD
 	public Autor getAutor(int id) {
 		return manager.find(Autor.class, id);
 	}
 
 	@Override
+=======
+>>>>>>> be0434bc7a2f9f070aaca12adafbb01e273dc247
 	public void saveAutor(Autor autor) {
 		manager.persist(autor);
 	}
 
 	@Override
+<<<<<<< HEAD
+=======
+	public Autor getAutor(int id) {
+		return manager.find(Autor.class, id);
+	}
+
+	@Override
+>>>>>>> be0434bc7a2f9f070aaca12adafbb01e273dc247
 	public void refreshAutor(Autor autor) {
 		manager.merge(autor);
 	}
@@ -43,6 +54,7 @@ public class AutorRepositoryImpl implements AutorRepository{
 		manager.remove(getAutor(id));
 	}
 
+<<<<<<< HEAD
 	@Override
 	public void insertLibro(Libro libro, int id) {
 		getAutor(id).getLibros().add(libro);
@@ -60,4 +72,6 @@ public class AutorRepositoryImpl implements AutorRepository{
 		return query.getResultList();
 	}
 
+=======
+>>>>>>> be0434bc7a2f9f070aaca12adafbb01e273dc247
 }

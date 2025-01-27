@@ -11,5 +11,11 @@
 <input type="checkbox" [checked]="this.edad < 18">
 <input type="checkbox" #cheked (click)="showAlert(this.cheked.checked)">
 
+<button (click)="ponerNombre()">compañero</button>
+<input type="text" placeholder="{{nombreCompi}}">
 
-
+<div>
+    <input type="text" placeholder="Pon un texto one way noseque" [(ngModel)]="texto" (keyup)="cambiarTexto($event)">
+    <input type="text">
+    <p>{{ texto }}</p>
+</div>

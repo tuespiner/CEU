@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AlumnoComponent } from './alumno/alumno.component';
+import { DatosLibroComponent } from './datos-libro/datos-libro.component';
 
 @Component({
   selector: 'app-hola',
   standalone: true,
-  imports: [RouterOutlet, UserProfileComponent, AlumnoComponent],
+  imports: [RouterOutlet, UserProfileComponent, AlumnoComponent, DatosLibroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -28,5 +29,8 @@ export class AppComponent {
   asignatura = {
     nombre: 'Desarrollo Entorno Cliente',
     codigo: '1'
+  }
+  seleccionarPadre(event: string){
+    console.log(event)
   }
 }

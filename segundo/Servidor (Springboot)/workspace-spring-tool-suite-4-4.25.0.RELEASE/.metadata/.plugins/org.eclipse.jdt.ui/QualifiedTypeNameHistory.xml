@@ -10,5 +10,7 @@
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="com.example.demo.repository.HotelRepository"/>
     <fullyQualifiedTypeName name="com.example.demo.model.Autor"/>
+    <fullyQualifiedTypeName name="com.example.demo.respository.LibroRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Estudiante"/>
     <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
 </qualifiedTypeNameHistroy>

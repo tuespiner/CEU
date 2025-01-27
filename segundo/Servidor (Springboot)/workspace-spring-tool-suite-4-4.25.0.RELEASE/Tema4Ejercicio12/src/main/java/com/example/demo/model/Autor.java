@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -25,14 +26,15 @@ public class Autor {
 	private List<Libro> libros;
 	
 	public Autor() {
-		
+		List<Libro> libros = new ArrayList();
+		this.libros = libros;
 	}
 	
 	public Autor(String nombre, List<Libro> libros) {
 		this.nombre = nombre;
 		this.libros = libros;
 	}
-
+	
 	public int getId() {
 		return id;
 	}
