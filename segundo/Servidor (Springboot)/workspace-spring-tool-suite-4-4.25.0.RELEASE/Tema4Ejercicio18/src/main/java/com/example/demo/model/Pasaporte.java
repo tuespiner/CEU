@@ -14,7 +14,7 @@ public class Pasaporte {
 	@Column(name = "id")
 	private int id;
 	@Column(name = "numero")
-	 private int numero;
+	 private String numero;
 	@OneToOne(mappedBy = "pasaporte")
 	private Persona persona;
 	
@@ -22,7 +22,7 @@ public class Pasaporte {
 		
 	}
 	
-	public Pasaporte(int numero, Persona persona) {
+	public Pasaporte(String numero, Persona persona) {
 		this.numero = numero;
 		this.persona = persona;
 	}
