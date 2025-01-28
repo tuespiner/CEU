@@ -1,0 +1,77 @@
+@font-face {
+    font-family: fuente-cerveceria-1;
+    src: url(../Fonts/Bahianita/Bahianita-Regular.ttf);
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+    height: 100vh;
+    & header{
+        font-family: fuente-cerveceria-1;
+        height: 10%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    & main{
+        background: linear-gradient( #fcbb00 30%, #ffd123);
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & h1{
+            margin: 0px;
+        }
+        & .inicio-register{
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+    }
+    & footer{
+        height: 10%;
+    }
+}
+
+.espuma {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.espuma svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 113px;
+}
+
+.espuma .shape-fill {
+    fill: #FFFFFF;
+}
+
+.fondo {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.fondo svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+.fondo .shape-fill {
+    fill: white;
+}
+
