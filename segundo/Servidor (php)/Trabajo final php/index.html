@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>CERVECERIA JUAN</h1>
-    </header>
+    </header> 
     <main>
         <div class="espuma">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -20,24 +20,39 @@
         </div>
 
         <div class="inicio-register">
-            <div class="inicio">
+            <div class="inicio" id="inicio">
                 <h1>INICIO SESIÓN</h1>
                 <form action="">
-                    <div>
-                        <label for=""></label>
-                        <input type="text" name="" id="">
+                    <div class="campoInput">
+                        <label for="correo">Correo</label>
+                        <input type="text" name="" id="correo">
                     </div>
-                    <div>
-                        <label for=""></label>
-                        <input type="password" name="" id="">
+                    <div class="campoInput">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="" id="contrasena">
                     </div>
                     <input type="submit" value="Iniciar Sesión">
                 </form>
+                <a href="#" id="RegistrarseA">Registrarse</a>
             </div>
-            <div class="register">
+            <div class="register" id="register">
+                <h1>REGISTRO</h1>
                 <form action="">
-
+                    <div class="campoInput">
+                        <label for="correo">Correo</label>
+                        <input type="text" name="" id="correo">
+                    </div>
+                    <div class="campoInput">
+                        <label for="edad">Edad</label>
+                        <input type="text" name="" id="edad">
+                    </div>
+                    <div class="campoInput">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="" id="contrasena">
+                    </div>
+                    <input type="submit" value="Registrarse">
                 </form>
+                <a href="#" id="iniciarSesionA">Iniciar sesion</a>
             </div>
         </div>
 
@@ -52,5 +67,19 @@
     <footer>
 
     </footer>
+    <script>
+        let inia = document.getElementById('iniciarSesionA')
+        let rega = document.getElementById('RegistrarseA')
+        let inicio = document.getElementById('inicio')
+        let registrarse = document.getElementById('register')
+        inia.addEventListener("click", () => {
+            registrarse.style.display = 'none'
+            inicio.style.display = 'block'
+        })
+        rega.addEventListener("click", () => {
+            registrarse.style.display = 'block'
+            inicio.style.display = 'none'
+        })
+    </script>
 </body>
 </html>
