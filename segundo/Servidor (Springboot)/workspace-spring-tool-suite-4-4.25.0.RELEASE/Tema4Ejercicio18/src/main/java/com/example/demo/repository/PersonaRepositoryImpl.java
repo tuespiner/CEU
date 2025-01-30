@@ -15,7 +15,7 @@ public class PersonaRepositoryImpl implements PersonaRepository{
 
 	@Override
 	public void savePersona(Persona persona) {
-		if(manager.find(Persona.class, persona.getId())!= null) {
+		if(this.getPersona(persona.getId())!= null) {
 			manager.merge(persona);
 		}else {
 			manager.persist(persona);

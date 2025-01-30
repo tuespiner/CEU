@@ -9,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.demo.model.Pasaporte;
 import com.example.demo.model.Persona;
 import com.example.demo.model.Proyecto;
+import com.example.demo.service.PasaporteService;
+import com.example.demo.service.PersonaService;
+import com.example.demo.service.ProyectoService;
 
 @SpringBootApplication
 public class Tema4Ejercicio18Application implements CommandLineRunner{
@@ -16,7 +19,12 @@ public class Tema4Ejercicio18Application implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(Tema4Ejercicio18Application.class, args);
 	}
-
+	
+	private PasaporteService pasaporteService;
+	private PersonaService personaService;
+	private ProyectoService proyectoService;
+	
+	
 	@Override
 	public void run(String... args) throws Exception {
 		Persona persona1 = new Persona("Juan Perez");
@@ -33,6 +41,12 @@ public class Tema4Ejercicio18Application implements CommandLineRunner{
 		persona1.getProyectos().add(proyecto2);
 		persona1.getProyectos().add(proyecto1);
 		persona2.getProyectos().add(proyecto1);
+		proyectoService.saveProyecto(proyecto1);
+		proyectoService.saveProyecto(proyecto2);
+		personaService.savePersona(persona1);
+		personaService.savePersona(persona2);
+		pasaporteService.savePasaporte(pasaporte1);
+		pasaporteService.savePasaporte(pasaporte2);
 	}
 	
 	

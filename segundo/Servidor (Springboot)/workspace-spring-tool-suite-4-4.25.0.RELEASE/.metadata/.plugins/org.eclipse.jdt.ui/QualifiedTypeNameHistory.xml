@@ -1,21 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.swing.Spring"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
-    <fullyQualifiedTypeName name="com.example.demo.modelo.Pelicula"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
-    <fullyQualifiedTypeName name="com.example.demo.repository.HotelRepository"/>
-    <fullyQualifiedTypeName name="com.example.demo.model.Autor"/>
-    <fullyQualifiedTypeName name="com.example.demo.respository.LibroRepository"/>
-    <fullyQualifiedTypeName name="com.example.demo.model.Estudiante"/>
-    <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-=======
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
->>>>>>> 74e003502047aa5469f983f8fa0b909e34e244c9
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
