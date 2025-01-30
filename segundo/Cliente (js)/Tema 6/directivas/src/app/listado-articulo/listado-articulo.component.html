@@ -1,0 +1,6 @@
+<div>
+    <div *ngFor="let articulo of articulos">
+        {{articulo.nombre}}, {{articulo.precio}}, {{articulo.unidades}}
+    </div>
+</div>
+<app-caracteristicas-articulo (selected)="seleccionarCaracteristica($event)"></app-caracteristicas-articulo>

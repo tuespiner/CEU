@@ -1,3 +1,4 @@
+<!--
 <form>
   <h1>{{titulo}}</h1>
   <div>
@@ -15,8 +16,21 @@
   </ng-template>
 
   <ol *ngFor="let persona of personas">
-    <li>Nombre: {{persona.nombre}}</li>
-    <li>Apellidos: {{persona.apellidos}}</li>
-    <li>Edad: {{persona.edad}}</li>
+    <li *ngIf="persona.edad >= 30">Nombre: {{persona.nombre}}</li>
+    <li *ngIf="persona.edad >= 30">Apellidos: {{persona.apellidos}}</li>
+    <li *ngIf="persona.edad >= 30">Edad: {{persona.edad}}</li>
   </ol>
 </form>
+
+<div>
+  <div>
+    <button (click)="botonPulsado('A')">A</button>
+    <button (click)="botonPulsado('B')">B</button>
+    <button (click)="botonPulsado('C')">C</button>
+  </div>
+  <p>{{ mensajeBoton }}</p>
+</div>-->
+
+<app-articulo>
+
+</app-articulo>

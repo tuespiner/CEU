@@ -1,0 +1,21 @@
+@font-face {
+    font-family: fuente-cerveceria-1;
+    src: url(../Fonts/Exo_2/Exo2-VariableFont_wght.ttf);
+}
+body{
+    width: 100%;
+    margin: 0px;
+    font-family: fuente-cerveceria-1;
+    & main{
+        width: 100%;
+        & .producto{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            & > div{
+                
+            }
+        }
+    }
+}

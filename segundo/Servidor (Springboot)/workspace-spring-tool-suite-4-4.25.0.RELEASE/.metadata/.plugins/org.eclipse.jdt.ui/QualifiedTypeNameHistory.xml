@@ -13,5 +13,9 @@
     <fullyQualifiedTypeName name="com.example.demo.respository.LibroRepository"/>
     <fullyQualifiedTypeName name="com.example.demo.model.Estudiante"/>
     <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+=======
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+>>>>>>> 74e003502047aa5469f983f8fa0b909e34e244c9
 </qualifiedTypeNameHistroy>
