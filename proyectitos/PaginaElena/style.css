@@ -26,6 +26,9 @@ body{
         & nav{
             display: flex;
             gap: 2rem;
+            padding: 1rem;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.089);
             & button{
                 font-family: Arial, Helvetica, sans-serif;
                 background-color: transparent;
@@ -144,12 +147,12 @@ body{
         }
         & .catalogo{
             background-color: #2e6647;
-            width: 100%;
+            padding: 2rem;
+            width: calc(100% - 4rem);
             min-height: 50vh;
             & h2{
                 font-family: fuente-elena-1;
                 margin: 0px;
-                margin-left: 2rem;
                 color: white;
                 font-size: 80px;
                 border-top: 3px solid white;
@@ -160,10 +163,6 @@ body{
         & .sobreNosotros{
             width: 100%;
             height: 50vh;
-            background-color: red;
-            & .flechita .shape-fill{
-                
-            }
         }
     }
     & footer{
@@ -174,47 +173,4 @@ body{
 
         }
     }
-}
-
-.book {
-    position: static;
-    bottom: 100%;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.book svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-}
-
-.book .shape-fill {
-    fill: #FFFFFF;
-}
-
-
-
-
-.flechita {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.flechita svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 45px;
-}
-
-.flechita .shape-fill {
-    fill: #2e6647;
 }
