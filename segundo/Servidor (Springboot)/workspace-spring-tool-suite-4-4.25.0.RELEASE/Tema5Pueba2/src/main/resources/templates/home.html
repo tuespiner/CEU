@@ -7,6 +7,12 @@
 <body>
 	<p th:text="${mensaje}">hola</p>
 	<p th:text="'Nombre: ' +${nombre1}">hola</p>
-	<img th:src="@{/Imagen/descarga.jfif}">
+	<img th:src="@{./Imagen/istockphoto-636379014-612x612.jpg}">
+	<a th:href="@{/index}">Ir a index</a>
+	<div>
+	<p th:if="${role} == 'admin'">Es admin</p>
+	<p th:unless="${role} == 'admin'">No es admin</p>
+	</div>
+	<a th:href="@{/form}">Ir a form</a>
 </body>
 </html>

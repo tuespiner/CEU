@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>El Diablo</h1>
+	<form th:action="@{form}" th:object="${user}" method="post">
+		<input type="text"  placeholder="Nombre" th:field="*{nombre}">
+		<input type="number" placeholder="Edad" th:field="*{edad}">
+		<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>
