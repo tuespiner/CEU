@@ -7,7 +7,7 @@ body{
     justify-content: center;
 }
 .campo{
-    width: 400px;
+    width: 410px;
     height: 400px;
     border: 1px solid black;
     & #tramo{
@@ -19,3 +19,4 @@ body{
         background-color: blue;
     }
 }
+ 
