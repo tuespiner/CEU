@@ -1,0 +1,5 @@
+<ol>
+  <li *ngFor="let planeta of (planetService$ | async)?.results">
+    {{planeta.name}}
+  </li>
+</ol>
