@@ -22,7 +22,6 @@ public class Proyecto {
 	private List<Persona> personas = new ArrayList<>();
 	
 	public Proyecto() {
-		
 	}
 	public Proyecto(String nombre) {
 		this.nombre = nombre;
