@@ -90,7 +90,7 @@
         <div>
             <h2>Eres proveedor</h2>
             <?xml version="1.0" ?>
-            <svg id="Layer_1_1_" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16"
+            <svg class="botonProveedor" id="Layer_1_1_" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16"
                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <path
                     d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M6.354,13.354l-0.707-0.707L10.293,8L5.646,3.354  l0.707-0.707L11.707,8L6.354,13.354z" />
@@ -98,7 +98,7 @@
         </div>
         <div>
             <h2>Eres cliente final</h2>
-            <?xml version="1.0" ?><svg id="Layer_1_1_" style="enable-background:new 0 0 16 16;" version="1.1"
+            <?xml version="1.0" ?><svg class="botonCliente" id="Layer_1_1_" style="enable-background:new 0 0 16 16;" version="1.1"
                 viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <path
@@ -106,16 +106,90 @@
             </svg>
         </div>
     </section>
-    <section class="proveedor">
+    <section class="proveedorCliente" id="proveedor">
         <form action="">
             <div class="divisor">
-                <label for=""></label>
-                <input type="text">
+                <label for="">Nombre comercial</label>
+                <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                <span></span>
+                <div>
+                    <p class="error" id="uno">No se puede dejar en blanco</p>
+                    <p>Nota: no hace falta que coincida con el nombre legal</p>
+                </div>
             </div>
+            <div class="divisor">
+                <label for="">Correo electronico</label>
+                <input type="text" name="email" placeholder="bb@bb.es" id="mail">
+                <span></span>
+                <div>
+                    <p class="error" id="dos">No se puede dejar en blanco</p>
+                </div>
+            </div>
+            <div class="divisor">
+                <label for="">Contraseña</label>
+                <input type="password" name="contrasena" placeholder="......." id="contr">
+                <span></span>
+                <div>
+                    <p class="error" id="tres">No se puede dejar en blanco</p>
+                </div>
+            </div>
+            <div class="divisor">
+                <label for="">Confirma contraseña</label>
+                <input type="password" name="confContrasena" placeholder="......." id="confirmContr">
+                <span></span>
+                <div>
+                    <p class="error" id="cuatro">No se puede dejar en blanco</p>
+                </div>
+            </div>
+            <div class="divisor">
+                <label for="">fecha de nacimiento</label>
+                <div class="fechas">
+                    <input type="number" name="fecha" id="">
+                    <input type="number" name="fecha" id="">
+                    <input type="number" name="fecha" id="">
+                </div>
+                <span></span>
+               <div>
+                    <p class="error" id="cinco">No se puede dejar en blanco</p>
+                    <p>No podrás cambiar tu fecha de nacimiento más adelante.</p>
+               </div>
+            </div>
+            <hr>
+            <div>
+                <input type="checkbox">
+                <p>Confirmo que acepto los términos de la cuenta y que estoy de acuerdo con la política de privacidad.</p>
+            </div>
+            <hr>
+            <input type="submit" id="submitProveedor" value="Crear" disabled >
         </form>
     </section>
-
-
+    <section class="proveedorCliente" id="cliente">
+        <form>
+            <div class="divisor">
+                <label for="">Nombre comercial</label>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div class="divisor">
+                <label for="">Correo electronico</label>
+                <input type="text" placeholder="bb@bb.es">
+            </div>
+            <div class="divisor">
+                <label for="">Contraseña</label>
+                <input type="password" placeholder=".......">
+            </div>
+            <div class="divisor">
+                <label for="">Confirma contraseña</label>
+                <input type="password" placeholder=".......">
+            </div>
+            <hr>
+            <div>
+                <input type="checkbox">
+                <p>Confirmo que acepto los términos de la cuenta y que estoy de acuerdo con la política de privacidad.</p>
+            </div>
+            <hr>
+            <input type="submit" value="Crear" disabled>
+        </form>
+    </section>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
