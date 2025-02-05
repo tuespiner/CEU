@@ -1,1 +1,9 @@
-<p>lista-personajes works!</p>
+<h1>Lista de personajes</h1>
+<ul>
+    <li *ngFor="let personaje of (personajes$ | asycn)?">
+        {{personaje.nombre}} - {{personaje.raza}}
+        <button (click)="eliminarPersonaje(personaje.id)">
+            eliminar
+        </button>
+    </li>
+</ul>
