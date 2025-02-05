@@ -1,0 +1,130 @@
+@font-face {
+    font-family: fuente-cerveceria-1;
+    src: url(../Fonts/Exo_2/Exo2-VariableFont_wght.ttf);
+}
+
+
+body{
+    width: 100%;
+    margin: 0px;
+    height: 100vh;
+    font-family: fuente-cerveceria-1;
+    & header{
+        height: 10%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & h1{
+            font-size: 70px;
+            letter-spacing: 3px;
+            text-shadow: -3px 3px 0px #fcbb00;
+        }
+    }
+    & main{
+        background: linear-gradient( #fcbb00 30%, #ffd123);
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & h1{
+            margin: 0px;
+        }
+        & form{
+            & .campoInput{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                & label{
+                    font-size: 30px;
+                    text-shadow: -2px 2px 0px #fcbb00;
+                }
+                & input{
+                    padding: 1rem;
+                    border: 0px;
+                    background-color: #fcbd002a;
+                    border-radius: 10px;
+                }
+                & p{
+                    color: red;
+                    margin: 0px;
+                }
+            }
+            & input[type='submit']{
+                width: 100%;
+                padding: 1rem 2rem;
+                border:0px;
+                border-radius: 10px;
+                margin-top: 2rem;
+                background-color: #ffcf23af;
+                transition: .3s;
+                font-size: 20px;
+                &:hover{
+                    background-color: #ffcf23bf;
+                    box-shadow: 0px 0px 10px 0px #ffcf23bf;
+                    cursor: pointer;
+                    scale: 1.1;
+                }
+            }
+        }
+        & .inicio-register{
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px 0px white;
+            & > div{
+                & h1{
+                    font-size: 50px ;
+                    text-shadow: -3px 3px 0px #fcbb00;
+                }
+            }
+            & .inicio{
+                display: none;
+            }
+        }
+    }
+    & footer{
+        height: 10%;
+    }
+}
+
+.espuma {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.espuma svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 113px;
+}
+
+.espuma .shape-fill {
+    fill: #FFFFFF;
+}
+
+.fondo {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.fondo svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+.fondo .shape-fill {
+    fill: white;
+}
+
