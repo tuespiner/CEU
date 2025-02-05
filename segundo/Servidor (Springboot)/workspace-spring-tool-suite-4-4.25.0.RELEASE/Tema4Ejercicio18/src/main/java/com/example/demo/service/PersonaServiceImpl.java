@@ -31,4 +31,6 @@ public class PersonaServiceImpl implements PersonaService{
 	public Persona getPersona(int id) {
 		return repo.getPersona(id);
 	}
+	
+	
 }

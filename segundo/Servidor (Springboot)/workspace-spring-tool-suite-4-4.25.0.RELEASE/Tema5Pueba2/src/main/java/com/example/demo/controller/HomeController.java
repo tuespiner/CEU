@@ -47,4 +47,7 @@ public class HomeController {
 		model.addAttribute("user", user);
 		return "result";
 	}
+	
+	@PostMapping("/libroFormulario")
+	public String libroFormulario()
 }

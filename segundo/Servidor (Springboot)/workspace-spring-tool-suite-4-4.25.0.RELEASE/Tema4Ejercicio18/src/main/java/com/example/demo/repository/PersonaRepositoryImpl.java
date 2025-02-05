@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.Persona;
@@ -25,5 +27,11 @@ public class PersonaRepositoryImpl implements PersonaRepository{
 	@Override
 	public Persona getPersona(int id) {
 		return manager.find(Persona.class, id);
+	}
+
+	@Override
+	public List<Persona> getPersonas() {
+		Query<Persona> query = (Query<Persona>) manager.createQuery("select p from Persona p", Persona.class);
+		return null;
 	}
 }
