@@ -29,7 +29,7 @@ $(document).ready(function(){
     $(document).on('keydown', function(event){
         detecBotones(event)
     })
-    interval = setInterval(ini, 20)
+    interval = setInterval(ini, 60)
 })
 function ini(){
     $('#fin').hide()

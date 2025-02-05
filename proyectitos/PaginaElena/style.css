@@ -6,6 +6,10 @@
     font-family: fuente-elena-2;
     src: url(Fonts/Yellowtail/Yellowtail-Regular.ttf);
 }
+@font-face {
+    font-family: fuente-elena-3;
+    src: url(Fonts/Satisfy/Satisfy-Regular.ttf);
+}
 body{
     width: 100%;
     margin: 0px;
@@ -120,7 +124,7 @@ body{
 
                         }
                         & p{
-                            font-family: fuente-elena-2;
+                            font-family: fuente-elena-3;
                             color: rgba(0, 0, 0, 0.761);
                             padding-top: .5rem;
                             border-top: 1px solid #2e6647;
@@ -148,14 +152,28 @@ body{
             padding: 2rem;
             width: calc(100% - 4rem);
             min-height: 50vh;
-            & h2{
-                font-family: fuente-elena-1;
-                margin: 0px;
-                color: white;
-                font-size: 80px;
-                border-top: 3px solid white;
-                border-bottom: 3px solid white;
-                width: fit-content;
+            & .catalogoDiv{
+                & h2{
+                    font-family: fuente-elena-1;
+                    margin: 0px;
+                    color: white;
+                    font-size: 80px;
+                    border-top: 3px solid white;
+                    border-bottom: 3px solid white;
+                    width: fit-content;
+                }
+                & > categoria{
+                    & > h3{
+                        color: white;
+                        font-size: 50px;
+                    }
+                    & .carruselCatalogo{
+                        width: 100%;
+                        height: 300px;
+                        border-top: 2px solid white;
+                        border-bottom: 2px solid white;
+                    }
+                }
             }
         }
         & .sobreNosotros{
