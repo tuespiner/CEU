@@ -31,7 +31,11 @@ public class PersonaRepositoryImpl implements PersonaRepository{
 
 	@Override
 	public List<Persona> getPersonas() {
+<<<<<<< HEAD
 		Query<Persona> query = (Query<Persona>) manager.createQuery("select p from Persona p", Persona.class);
 		return null;
+=======
+		return manager.createQuery("Select p from Persona p", Persona.class).getResultList();
+>>>>>>> 28d74847b814f1f138be6e45d05c908b0dbed2f5
 	}
 }

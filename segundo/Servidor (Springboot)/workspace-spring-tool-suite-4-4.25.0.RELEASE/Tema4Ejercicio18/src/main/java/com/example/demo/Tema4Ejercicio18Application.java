@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,8 +21,11 @@ public class Tema4Ejercicio18Application implements CommandLineRunner{
 		SpringApplication.run(Tema4Ejercicio18Application.class, args);
 	}
 	
+	@Autowired
 	private PasaporteService pasaporteService;
+	@Autowired
 	private PersonaService personaService;
+	@Autowired
 	private ProyectoService proyectoService;
 	
 	
@@ -47,6 +51,14 @@ public class Tema4Ejercicio18Application implements CommandLineRunner{
 		personaService.savePersona(persona2);
 		pasaporteService.savePasaporte(pasaporte1);
 		pasaporteService.savePasaporte(pasaporte2);
+		
+		List<Persona> personas = personaService.getPersonas();
+		personas.stream().forEach((per) -> {
+			System.out.println(per.getName());
+			per.getProyectos().stream().forEach((pro) -> {
+				System.out.println("/t"+pro.getNombre());
+			});
+		});
 	}
 	
 	

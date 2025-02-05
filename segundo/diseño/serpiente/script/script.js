@@ -4,38 +4,35 @@ var cuerpoSerpiente = [
     {
         top: 5,
         left: 0,
-        key: null
     },
     {
         top: 15,
         left: 0,
-        key: null
     },
     {
         top: 25,
         left: 0,
-        key: null
     },
     {
         top: 35,
         left: 0,
-        key: null
     },
     {
         top: 45,
         left: 0,
-        key: null
     }
 ]
 var interval
 var recordedKey = 'up'
 $(document).ready(function(){
+    $('#fin').hide()
     $(document).on('keydown', function(event){
         detecBotones(event)
     })
-    interval = setInterval(ini, 60)
+    interval = setInterval(ini, 20)
 })
 function ini(){
+    $('#fin').hide()
     pintar()
     moverse()
 }
@@ -102,7 +99,10 @@ function moverse(){
 }
 
 function fin(){
-    console.log('mamahuevo')
     clearInterval(interval)
+    $('#fin').show()
+    $('#reintentar').on('click', function(){
+         location.reload()
+    })
 }
-
+ s

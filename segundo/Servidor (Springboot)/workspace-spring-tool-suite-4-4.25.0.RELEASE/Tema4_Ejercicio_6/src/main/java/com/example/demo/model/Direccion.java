@@ -13,7 +13,7 @@ public class Direccion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
-	private Integer id;
+	private int id;
 	@Column(name="calle")
 	private String calle;
 	@Column(name="ciudad")

@@ -19,4 +19,44 @@ body{
         background-color: blue;
     }
 }
+.manzana{
+    width: 10px;
+    height: 10px;
+    background-image: url(Imagenes/manzana.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fin{
+    position: fixed;
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: black;
+    box-shadow: 0px 0px 10px 0px black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    & h2{
+        margin: 0px;
+        text-shadow: 0px 0px 10px white;
+        font-size: 60px;
+    }
+    & button{
+        border: 0px;
+        background-color: white;
+        border-radius: 100px;
+        padding: .5rem 3rem;
+        color: black;
+        box-shadow: 0px 0px 10px 0px white;
+        transition: .3s;
+        &:hover{
+            scale: 1.2;
+            box-shadow: 0px 0px 20px 0px white;
+            cursor: pointer;
+        }
+    }
+}
  
