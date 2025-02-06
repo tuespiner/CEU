@@ -49,5 +49,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/libroFormulario")
-	public String libroFormulario()
+	public String libroFormulario() {
+		return "";
+	}
 }
