@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+</head>
+<body>
+	<h1>CLIENTES</h1>
+	<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>NOMBRE</th>
+			<th>CIUDAD</th>
+			<th>VER MAS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="cliente: ${clientes}">
+			<td	th:text="${cliente.id}"></td>
+			<td	th:text="${cliente.nombre}"></td>
+			<td	th:text="${cliente.direccion.ciudad}"></td>
+			<td> <form th:action="@{index}" th:object="${cliente.id}" method="post">
+			<input type="submit" value="Ver">
+			</form></td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<a th:href="@{/agregarCliente}">Agregar Cliente</a>
+</body>
+</html>
