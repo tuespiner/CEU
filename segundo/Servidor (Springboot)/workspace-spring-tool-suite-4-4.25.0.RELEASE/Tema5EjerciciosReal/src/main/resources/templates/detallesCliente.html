@@ -5,7 +5,11 @@
 <title>Detalles</title>
 </head>
 <body>
-	<h1 th:text="Detalles cliente ${cliente.nombre}"></h1>
-	
+	<h1 th:text="'Detalles Cliente ' + ${clienteDetalle.nombre}"></h1>
+	<p th:text="'ID: ' + ${clienteDetalle.id}"></p>
+	<p th:text="'NOMBRE: ' + ${clienteDetalle.nombre}"></p>
+	<p th:text="'CIUDAD: ' + ${clienteDetalle.direccion.ciudad}"></p>
+	<p th:text="'CALLE: ' + ${clienteDetalle.direccion.calle}"></p>
+	<a th:href="@{/}">VOLVER</a>
 </body>
 </html>

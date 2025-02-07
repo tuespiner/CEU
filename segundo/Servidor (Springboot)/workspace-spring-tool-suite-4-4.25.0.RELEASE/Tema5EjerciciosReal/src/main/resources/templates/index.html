@@ -20,13 +20,12 @@
 			<td	th:text="${cliente.id}"></td>
 			<td	th:text="${cliente.nombre}"></td>
 			<td	th:text="${cliente.direccion.ciudad}"></td>
-			<td> <form th:action="@{index}" th:object="${cliente.id}" method="post">
-			<input type="submit" value="Ver">
-			</form></td>
+			<td> a<a th:href="@{/{id}(id=${cliente.id})}">Ver mas</a></td>
 		</tr>
 	</tbody>
 	</table>
 	
 	<a th:href="@{/agregarCliente}">Agregar Cliente</a>
+	<a th:href="@{/buscarPorCiudad}">Buscar Por Ciudad</a>
 </body>
 </html>

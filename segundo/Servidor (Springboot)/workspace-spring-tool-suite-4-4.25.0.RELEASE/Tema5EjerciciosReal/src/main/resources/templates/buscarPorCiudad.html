@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Buscar Clientes Por Ciudad</h1>
+	
+	<form th:action="@{/buscarPorCiudad}" th:object="${ciudad}" method="post">
+		<input type="text" th:field="*{ciudad}" placeholder="Ciudad">
+		<input type="submit" value="BUSCAR">
+	</form>
+	
+	<div th:if="${ciudad}">
+		<h2 th:text="'Clientes de la ciudad ' + ${ciudad}"></h2>
+	</div>
+</body>
+</html>
