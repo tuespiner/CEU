@@ -41,8 +41,7 @@ public class VistaController {
 	
 	@PostMapping("/agregarCliente")
 	public String agregarCliente(@ModelAttribute Cliente cliente, Model model) {
-		model.addAttribute("clienteNuevo", cliente);
 		service.saveCliente(cliente);
-		return "index";
+		return "redirect:/";
 	}
 }
