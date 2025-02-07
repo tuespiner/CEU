@@ -7,13 +7,18 @@
 <body>
 	<h1>Buscar Clientes Por Ciudad</h1>
 	
-	<form th:action="@{/buscarPorCiudad}" th:object="${ciudad}" method="post">
-		<input type="text" th:field="*{ciudad}" placeholder="Ciudad">
+	<form th:action="@{/buscarPorCiudad}" method="post">
+		<input type="text" name="ciudad" th:value="${ciudad}" placeholder="Ciudad">
 		<input type="submit" value="BUSCAR">
 	</form>
-	
-	<div th:if="${ciudad}">
-		<h2 th:text="'Clientes de la ciudad ' + ${ciudad}"></h2>
+	<div th:unless="${nulo}">
+		<h2 th:text="${ciudad}"></h2>
+		<ol>
+			<li th:each="cliente:${clientesCiudad}" th:text="${cliente.nombre}"></li>
+		</ol>
 	</div>
+	<p th:if="${nulo}">No hay nada en la lista</p>
+	
+	<a th:href="@{/}">VOLVER</a>
 </body>
 </html>

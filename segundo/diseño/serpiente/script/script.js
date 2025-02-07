@@ -98,6 +98,11 @@ function moverse(){
     }
 }
 
+function posicionComida(){
+    let top = Number(Math.random() * 40)
+    let left = Number(Math.random() * 40)
+}
+
 function fin(){
     clearInterval(interval)
     $('#fin').show()
@@ -105,4 +110,4 @@ function fin(){
          location.reload()
     })
 }
- s
+ 

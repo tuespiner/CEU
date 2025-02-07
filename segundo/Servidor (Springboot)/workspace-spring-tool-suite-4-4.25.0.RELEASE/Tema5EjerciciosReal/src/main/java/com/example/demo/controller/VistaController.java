@@ -57,9 +57,10 @@ public class VistaController {
 	}
 	
 	@PostMapping("/buscarPorCiudad")
-	public String buscarPorCiudad(@ModelAttribute String ciudad,  Model model) {
+	public String buscarPorCiudad(@RequestParam String ciudad,  Model model) {
 		model.addAttribute("clientesCiudad", service.findClientesByCiudad(ciudad));
 		model.addAttribute("ciudad", ciudad);
+		model.addAttribute("nulo", service.findClientesByCiudad(ciudad).isEmpty());
 		return "buscarPorCiudad";
 	}
 }
