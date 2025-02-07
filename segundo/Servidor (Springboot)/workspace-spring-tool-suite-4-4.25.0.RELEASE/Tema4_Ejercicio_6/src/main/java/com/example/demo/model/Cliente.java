@@ -20,18 +20,20 @@ public class Cliente {
 	private int id;
 	@Column(name="nombre")
 	private String nombre;
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "direccion_id")
+	@OneToOne(cascade = CascadeType.ALL,orphanRemoval = true)
+    @JoinColumn(name = "direccion_id")
 	private Direccion direccion;
 	public Cliente() {
-		
+		super();
 	}
 	public Cliente(String nombre, Direccion direccion) {
+		super();
 		this.nombre = nombre;
 		this.direccion = direccion;
 	}
 	
 	public Integer getId() {
+		System.out.println(this.id);
 		return id;
 	}
 	public void setId(Integer id) {

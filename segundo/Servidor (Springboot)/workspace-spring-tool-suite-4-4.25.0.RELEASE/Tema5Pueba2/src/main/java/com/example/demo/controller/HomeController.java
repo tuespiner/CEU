@@ -45,9 +45,12 @@ public class HomeController {
 	@PostMapping("/form")
 	public String form(@ModelAttribute User user, Model model) {
 		model.addAttribute("user", user);
+		
 		return "result";
 	}
 	
 	@PostMapping("/libroFormulario")
-	public String libroFormulario()
+	public String libroFormulario() {
+		return "";
+	}
 }

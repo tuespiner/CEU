@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="com.example.demo.model.Persona"/>
-=======
-    <fullyQualifiedTypeName name="com.example.demo.service.DireccionService"/>
->>>>>>> 28d74847b814f1f138be6e45d05c908b0dbed2f5
+    <fullyQualifiedTypeName name="org.hibernate.internal.build.AllowSysOut"/>
 </qualifiedTypeNameHistroy>

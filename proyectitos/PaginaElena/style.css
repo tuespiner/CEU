@@ -30,13 +30,18 @@ body{
         & nav{
             display: flex;
             gap: 2rem;
+            padding: 1rem 2rem;
+            border: 2px solid black;
+            background-color: rgba(255, 255, 255, 0.211);
             & button{
                 font-family: Arial, Helvetica, sans-serif;
                 background-color: transparent;
                 transition: .3s;
                 border: 0px; 
+                padding: .5rem 0rem;
+                font-weight: bold;
+                border-bottom: 1px solid rgba(0, 0, 0, 0);
                 &:hover{
-                    padding-bottom: .5rem;
                     cursor: pointer;
                     border-bottom: 1px solid black;
                 }
@@ -162,16 +167,86 @@ body{
                     border-bottom: 3px solid white;
                     width: fit-content;
                 }
-                & > categoria{
-                    & > h3{
+                & .categoria{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    & h3{
+                        margin:0px;
+                        font-family: fuente-elena-3;
                         color: white;
                         font-size: 50px;
                     }
                     & .carruselCatalogo{
+                        display: flex;
                         width: 100%;
-                        height: 300px;
+                        height: 350px;
                         border-top: 2px solid white;
                         border-bottom: 2px solid white;
+                        & .elemento{
+                            width: 300px;
+                            height: 350px;
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: 250px .5fr .5fr;
+                            border-left: 1px solid white;
+                            border-right: 1px solid white;
+                            color: white;
+                            & button{
+                                font-family: fuente-elena-1;
+                                --tamano: calc(100% - 1rem);
+                                grid-row: 3/4;
+                                grid-column: 2/3;
+                                margin: .5rem;
+                                width: var(--tamano);
+                                min-height: var(--tamano);
+                                background-color: rgba(255, 255, 255, 0.183);
+                                border: 2px solid white;
+                                color: white;
+                                transition: .3s;
+                                font-size: 17px;
+                                &:hover{
+                                    background-color: rgba(255, 255, 255, 0.438);
+                                    cursor: pointer;
+                                    scale: 1.1;
+                                }
+                            }
+                            & span{
+                                grid-row: 3/4;
+                                grid-column: 1/2;
+                                padding: .5rem;
+                                align-self: center;
+                                font-family: fuente-elena-3;
+                                font-size: 20px;
+                                color: white;
+                            }
+                            & p{
+                                height: calc(100% - .5rem - 2px);
+                                font-family: fuente-elena-1;
+                                font-size: 20px;
+                                margin: 0rem .5rem;
+                                padding: .25rem 0rem;
+                                grid-row: 2/3;
+                                grid-column: 1/3;
+                                border-bottom: 2px solid white;
+                                display: flex;
+                                align-items: center;
+                            }
+                            & div{
+                                grid-row: 1/2;
+                                grid-column: 1/3;
+                                background-image: url(Imagenes/champu.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                            }
+                            &:first-child{
+                                border-left: 2px solid white;
+                            }
+                            &:last-child{
+                                border-right: 2px solid white;
+                            }
+                        }
                     }
                 }
             }
@@ -192,11 +267,12 @@ body{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             & > a{
-                width: 80px;
-                height: 80px;
+                width: 50px;
+                height: 50px;
                 background-color: white;
                 justify-self: end;
                 transition: .3s;
+                clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0 100%);
                 &:hover{
                     scale: 1.2;
                     cursor: pointer;
@@ -228,6 +304,7 @@ body{
                     border-radius: 100px;
                     border: 0px;
                     transition: .3s;
+                    background-color: white;
                     &:hover{
                         box-shadow: 0px 0px 15px -5px white;
                         scale: 1.2;

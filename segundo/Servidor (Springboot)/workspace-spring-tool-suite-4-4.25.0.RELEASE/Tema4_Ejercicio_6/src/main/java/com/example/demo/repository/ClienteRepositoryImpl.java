@@ -31,10 +31,10 @@ public class ClienteRepositoryImpl implements ClienteRepository{
 	@Transactional
 	public void saveCliente(Cliente cliente) {
 		System.out.println(cliente.getId());
-		if(this.getCliente(cliente.getId())!= null) {
-			manager.merge(cliente);
-		}else {
+		if(cliente.getId() == null) {
 			manager.persist(cliente);
+		}else {
+			manager.merge(cliente);
 		}
 	}
 
