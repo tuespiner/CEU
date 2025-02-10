@@ -35,4 +35,21 @@ export class LibroServiceService {
   getLibro(id:number){
     return this.libros.filter((libro) => libro.id == id)
   }
+
+  darAlta(libro:libro){
+    libro.id = this.getId()
+    this.libros.push(libro)
+  }
+  getId(): number{
+    let id = 0
+    this.libros.forEach((libro) => {
+      if(libro.id > id){
+        id = libro.id
+      }
+    })
+    return id + 1
+  }
+  modificar(libro:libro){
+    this.libros.filter((libroLista) => libroLista.id != libro.id)[0] = libro
+  }
 }
