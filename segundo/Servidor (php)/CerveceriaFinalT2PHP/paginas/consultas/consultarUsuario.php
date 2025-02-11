@@ -5,8 +5,11 @@
     //funcion que hace las consultas para no repetir codigo
     function consulta($query){
         global $conn;
-        $resultado = $conn->query($query);
-        return $resultado;
+        if(str_starts_with($query, 'INSERT')){
+        }else{
+            $resultado = $conn->query($query);
+            return $resultado;
+        }
     }
 
 
@@ -17,7 +20,7 @@
         if ($resultado->num_rows > 0) {
             // Recorrer los resultados y mostrar los usuarios
             while ($fila = $resultado->fetch_assoc()) {
-                echo "ID: " . $fila["id"] . " - Nombre: " . $fila["correo"] . "<br>";
+                echo "ID: " . $fila["id"] . " - Correo: " . $fila["correo"] . "<br>";
             }
         } else {
             echo "No hay usuarios en la base de datos.";
@@ -28,5 +31,8 @@
         $query = "SELECT * FROM usuario WHERE correo like '".$correo."' and contraseña like '".$contrasena."'";
         $resultado = consulta($query);
 
+    }
+    function anadirUsuarios(){
+        $query = "INSERT INTO usuario () VALUES ()"
     }
 ?>
