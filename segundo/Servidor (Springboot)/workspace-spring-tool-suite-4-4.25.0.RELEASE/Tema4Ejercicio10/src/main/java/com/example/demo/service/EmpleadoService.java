@@ -1,10 +1,11 @@
 package com.example.demo.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class EmpleadoService {
-	
-	
+import com.example.demo.model.Empleado;
+
+public interface EmpleadoService {
+	public List<Empleado> getEmpleados();
+	public Empleado getEmpleado(int id);
+	public void saveEmpleado(Empleado empleado);
 }

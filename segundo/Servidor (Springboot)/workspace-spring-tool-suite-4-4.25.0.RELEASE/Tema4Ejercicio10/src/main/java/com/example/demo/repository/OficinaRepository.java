@@ -1,11 +1,11 @@
 package com.example.demo.repository;
 
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-import jakarta.persistence.EntityManager;
+import com.example.demo.model.Oficina;
 
-@Repository
-public class OficinaRepository {
+public interface OficinaRepository {
+	public List<Oficina> getOficinas();
+	public Oficina getOficina(int id);
 	
-	private EntityManager entityManager;
 }
