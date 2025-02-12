@@ -12,7 +12,11 @@
         <nav>
             <a href="./home.php">Home</a>
             <a href="./catalogo.php">Catálogo</a>
-            <a href="./carrito.php">Carrito</a>
+            <?php
+                if($_SESSION["usuario"]["perfil"] == "usuario"){
+                    echo '<a href="./carrito.php">Carrito</a>"';
+                }
+            ?>
             <a href="">Cerrar Sesión</a>
         </nav>
     </header>   

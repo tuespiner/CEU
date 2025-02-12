@@ -8,6 +8,9 @@
         if(str_starts_with($query, 'INSERT')){
         }else{
             $resultado = $conn->query($query);
+            if($resultado->num_rows == 0){
+                $resultado = null;
+            }
             return $resultado;
         }
     }
@@ -30,9 +33,20 @@
     function consultarUsuario($correo, $contrasena){
         $query = "SELECT * FROM usuario WHERE correo like '".$correo."' and contraseña like '".$contrasena."'";
         $resultado = consulta($query);
-
+        return $resultado;
     }
     function anadirUsuarios(){
-        $query = "INSERT INTO usuario () VALUES ()"
+        $query = "INSERT INTO usuario () VALUES ()";
+    }
+    function comprobarUsuario($correo, $contrasena){
+        $usuario = consultarUsuario($correo, $contrasena);
+        if($usuario == null || !$usuario){
+            echo "<p>Algun valor no es correcto</p>";
+            return null;
+        }else{
+            while($fila = $usuario->fetch_assoc()){
+                return $fila;
+            }
+        };
     }
 ?>
