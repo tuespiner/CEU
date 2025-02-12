@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="styles.css"/>
 <style>label{font-weight:bold;}</style>
 <?php
-// ? Hacer que funcione las imagenes y mostrarlas al final en el resultado.
     $error = [];
     
     $tipoCerveza = "<li><label>Tipo de cerveza:</label> ".$_REQUEST['tipoCerveza']."</li>";
