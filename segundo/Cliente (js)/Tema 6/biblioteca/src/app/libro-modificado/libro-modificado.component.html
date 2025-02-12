@@ -1,0 +1,7 @@
+<h1>MODIFICAR LIBRO</h1>
+<form action="">
+    <input type="text" [(ngModel)]="libro.titulo" [value]="libro.titulo" name="titulo">
+    <input type="text" [(ngModel)]="libro.autor" [value]="libro.autor" name="autor">
+    <input type="submit" (click)="modificar()" [routerLink]="['/libros']" value="MODIFICAR">
+</form>
+<a [routerLink]="['/libros']">VOLVER</a>

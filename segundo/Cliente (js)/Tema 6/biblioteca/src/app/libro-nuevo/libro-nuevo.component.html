@@ -1,0 +1,7 @@
+<h1>AÑADIR LIBRO</h1>
+<form >
+    <input type="text" [(ngModel)]="libro.titulo" name="titulo" placeholder="TITULO">
+    <input type="text" [(ngModel)]="libro.autor" name="autor" placeholder="AUTOR">
+    <input type="submit" (click)="darAlta()" [routerLink]="['/libros']" value="DAR ALTA">
+</form>
+<a [routerLink]="['/libros']">volver</a>

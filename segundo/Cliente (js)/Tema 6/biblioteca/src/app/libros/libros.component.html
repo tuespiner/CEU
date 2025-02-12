@@ -1,1 +1,12 @@
-<p>libros works!</p>
+<h2>LIBROS</h2>
+<ul>
+    <li>id - titulo</li>
+    <li *ngFor="let libro of libroList$">
+        <a [routerLink]="['/libro-detalle', libro.id]">
+            {{libro.id}} - {{libro.titulo}}
+        </a>
+        <button [routerLink]="['/libro-modificado', libro.id]" >MODIFICAR</button>
+    </li>
+</ul>
+
+<button [routerLink]="['/libro-nuevo']">CREAR LIBRO</button>
