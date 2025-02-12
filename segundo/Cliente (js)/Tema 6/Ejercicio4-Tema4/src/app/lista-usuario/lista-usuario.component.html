@@ -6,13 +6,15 @@
             <th>ID</th>
             <th>NOMBRE</th>
             <th>USUARIO</th>
+            <th>DETALLES</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="">
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let usuario of usuarioList$ | async">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.username}}</td>
+            <td><a [routerLink]="['/usuarios', usuario.id]">+</a></td>
         </tr>
     </tbody>
 </table>

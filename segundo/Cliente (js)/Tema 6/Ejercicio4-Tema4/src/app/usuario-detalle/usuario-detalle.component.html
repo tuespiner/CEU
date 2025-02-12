@@ -1,0 +1,22 @@
+<h1 >{{'Detalles del usuario ' + (usuario$ | async)?.username}}</h1>
+<ol *ngIf="usuario$ | async as usuario"> 
+    <li>{{'ID: ' + usuario.id}}</li>
+    <li>{{'NOMBRE: ' + usuario.name}}</li>
+    <li>{{'USUARIO: ' + usuario.username}}</li>
+    <li>{{'CORREO: ' + usuario.email}}</li>
+    <li>EMPRESA:
+        <ol>
+            <li>{{'NAME: '+ usuario.company.name}}</li>
+            <li>{{'CATCHPHRASE: '+ usuario.company.catchphrase}}</li>
+            <li>{{'BS: '+ usuario.company.bs}}</li>
+        </ol>
+    </li>
+    <li>DIRECCION: 
+        <ol>
+            <li>{{'STREET: ' + usuario.address.street}}</li>
+            <li>{{'SUITE: ' + usuario.address.suite}}</li>
+            <li>{{'CITY: ' + usuario.address.city}}</li>
+        </ol>
+    </li>
+</ol>
+<a [routerLink]="['/usuarios']">ATRAS</a>
