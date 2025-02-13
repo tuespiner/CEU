@@ -5,14 +5,11 @@
     //funcion que hace las consultas para no repetir codigo
     function consulta($query){
         global $conn;
-        if(str_starts_with($query, 'INSERT')){
-        }else{
-            $resultado = $conn->query($query);
-            if($resultado->num_rows == 0){
+        $resultado = $conn->query($query);
+            if(str_starts_with($query, "SELECT") && $resultado->num_rows == 0){
                 $resultado = null;
             }
             return $resultado;
-        }
     }
 
 
@@ -35,8 +32,16 @@
         $resultado = consulta($query);
         return $resultado;
     }
-    function anadirUsuarios(){
-        $query = "INSERT INTO usuario () VALUES ()";
+    function anadirUsuario($contrasena, $correo, $edad){
+        if(comprobarUsuario($correo, $contrasena) == NULL){
+            $query = "INSERT INTO `usuario`(`correo`, `edad`, `contraseña`, `perfil`) 
+            VALUES ('".$correo."','".$edad."','".$contrasena."','usuario')";
+            $resultado = consulta($query);
+            return $resultado;
+        }else{
+            return false;
+        }
+        
     }
     function comprobarUsuario($correo, $contrasena){
         $usuario = consultarUsuario($correo, $contrasena);
