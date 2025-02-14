@@ -167,15 +167,22 @@ body{
                     border-bottom: 3px solid white;
                     width: fit-content;
                 }
+                & .dosCategorias{
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+                    width: 100%;
+                    gap: 2rem;
+                    
+                }
                 & .categoria{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     & h3{
-                        margin:0px;
+                        margin:.5rem;
                         font-family: fuente-elena-3;
                         color: white;
-                        font-size: 50px;
+                        font-size: 70px;
                     }
                     & .carruselCatalogo{
                         display: flex;
@@ -183,8 +190,12 @@ body{
                         height: 350px;
                         border-top: 2px solid white;
                         border-bottom: 2px solid white;
+                        overflow: scroll;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                         & .elemento{
-                            width: 300px;
+                            min-width: 300px;
                             height: 350px;
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
@@ -252,8 +263,28 @@ body{
             }
         }
         & .sobreNosotros{
-            width: 100%;
+            width: calc(100% - 10rem);
             height: 50vh;
+            padding: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .sobreNosotrosDiv{
+                color: #2e6647;
+                & p{
+                    font-size: 20px;
+                    width: 80%;
+                }
+                & h2{
+                    font-size: 80px;
+                    font-family: fuente-elena-1;
+                    margin: 0px;
+                    justify-self: end;
+                }
+                & .carrousel{
+                    margin-top: 5rem;
+                }
+            }
         }
     }
     & footer{
