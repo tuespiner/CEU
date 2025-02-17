@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns=""><!--se me ha olvidado esta linea, lo voy a hacer como si estuviera, 
+no me he preparado bien los apuntes si no esto almenos funcionaria-->
+<head>
+<meta charset="UTF-8">
+<title>planetas</title>
+</head>
+<body>
+	<h1>Lista de planetas y sus Lunas</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Tipo</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="let planeta of planetas">
+				<td th:text="${planeta.nombre}"></td>
+				<td th:text="${planeta.tipo}"></td>
+				<td><a th:href="@{/ + ${planeta.id}}"></a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
