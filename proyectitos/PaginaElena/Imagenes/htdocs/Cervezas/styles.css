@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+        body{
+            font-family: Afacad Flux;
+            margin: 0px;
+            padding: 1rem;
+        }
+        label{
+            min-width: 38%;
+        }
+        h1{
+            margin-top: 0px;
+            color: rgb(13, 98, 255);
+        }
+        form{
+            border: 1px solid black;
+            padding: 1rem 5rem 1rem 1rem;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            gap: .5rem;
+        }
+        div{
+            display: flex;
+        }
+        p{
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            width: max-content;
+        }
+        input:last-child{
+            width: min-content;
+        }
+        .separador:nth-child(8) div{
+            width: max-content;
+        }
