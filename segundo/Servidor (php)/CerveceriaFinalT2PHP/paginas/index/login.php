@@ -5,6 +5,7 @@
             <label for="correo">Correo</label>
             <input type="text" name="correo" id="correo">
             <?php
+            
             if(isset($_REQUEST["correo"]) && $_REQUEST["correo"] == ""){
                 echo "<p>El correo no puede estar vacio</p>";
             };
@@ -39,5 +40,5 @@
             ?>
         <input type="submit" value="Iniciar Sesión">
     </form>
-    <a href="#" id="RegistrarseA">Registrarse</a>
+    <a href="index.php?accion=cambiar" id="RegistrarseA" >Registrarse</a>
 </div>

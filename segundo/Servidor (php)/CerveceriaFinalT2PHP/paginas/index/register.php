@@ -5,6 +5,7 @@
             <label for="correo2">Correo</label>
             <input type="text" name="correo" id="correo2">
             <?php
+            
             $_SESSION['registerListo']=[
                 "correo" => true,
                 "edad" => true,
@@ -63,5 +64,5 @@
         ?>
         <input type="submit" value="Registrarse">
     </form>
-    <a href="#" id="iniciarSesionA">Iniciar sesion</a>
+    <a href="index.php?accion=cambiar" id="iniciarSesionA">Iniciar sesion</a>
 </div>

@@ -24,16 +24,18 @@
         </div>
         <div class="inicio-register">
             <?php
-            if(!isset($_SESSION['cual'])){
-                include 'login.php';
-                $_SESSION['cual'] = 'login';
-            }else{
-                if($_SESSION['cual'] == 'register'){
-                    include 'register.php';
-                }else{
-                    include 'login.php';
-                }
+            if (isset($_GET['accion']) && $_GET['accion'] == 'cambiar') {
+                $_SESSION['cual'] = ($_SESSION['cual'] == 'login') ? 'register' : 'login';
             }
+            if(!isset($_SESSION['cual'])){
+                $_SESSION['cual'] = 'login';
+            }
+            if($_SESSION['cual'] == 'register'){
+                include 'register.php';
+            }else{
+                include 'login.php';
+            }
+            
             ?>
         </div>
         <div class="fondo">
