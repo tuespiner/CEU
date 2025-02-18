@@ -15,7 +15,7 @@
 		<input type="text" name="estado"  th:field="*{perfil.estado}" placeholder="estado">
 		<!-- th:value="(${usuarioPasado} != null)?${usuarioPasdo.perfil.bio}" -->
 		<textarea rows="" cols="" name="biografia"  th:field="*{perfil.bio}" placeholder="biografia"></textarea>
-		<input th:if="${usuarioPasado} == null" type="submit" value="AÑADIR">
+		<input th:if="${usuario.id == null}" type="submit" value="AÑADIR">
 	</form>
 	<a th:href="@{/}">volver</a>
 </body>

@@ -78,9 +78,6 @@ body{
                     text-shadow: -3px 3px 0px #fcbb00;
                 }
             }
-            & .inicio{
-                display: none;
-            }
         }
     }
     & footer{

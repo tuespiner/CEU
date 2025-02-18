@@ -24,10 +24,11 @@
         </div>
         <div class="inicio-register">
             <?php
-            if(!isset($_SESSION['queSoy'])){
-                include 'register.php';
+            if(!isset($_SESSION['cual'])){
+                include 'login.php';
+                $_SESSION['cual'] = 'login';
             }else{
-                if($_SESSION['queSoy'] == 'register'){
+                if($_SESSION['cual'] == 'register'){
                     include 'register.php';
                 }else{
                     include 'login.php';
@@ -43,24 +44,5 @@
     </main>
     <footer>
     </footer>
-    <script>
-        let inia = document.getElementById('iniciarSesionA')
-        let rega = document.getElementById('RegistrarseA')
-        let inicio = document.getElementById('inicio')
-        let registrarse = document.getElementById('register')
-        inia.addEventListener("click", () => {
-            registrarse.style.display = 'none'
-            inicio.style.display = 'block'
-            <?php
-            
-             $_SESSION['queSoy'] = 'inicio';
-             echo 'console.log("'.$_SESSION['queSoy'].'")';?>
-        })
-        rega.addEventListener("click", () => {
-            registrarse.style.display = 'block'
-            inicio.style.display = 'none'
-            <?php $_SESSION['queSoy'] = 'register';?>
-        })
-    </script>
 </body>
 </html>

@@ -22,10 +22,7 @@ public class UsuarioController {
 	public String index() {
 		return "index";
 	}
-	@GetMapping("/{id}")
-	public String indexId() {
-		return "index";
-	}
+
 	
 	@GetMapping("/verTodosLosUsuarios")
 	public String verTodosLosUsuarios(Model model) {
@@ -42,7 +39,7 @@ public class UsuarioController {
 	
 	@GetMapping("/usuario-form/{id}")
 	public String usuarioForm(@PathVariable("id") Integer id ,Model model) {
-		model.addAttribute("usuarioPasado", this.service.getUsuarioById(id));
+		model.addAttribute("usuario", this.service.getUsuarioById(id));
 		return "usuario-form";
 	}
 	

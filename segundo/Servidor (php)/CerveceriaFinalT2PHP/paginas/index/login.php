@@ -20,24 +20,22 @@
             ?>
         </div>
         <?php
-            if(isset($_SESSION['queSoy']) && $_SESSION['queSoy'] == 'inicio'){
-                if((isset($_REQUEST["correo"]) && isset($_REQUEST["contrasena"])) || 
-                (isset($_COOKIE["correo"]) && isset($_COOKIE["contrasena"]))){
-                    if(!empty($_REQUEST["correo"]) && !empty($_REQUEST["contrasena"])){
-                        $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
-                        if($usuario != null){
-                            $_SESSION["usuario"] = $usuario;
-                            header("Location: ../catalogo/catalogo.php");
-                        }
-                    }else if(!empty($_COOKIE["correo"]) && !empty($_COOKIE["contrasena"])){
-                        $usuario = comprobarUsuario($_COOKIE["correo"], $_COOKIE["contrasena"]);
-                        if($usuario != null){
-                            $_SESSION["usuario"] = $usuario;
-                            header("Location: ../catalogo/catalogo.php");
-                        }
+            if((isset($_REQUEST["correo"]) && isset($_REQUEST["contrasena"])) || 
+            (isset($_COOKIE["correo"]) && isset($_COOKIE["contrasena"]))){
+                if(!empty($_REQUEST["correo"]) && !empty($_REQUEST["contrasena"])){
+                    $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
+                    if($usuario != null){
+                        $_SESSION["usuario"] = $usuario;
+                        header("Location: ../catalogo/catalogo.php");
                     }
-                };
-            }
+                }else if(!empty($_COOKIE["correo"]) && !empty($_COOKIE["contrasena"])){
+                    $usuario = comprobarUsuario($_COOKIE["correo"], $_COOKIE["contrasena"]);
+                    if($usuario != null){
+                        $_SESSION["usuario"] = $usuario;
+                        header("Location: ../catalogo/catalogo.php");
+                    }
+                }
+            };
             ?>
         <input type="submit" value="Iniciar Sesión">
     </form>

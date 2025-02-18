@@ -1,8 +1,8 @@
 <?php 
     //Dato para hacer la consulta
-    $servidor = '127.0.0.1:3307';
+    $servidor = '127.0.0.1:3306';
     $usuario = 'root';
-    $clave = '';
+    $clave = 'root';
     $baseDatos = 'aquinovendemoscruzcampo';
 
     //Crear conexion a bbdd

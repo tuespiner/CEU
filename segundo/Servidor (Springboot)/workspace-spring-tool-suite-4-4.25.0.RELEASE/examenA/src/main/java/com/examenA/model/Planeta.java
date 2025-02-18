@@ -1,5 +1,6 @@
 package com.examenA.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -30,11 +31,13 @@ public class Planeta {
 	}
 	public Planeta() {
 		super();
+		this.lunas = new ArrayList<Luna>();
 	}
 	public Planeta(String nombre, String tipo) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
+		this.lunas = new ArrayList<Luna>();
 	}
 	public Long getId() {
 		return id;
