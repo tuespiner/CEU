@@ -27,13 +27,21 @@
                     $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
                     if($usuario != null){
                         $_SESSION["usuario"] = $usuario;
-                        header("Location: ../catalogo/catalogo.php");
+                        if($usuario['perfil'] == 'admin'){
+                            header("Location: ../home/home.php");
+                        }else{
+                            header("Location: ../catalogo/catalogo.php");
+                        }
                     }
                 }else if(!empty($_COOKIE["correo"]) && !empty($_COOKIE["contrasena"])){
                     $usuario = comprobarUsuario($_COOKIE["correo"], $_COOKIE["contrasena"]);
                     if($usuario != null){
                         $_SESSION["usuario"] = $usuario;
-                        header("Location: ../catalogo/catalogo.php");
+                        if($usuario['perfil'] == 'admin'){
+                            header("Location: ../home/home.php");
+                        }else{
+                            header("Location: ../catalogo/catalogo.php");
+                        }
                     }
                 }
             };

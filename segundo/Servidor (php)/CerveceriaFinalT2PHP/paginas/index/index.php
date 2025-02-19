@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="../../styles/loginStyle.css">
     <title>Cervecería Juan</title>
 </head>
-<body>
+<body class="">
     <header>
         <h1>CERVECERIA JUAN</h1>
     </header> 
     <main>
     <?php 
         session_start();
+        if (isset($_GET['accion']) && $_GET['accion'] == 'cerrarSesion') {
+            session_destroy();
+            session_start();
+        }
         include '../consultas/consultarUsuario.php';
         consultarUsuarios();?>
         <div class="espuma">

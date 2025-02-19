@@ -2,9 +2,9 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 18-02-2025 a las 15:59:45
--- Versión del servidor: 10.4.32-MariaDB
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-02-2025 a las 13:07:37
+-- Versión del servidor: 11.6.2-MariaDB
 -- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `aquinovendemoscruzcampo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `producto`
+--
+
+CREATE TABLE `producto` (
+  `id` int(3) NOT NULL,
+  `denominacion` varchar(100) DEFAULT NULL,
+  `formato` varchar(100) DEFAULT NULL,
+  `tamano` varchar(100) DEFAULT NULL,
+  `tipo` varchar(100) DEFAULT NULL,
+  `precio` double DEFAULT NULL,
+  `marca` varchar(50) DEFAULT NULL,
+  `fecha_consumo` date DEFAULT NULL,
+  `alergias` varchar(40) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `observaciones` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id`, `denominacion`, `formato`, `tamano`, `tipo`, `precio`, `marca`, `fecha_consumo`, `alergias`, `foto`, `observaciones`) VALUES
+(1, 'lager', 'tercio', '750ml', 'botellin', 2.5, 'estrella galicia', '2030-11-12', 'ninguna', '[value-9]', 'ninguna');
 
 -- --------------------------------------------------------
 
@@ -50,6 +77,12 @@ INSERT INTO `usuario` (`id`, `correo`, `edad`, `contraseña`, `perfil`) VALUES
 --
 
 --
+-- Indices de la tabla `producto`
+--
+ALTER TABLE `producto`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -58,6 +91,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `producto`
+--
+ALTER TABLE `producto`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

@@ -56,7 +56,7 @@
          if(anadirUsuario($_REQUEST["contrasena"], $_REQUEST["correo"], $_REQUEST["edad"])){
              $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
              $_SESSION["usuario"] = $usuario;
-             header("Location: ..//catalogo/catalogo.php");
+             header("Location: ../catalogo/catalogo.php");
          }else{
              echo "<p>Algo no fue bien o hay otro usuario con los mismos datos</p>";
          }
