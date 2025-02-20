@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/catalogoStyle.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../styles/commonStyles.css">
+    <link rel="stylesheet" href="../inputs/inputsStyles.css">
+    <link rel="stylesheet" href="../styles/catalogoStyle.css">
     <title>Cerveceria Juan</title>
 </head>
-<body class="min-h-screen w-screen">
+<body>
     <?php
     session_start(); 
     include '../consultas/consultarProducto.php';
     include '../inputs/header.php';
     $_SESSION['productos'] = getProductos();
     ?>
-    <main class="w-screen min-h-screen py-12 px-24">
+    <main>
         <?php
         if($_SESSION['productos'] != null){
             if($_SESSION['usuario']['perfil'] == 'admin'){

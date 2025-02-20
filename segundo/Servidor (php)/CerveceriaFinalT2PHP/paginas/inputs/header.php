@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="inputsStyles.css">
     <title>Document</title>
 </head>
 <body>
-    <header class="flex justify-between items-center w-screen p-4 bg-yellow-700 text-white">
-        <div class="rounded-full"></div>
-        <h2 class="text-3xl">Cerveceria Juan</h2>
-        <nav clas="flex gap-12">
+    <header>
+        <div></div>
+        <h2>Cerveceria Juan</h2>
+        <nav>
             <?php
                 if($_SESSION["usuario"]["perfil"] == "admin"){
                     echo '<a href="../home/home.php">Home</a>';

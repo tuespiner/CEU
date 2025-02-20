@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/catalogoStyle.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Cerveceria Juan</title>
 </head>
 <body>
     <main>
         <?php
             while ($fila = $_SESSION['productos']->fetch_assoc()){
-                echo '<div class="w-max h-2/4 p-8 rounded-md shadow-2xl">';
+                echo '<div>';
                 echo '<div class="imagen"></div>';
                 echo '<h2>'.$fila['formato'].'</h2>';
                 echo '<ul><li><p>Marca: '.$fila['marca'].'</p></li>';
