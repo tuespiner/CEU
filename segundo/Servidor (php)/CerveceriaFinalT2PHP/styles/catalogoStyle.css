@@ -13,8 +13,15 @@ body{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr;
-            & > div{
-                
+            & .imagen{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & img{
+                    height: 400px;
+                }
             }
         }
     }
