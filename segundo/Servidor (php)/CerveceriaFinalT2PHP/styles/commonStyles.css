@@ -3,6 +3,7 @@
     src: url(../Fonts/Exo_2/Exo2-VariableFont_wght.ttf);
 }
 body{
+    --naranja-cerveceria:#ea674b;
     font-family: fuente-cerveceria-1;
     width: 100%;
     margin: 0px;
