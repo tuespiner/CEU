@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-02-2025 a las 13:07:37
+-- Tiempo de generación: 21-02-2025 a las 10:25:09
 -- Versión del servidor: 11.6.2-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -59,18 +59,19 @@ CREATE TABLE `usuario` (
   `correo` varchar(100) NOT NULL,
   `edad` int(3) NOT NULL,
   `contraseña` varchar(255) NOT NULL,
-  `perfil` varchar(50) NOT NULL
+  `perfil` varchar(50) NOT NULL,
+  `carrito` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`carrito`))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `correo`, `edad`, `contraseña`, `perfil`) VALUES
-(1, 'juanspiner89@gmail.com', 19, '1234', 'admin'),
-(2, 'usuario1@gmail.com', 25, '1234', 'usuario'),
-(11, 'anitacorreo@gmail.com', 21, '1234', 'usuario'),
-(12, 'usuario2@gmail.com', 14, '1234', 'usuario');
+INSERT INTO `usuario` (`id`, `correo`, `edad`, `contraseña`, `perfil`, `carrito`) VALUES
+(1, 'juanspiner89@gmail.com', 19, '1234', 'admin', '{\"productosCarrito\": []}'),
+(2, 'usuario1@gmail.com', 25, '1234', 'usuario', '{\"productosCarrito\": []}'),
+(11, 'anitacorreo@gmail.com', 21, '1234', 'usuario', '{\"productosCarrito\": []}'),
+(12, 'usuario2@gmail.com', 14, '1234', 'usuario', '{\"productosCarrito\": []}');
 
 --
 -- Índices para tablas volcadas
