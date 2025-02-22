@@ -1,0 +1,14 @@
+@font-face {
+    font-family: fuente-cerveceria-1;
+    src: url(../Fonts/Exo_2/Exo2-VariableFont_wght.ttf);
+}
+body{
+    --naranja-cerveceria:#ea674b;
+    font-family: fuente-cerveceria-1;
+    width: 100%;
+    margin: 0px;
+    min-width: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(4rem + 29px), minmax(calc(100vh - 8rem - 58px), auto), calc(4rem + 29px);
+}

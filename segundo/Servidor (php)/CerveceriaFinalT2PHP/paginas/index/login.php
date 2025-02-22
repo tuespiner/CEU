@@ -5,6 +5,7 @@
             <label for="correo">Correo</label>
             <input type="text" name="correo" id="correo">
             <?php
+            
             if(isset($_REQUEST["correo"]) && $_REQUEST["correo"] == ""){
                 echo "<p>El correo no puede estar vacio</p>";
             };
@@ -20,26 +21,32 @@
             ?>
         </div>
         <?php
-            if(isset($_SESSION['queSoy']) && $_SESSION['queSoy'] == 'inicio'){
-                if((isset($_REQUEST["correo"]) && isset($_REQUEST["contrasena"])) || 
-                (isset($_COOKIE["correo"]) && isset($_COOKIE["contrasena"]))){
-                    if(!empty($_REQUEST["correo"]) && !empty($_REQUEST["contrasena"])){
-                        $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
-                        if($usuario != null){
-                            $_SESSION["usuario"] = $usuario;
-                            header("Location: ../catalogo/catalogo.php");
-                        }
-                    }else if(!empty($_COOKIE["correo"]) && !empty($_COOKIE["contrasena"])){
-                        $usuario = comprobarUsuario($_COOKIE["correo"], $_COOKIE["contrasena"]);
-                        if($usuario != null){
-                            $_SESSION["usuario"] = $usuario;
+            if((isset($_REQUEST["correo"]) && isset($_REQUEST["contrasena"])) || 
+            (isset($_COOKIE["correo"]) && isset($_COOKIE["contrasena"]))){
+                if(!empty($_REQUEST["correo"]) && !empty($_REQUEST["contrasena"])){
+                    $usuario = comprobarUsuario($_REQUEST["correo"], $_REQUEST["contrasena"]);
+                    if($usuario != null){
+                        $_SESSION["usuario"] = $usuario;
+                        if($usuario['perfil'] == 'admin'){
+                            header("Location: ../home/home.php");
+                        }else{
                             header("Location: ../catalogo/catalogo.php");
                         }
                     }
-                };
-            }
+                }else if(!empty($_COOKIE["correo"]) && !empty($_COOKIE["contrasena"])){
+                    $usuario = comprobarUsuario($_COOKIE["correo"], $_COOKIE["contrasena"]);
+                    if($usuario != null){
+                        $_SESSION["usuario"] = $usuario;
+                        if($usuario['perfil'] == 'admin'){
+                            header("Location: ../home/home.php");
+                        }else{
+                            header("Location: ../catalogo/catalogo.php");
+                        }
+                    }
+                }
+            };
             ?>
         <input type="submit" value="Iniciar Sesión">
     </form>
-    <a href="#" id="RegistrarseA">Registrarse</a>
+    <a href="index.php?accion=cambiar" id="RegistrarseA" >Registrarse</a>
 </div>

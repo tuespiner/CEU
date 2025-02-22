@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="../../styles/loginStyle.css">
     <title>Cervecería Juan</title>
 </head>
-<body>
+<body class="">
     <header>
         <h1>CERVECERIA JUAN</h1>
     </header> 
     <main>
     <?php 
         session_start();
+        if (isset($_GET['accion']) && $_GET['accion'] == 'cerrarSesion') {
+            session_destroy();
+            session_start();
+        }
         include '../consultas/consultarUsuario.php';
         consultarUsuarios();?>
         <div class="espuma">
@@ -24,15 +28,18 @@
         </div>
         <div class="inicio-register">
             <?php
-            if(!isset($_SESSION['queSoy'])){
+            if (isset($_GET['accion']) && $_GET['accion'] == 'cambiar') {
+                $_SESSION['cual'] = ($_SESSION['cual'] == 'login') ? 'register' : 'login';
+            }
+            if(!isset($_SESSION['cual'])){
+                $_SESSION['cual'] = 'login';
+            }
+            if($_SESSION['cual'] == 'register'){
                 include 'register.php';
             }else{
-                if($_SESSION['queSoy'] == 'register'){
-                    include 'register.php';
-                }else{
-                    include 'login.php';
-                }
+                include 'login.php';
             }
+            
             ?>
         </div>
         <div class="fondo">
@@ -43,24 +50,5 @@
     </main>
     <footer>
     </footer>
-    <script>
-        let inia = document.getElementById('iniciarSesionA')
-        let rega = document.getElementById('RegistrarseA')
-        let inicio = document.getElementById('inicio')
-        let registrarse = document.getElementById('register')
-        inia.addEventListener("click", () => {
-            registrarse.style.display = 'none'
-            inicio.style.display = 'block'
-            <?php
-            
-             $_SESSION['queSoy'] = 'inicio';
-             echo 'console.log("'.$_SESSION['queSoy'].'")';?>
-        })
-        rega.addEventListener("click", () => {
-            registrarse.style.display = 'block'
-            inicio.style.display = 'none'
-            <?php $_SESSION['queSoy'] = 'register';?>
-        })
-    </script>
 </body>
 </html>
