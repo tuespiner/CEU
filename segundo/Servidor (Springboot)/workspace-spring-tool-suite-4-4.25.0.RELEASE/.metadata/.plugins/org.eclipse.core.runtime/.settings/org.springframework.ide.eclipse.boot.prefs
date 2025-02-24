@@ -1,27 +1,19 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=18e27b87711fb55de08a83595e868049f7e51bae
+>>>>>>>=2eda4d05b62a840326cc682138eabc371cb20a01
 eclipse.preferences.version=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=21
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=28
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mariadb=21
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.thymeleaf=7
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=27
-<<<<<<< HEAD
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=Tema5Ejercicicios9-13DeNuevo
-=======
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=Tema5Ejercicicios9-13
->>>>>>> 2eda4d05b62a840326cc682138eabc371cb20a01
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.4.2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=22
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=29
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mariadb=22
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.thymeleaf=8
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=28
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=Tema5Ejercicicios18-22
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.4.3
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Demo project for Spring Boot
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.example
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-<<<<<<< HEAD
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=Tema5Ejercicicios9-13DeNuevo
-=======
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=Tema5Ejercicicios9-13
->>>>>>> 2eda4d05b62a840326cc682138eabc371cb20a01
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=Tema5Ejercicicios18-22
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.example.demo
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
