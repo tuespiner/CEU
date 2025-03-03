@@ -1,6 +1,6 @@
 @font-face {
     font-family: sugar-pie;
-    src: url(Fonts/Sugar-Pie-W00-Regular.ttf);
+    src: url(../Fonts/Sugar-Pie-W00-Regular.ttf);
 }
 /*CUERPO*/
 body{ 
@@ -14,49 +14,56 @@ body{
     overflow-x: hidden;
     & header{
         padding: 1rem;
-        width: calc(100% - 2rem);
         position: fixed;
         top: 0px;
         left: 0px;
+        width: calc(100% - 2rem);
         z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         & nav{
-            width: 100%;
             display: flex;
+            width: 100%;
             justify-content: space-between;
-            & button{
-                border: .5rem solid #5d302d;
+            align-items: center;
+            & .menu-movil{
+                display: none;
+            }
+            & .boton{
+                background-color: white;
+                color: white;
+                border: .75rem solid #5d302d;
                 border-radius: 15px;
-                height: calc(80px + 1rem);
-                width: calc(80px + 1rem);
-                padding: 0px;
-                & img{
-                    width: 80px;
-                }
+                font-family: sugar-pie;
+                font-size: 20px;
+                transition: .3s;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                text-align: center;
                 & a{
-                    text-decoration: none;
-                    color: black;
-                    font-family: sugar-pie;
-                    font-size: larger;
+                    width: 100%;
+                }
+                & img{
+                    width: 100%;
+                    height: auto;
                 }
                 &:hover{
-                    box-shadow: inset 0px 0px 10px #5d302d;
+                    scale: 1.1;
+                    cursor: pointer;
                 }
             }
-            & div{
+            & .menu{
+                display: flex;
                 background-color: #5d302d;
                 border-radius: 15px;
-                display: flex;
-                gap: .5rem;
-                border: .5rem solid #5d302d;
-                & button{
-                    border: 0px;
-                    height: 80px;
-                    width: 80px;
-                }
             }
             &::after{
                 content: "";
-                width: calc(80px + 1rem);
+                display: block;
+                width: 80px;
             }
         }
     }
@@ -66,6 +73,7 @@ body{
             flex-direction: column;
             gap: 6rem;
             margin-top: 1rem;
+            
         }
     }
     /*PIE*/
@@ -81,6 +89,10 @@ body{
         color: white;
         & .contacto{
             grid-area: contacto;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
         }
         & .redes-sociales{
             grid-area: redes-sociales;
@@ -95,10 +107,16 @@ body{
                 width: 100%;
                 & a{
                     transition: .3s;
+                    border-radius: 100px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: visible;
+                    max-height: 50px;
+                    max-width: 50px;
                     & svg{
-                        border-radius: 100px;
-                        background-color: white;
-                        width: 50px;
+                        min-width: 55px;
                     }
                     &:hover{
                         scale: 1.3;
@@ -127,6 +145,40 @@ body{
                 }
             }
         }
+        
+    }
+}
+.click-menu-movil{
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    display:none;
+    flex-wrap: wrap;
+    background-color: #61b9ad;
+    border-bottom: 1rem solid #5d302d;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    & div{
+        border: 0px;
+        background-color: white;
+        border: .5rem solid #5d302d;
+        color: white;
+        border-radius: 15px;
+        padding: 1rem;
+        margin: .5rem;
+        font-family: sugar-pie;
+        font-size: 20px;
+        transition: .3s;
+        & a{
+            text-decoration: none;
+            color: #5d302d;;
+        }
+        &:hover{
+            scale: 1.05;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 10px #5d302d;
+        }
     }
 }
 /*IMAGEN DE INICIO*/
@@ -139,7 +191,7 @@ body{
     align-items: center;
     clip-path: polygon(0% 0, 100% 0%, 100% 85%, 0 100%);
     justify-content: center;
-    background-image: url(Imagenes/imagen-fachada-bariloche.jpg);
+    background-image: url(../Imagenes/imagen-fachada-bariloche.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
@@ -318,7 +370,7 @@ body{
             grid-template-columns:1fr ;
             grid-template-rows: repeat(2,1fr);
             & .img-tarta{
-                background-image: url(Imagenes/tarta\ queso.jpg);
+                background-image: url(../Imagenes/tarta\ queso.jpg);
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
             }
@@ -333,14 +385,14 @@ body{
             grid-column: 3/-1;
             grid-row: 1/3;
             & .img-tarta{
-                background-image: url(Imagenes/tarta\ red\ velvet.webp);
+                background-image: url(../Imagenes/tarta\ red\ velvet.webp);
             }
         }
         &:nth-child(4), &:nth-child(5){
             grid-column: 1/3;
             grid-row: 1/2;
             & .img-tarta{
-                background-image: url(Imagenes/tarta\ abuela.webp);
+                background-image: url(../Imagenes/tarta\ abuela.webp);
                 border-top-left-radius: 15px;
                 border-bottom-left-radius: 15px;
             }
@@ -349,7 +401,7 @@ body{
             grid-column: 2/-1;
             grid-row: 3/-1;
             & .img-tarta{
-                background-image: url(Imagenes/tarta\ muerte\ por\ chocolate.jpg);
+                background-image: url(../Imagenes/tarta\ muerte\ por\ chocolate.jpg);
             }
         }
         & .img-tarta{
@@ -480,11 +532,129 @@ body{
         grid-row: 2/-1;
         grid-template-columns:1fr ;
         grid-template-rows: repeat(2,1fr);
-        & .info-tarta{
-            border: 0px;
-            border-top: 1rem solid #5d302d;
-            width: calc(100% - 2rem);
-            height: calc(100% - 3rem);
+        & > div{
+            &:first-child{
+                justify-content: center;
+            }
+            &{
+                grid-template-columns:1fr ;
+                grid-template-rows: repeat(2,1fr);
+                & .info-tarta{
+                    border: 0px;
+                    border-top: 1rem solid #5d302d;
+                    width: calc(100% - 2rem);
+                    height: calc(100% - 3rem);
+                    border-left: 0px;
+                }
+            }
         }
     }
+    .ubi-reseñas{
+        & > div{
+            & > div{
+                & .resena{
+                    height: fit-content;
+                    padding: 1rem;
+                    & h4{
+                        margin-top: 0px;
+                    }
+                    & p{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width < 900px){
+    header{
+        & nav{
+            &::after{
+                display: none !important;
+            }
+        }
+    }
+    body{
+        & footer{
+            height: auto;
+            gap: 1rem;
+            grid-template-areas: 
+            "contacto subir" 
+            "redes-sociales redes-sociales";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            & .subir{
+                justify-content: center;
+            }
+            & .redes-sociales{
+                gap: 1rem;
+            }
+        }
+    }
+    .menu{
+        display: none !important;
+    }
+    .menu-movil{
+        display: flex !important;
+    }
+    .imagen-inicio{
+        & h1{
+            font-size: 80px;
+        }
+        & h2{
+            font-size: 30px;
+        }
+    }
+    .tartas{
+        padding: 1rem;
+        width: calc(100% - 2rem);
+        margin-bottom: 0rem;
+    }
+    .instalaciones, .desayunos-meriendas{
+        & h2{
+            font-size: 40px;
+            margin: 0px 1rem;
+            text-align: center;
+        }
+    }
+    .ubi-reseñas{
+        & > div{
+            & > div{
+                width: 100%;
+                & .resena{
+                    grid-column: 1/-1!important;
+                    height: fit-content;
+                    padding: 1rem;
+                    & h4{
+                        margin-top: 0px;
+                    }
+                    & p{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width < 550px){
+    .imagen-inicio{
+        & h1{
+            font-size: 60px;
+        }
+        & h2{
+            font-size: 20px;
+        }
+    }
+    .tartas{
+        & > div{
+            &:first-child{
+                & h1{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+    
 }

@@ -1,49 +1,71 @@
 <!DOCTYPE html>
-<html lang="es_ES">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bariloche</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="Imagenes/Logo Bariloche.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="shortcut icon" href="Imagenes/LogoBariloche.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
+    <div class="click-menu-movil" role="navigation" aria-label="menu navegacion movil">
         <nav>
-            <button>
-                <img src="Imagenes/logo bariloche.png" alt="">
-            </button>
-            <div>
-                <button><a href="#inicio">Inicio</a></button>
-                <button><a href="#instalaciones">Nuesto bar</a></button>
-                <button><a href="#desayunosMeriendas">Desayunos meriendas</a></button>
-                <button><a href="#tartas">Tartas</a></button>
-                <button><a href="#reseñas">Reseñas ubicación</a></button>
+            <div><a href="#inicio">Inicio</a></div>
+            <div><a href="#instalaciones">Nuestro bar</a></div>
+            <div><a href="#desayunosMeriendas">Desayunos meriendas</a></div>
+            <div><a href="#tartas">Tartas</a></div>
+            <div><a href="#reseñas">Reseñas ubicación</a></div>
+            <div id="cerrar"><a href="#">Cerrar</a></div>
+        </nav>
+    </div>
+    <header>
+        <nav aria-label="menu de navegación">
+            <div class="boton">
+                <a href="#inicio"><img src="Imagenes/logoBariloche.png" alt="Logo Bariloche"></a>
+            </div>
+            <div class="menu">
+                <div class="boton"><a href="#inicio">Inicio</a></div>
+                <div class="boton"><a href="#instalaciones">Nuestro bar</a></div>
+                <div class="boton"><a href="#desayunosMeriendas">Desayunos meriendas</a></div>
+                <div class="boton"><a href="#tartas">Tartas</a></div>
+                <div class="boton"><a href="#reseñas">Reseñas ubicación</a></div>
+            </div>
+            <div class="menu-movil">
+                <div class="boton" aria-label="Abrir menú móvil"><a href="#inicio">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menú</title>
+                        <g data-name="1" id="_1">
+                            <path d="M441.13,166.52h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z" />
+                            <path d="M441.13,279.72h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z" />
+                            <path d="M441.13,392.92h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z" />
+                        </g>
+                    </svg>
+                </a></div>
             </div>
         </nav>
     </header>
     <main>
         <section class="imagen-inicio" id="inicio">
             <h1>BARILOCHE</h1>
-            <h2>!Qué bueno que viniste¡</h2>
+            <h2>¡Qué bueno que viniste!</h2>
         </section>
         <div>
             <section class="instalaciones" id="instalaciones">
                 <h2>¿CÓMO ES NUESTRO BAR?</h2>
                 <div>
-                    <div class="carrusel" reverse="true">
+                    <div class="carrusel" reverse="true" aria-label="carrusel de imágenes de nuestro bar">
                         <div class="carrousel-list">
-                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
+                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt="Imagen del bar"></div>
                         </div>
                     </div>
                 </div>
@@ -51,28 +73,28 @@
             <section class="desayunos-meriendas" id="desayunosMeriendas">
                 <h2>¿Y NUESTROS DESAYUNOS / MERIENDAS?</h2>
                 <div>
-                    <div class="carrusel">
+                    <div class="carrusel" aria-label="carrusel de imágenes de nuestros desayunos y meriendas">
                         <div class="carrousel-list">
-                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt=""></div>
-                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt=""></div>
+                            <div class="item" style="--position: 1"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 2"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 3"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 4"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 5"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 6"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 7"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 8"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
+                            <div class="item" style="--position: 9"><img src="Imagenes/imagen.jpg" alt="Imagen de desayuno o merienda"></div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        <section class="tartas" id="tartas">
+        <section class="tartas" id="tartas" aria-label="tartas">
             <div>
                 <h1>NUESTRAS TARTAS</h1>
             </div>
             <div>
-                <div class="img-tarta"></div>
+                <div class="img-tarta" role="img" aria-label="Imagen de tarta de queso"></div>
                 <div class="info-tarta">
                     <div>
                         <h1>Tarta de queso</h1>
@@ -84,7 +106,7 @@
                 </div>
             </div>
             <div>
-                <div class="img-tarta"></div>
+                <div class="img-tarta" role="img" aria-label="Imagen de tarta Red Velvet"></div>
                 <div class="info-tarta">
                     <div>
                         <h1>Red velvet</h1>
@@ -96,7 +118,7 @@
                 </div>
             </div>
             <div>
-                <div class="img-tarta"></div>
+                <div class="img-tarta" role="img" aria-label="Imagen de tarta de la abuela"></div>
                 <div class="info-tarta">
                     <div>
                         <h1>Tarta de la abuela</h1>
@@ -108,7 +130,7 @@
                 </div>
             </div>
             <div>
-                <div class="img-tarta"></div>
+                <div class="img-tarta" role="img" aria-label="Imagen de tarta Muerte por chocolate"></div>
                 <div class="info-tarta">
                     <div>
                         <h1>Muerte por chocolate</h1>
@@ -124,9 +146,9 @@
         <section class="ubi-reseñas" id="reseñas">
             <div>
                 <h3>RESEÑAS</h3>
-                <div>
+                <div aria-label="reseñas de nuestros clientes">
                     <div class="resena">
-                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <img src="Imagenes/fotoPerfil.webp" alt="Foto de perfil de Maricarmen">
                         <div>
                             <h4>Maricarmen</h4>
                             <p>Sitio ideal para ir a tomarse un cafelito con tus amigos y acompañarlo con un pastelito
@@ -134,7 +156,7 @@
                         </div>
                     </div>
                     <div class="resena">
-                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <img src="Imagenes/fotoPerfil.webp" alt="Foto de perfil de Juan Luis">
                         <div>
                             <h4>Juan Luis</h4>
                             <p>Llevo toda la vida comprando las tartas en el mercadona, les di una oportunidad a las
@@ -142,7 +164,7 @@
                         </div>
                     </div>
                     <div class="resena">
-                        <img src="Imagenes/foto perfil.webp" alt="">
+                        <img src="Imagenes/fotoPerfil.webp" alt="Foto de perfil de Raul">
                         <div>
                             <h4>Raul</h4>
                             <p>Desayunos de todo tipo, para celiacos incluso y una lista de ingredientes para
@@ -154,36 +176,36 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.3327706851233!2d-6.126384523315824!3d37.38196187208703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd121390a0159a6f%3A0x19c4fbd527be76b!2sPasteler%C3%ADa%20Bariloche%20Apalankao%20Street%20Tapas!5e0!3m2!1ses!2ses!4v1737931906300!5m2!1ses!2ses"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade" aria-label="Mapa de ubicación de Pastelería Bariloche"></iframe>
         </section>
     </main>
     <footer>
         <div class="contacto">
-            <p>Teléfono: 626 18 92 21</p>
-            <p>Correo: barilocheEspartinas@gmail.com</p>
+            <p>Teléfono: <a href="tel:+34626189221">626 18 92 21</a></p>
+            <p>Correo: <a href="mailto:barilocheEspartinas@gmail.com">barilocheEspartinas@gmail.com</a></p>
         </div>
         <div class="redes-sociales">
             <div>
-                <a href="#">
-                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                <a href="#" aria-label="Facebook">
+                    <svg data-name="Layer 1"  viewBox="0 0 512 512"
                         xmlns="http://www.w3.org/2000/svg">
-                        <title />
+                        <title>Facebook</title>
                         <path
                             d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM385.62,232.382c-27.184,0-53.634-8.822-74-23.75l-.162,101.5a92.457,92.457,0,1,1-80.178-91.721v49.845a43.657,43.657,0,1,0,31.288,41.876V109.333h51.275a71.773,71.773,0,0,0,71.774,71.773Z" />
                     </svg>
                 </a>
-                <a href="#">
-                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                <a href="#" aria-label="Twitter">
+                    <svg data-name="Layer 1"  viewBox="0 0 512 512"
                         xmlns="http://www.w3.org/2000/svg">
-                        <title />
+                        <title>Twitter</title>
                         <path
                             d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0Zm67.59,153.428s-26.194-2.064-36.513,1.746c-17.056,6.3-17.462,21.034-17.462,35.084v28.694h52.149l-7.62,54.888H269.615V409.333h-58.9V273.84H161.744V218.952h48.974V172.4c0-49.292,37.942-67.151,60.563-69.294s52.309,4.286,52.309,4.286Z" />
                     </svg>
                 </a>
-                <a href="#">
-                    <?xml version="1.0" ?><svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+                <a href="#" aria-label="Instagram">
+                    <svg data-name="Layer 1"  viewBox="0 0 512 512"
                         xmlns="http://www.w3.org/2000/svg">
-                        <title />
+                        <title>Instagram</title>
                         <path
                             d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
                         <path d="M256,211.545A44.455,44.455,0,1,0,300.455,256,44.455,44.455,0,0,0,256,211.545Z" />
@@ -195,15 +217,15 @@
             <p>Todos los derechos reservados</p>
         </div>
         <div class="subir">
-            <button id="subir"></button>
+            <button id="subir" aria-label="Subir"></button>
         </div>
     </footer>
-    <!--<section class="privacidad">
+    <section class="privacidad" aria-label="Sección de privacidad">
         <div>
-            <p>He leido y acepto las condiciones de privacidad de datos personales</p>
-            <button>Acepto</button>
+            <p>He leído y acepto las <a href="paginas/privacidad.html">condiciones de privacidad</a> de datos personales</p>
+            <button class="aceptar">Acepto</button>
         </div>
-    </section>-->
+    </section>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 </body>
