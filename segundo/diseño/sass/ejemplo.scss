@@ -1,0 +1,31 @@
+$tam-fuente:2rem;   //declarar variables
+$color-texto:black;
+$color-enlace:green;
+$color-fondo:rgb(197, 197, 197);
+
+$margenes:(0px, 20px, 10px, 20px); //decalrar listas
+
+$responsive:('descktop': 1200px, 'tablet': 1024px, 'mobile': 600px);
+
+$etiqueta-error:'error'; //interpolacion
+
+body{
+    background-color: $color-fondo;
+    margin: 0px;
+    width: 100%;
+    & h1{
+        color: $color-texto;
+        font-size: $tam-fuente;
+    }
+    & a{
+        color: $color-enlace;
+        margin-top: nth($margenes, 2); //para acceder a un elemento de una lista
+        &.#{$etiqueta-error}{
+            
+        }
+    }
+}
+
+@media (max-width: map-get($responsive, 'mobile')){
+
+}
